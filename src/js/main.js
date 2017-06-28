@@ -18,3 +18,7 @@ global.picture.ready(function() {
 
 var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) => console.log(a + b + c);
 f();  // 6
+
+
+import 'gp-module-history';
+console.log('baam;');

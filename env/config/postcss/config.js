@@ -38,6 +38,8 @@ function resolve(id, basedir, importOptions) {
         if (!id.match(/.*\.(pcss|css)$/)) {
             id = path.join(id, 'default.pcss');
         }
+    } else if (id.indexOf('/') === 0) {
+        id = path.join(process.cwd(), id);
     }
     return id;
 }

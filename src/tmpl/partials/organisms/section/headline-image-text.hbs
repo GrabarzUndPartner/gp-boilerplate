@@ -9,6 +9,11 @@ article:
 ---
 {{#mixin "organisms/section" this section-name="headline-image-text"}}
   {{#content "content"}}
-    {{{mixin "molecules/article" article}}}
+    {{#mixin "molecules/article" article}}
+      {{#content "placeholder"}}
+        {{{mixin "atoms/text" content}}}
+        {{{mixin "molecules/scrollable-mask" scrollableMask}}}
+      {{/content}}
+    {{/mixin}}
   {{/content}}
 {{/mixin}}
