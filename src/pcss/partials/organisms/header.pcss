@@ -1,0 +1,32 @@
+.partial[data-partial="organisms/header"] {
+  min-width: $screen-default;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 5;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  /*transform: translateY(-100%);
+  transition-property: transform;
+  transition-duration: 0.35s;
+  transition-timing-function: easeInOut;*/
+  &.js-slideDown {
+    transform: translateY(0%);
+  }
+  nav {
+    @media (--screen-md) {
+      padding: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        margin: calc(15 / 16)em 0;
+        margin-right: calc(15 / 16)em;
+      }
+    }
+  }
+}

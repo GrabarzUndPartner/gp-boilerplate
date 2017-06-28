@@ -1,0 +1,28 @@
+---
+list:
+  -
+    url: "#1"
+    title: "Test 1"
+  -
+    url: "#2"
+    title: "Test 2"
+---
+<header class="partial controller js-slideDown" data-partial="organisms/header" data-controller="./partials/organisms/Header">
+  <div class="grid-wrapper">
+    <div class="grid-g">
+      <div class="grid-col-12-12">
+        {{#with list}}
+          <nav class="grid-gutter">
+            <ul>
+              {{#each this}}
+                <li>
+                  {{{mixin "atoms/link" this class="hard-reset"}}}
+                </li>
+              {{/each}}
+            </ul>
+          </nav>
+        {{/with}}
+      </div>
+    </div>
+  </div>
+</header>

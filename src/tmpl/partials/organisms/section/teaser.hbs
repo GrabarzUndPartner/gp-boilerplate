@@ -1,0 +1,39 @@
+---
+docs:
+  concept:
+    zeplin:
+      desktop: '#zeplin-url-desktop'
+      mobile: '#zeplin-url-mobile'
+  refs:
+    picture: "ref:atoms/picture"
+    class:
+      type: "string"
+      required: false
+      values: ["align-left-[default,xs,sm,md,lg]", "align-right-[default,xs,sm,md,lg]"]
+data:
+  class: "controller"
+  extendedRange: true
+  picture: "ref:atoms/picture"
+  headlineText:
+    headline:
+      text: "Headline"
+    content:
+      text: "Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und dazu noch in dieser engen Gasse mitten im übel beleumundeten Hafenviertel?"
+---
+
+{{#mixin "organisms/section" this section-name="teaser" wrapper=true}}
+  {{#content "attributes"}}
+    data-controller="./partials/organisms/section/ScrollParallaxImage"
+    data-extended-range="{{{extendedRange}}}"
+  {{/content}}
+  {{#content "content"}}
+    <div class="grid-g">
+      <div class="teaser__image grid-col-12-12 grid-col-sm-6-12">
+        {{{mixin "atoms/picture" picture}}}
+      </div>
+      <div class="teaser__text grid-col-12-12 grid-col-sm-6-12">
+        {{{mixin "molecules/headline-text" headlineText}}}
+      </div>
+    </div>
+  {{/content}}
+{{/mixin}}

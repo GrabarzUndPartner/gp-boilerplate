@@ -1,0 +1,17 @@
+---
+class: #String
+overline:
+  text: "Overline"
+headline:
+  text: "Headline"
+subline:
+  text: "Subline"
+content:
+  text: "Text"
+---
+<section class="partial{{#if class}} {{{class}}}{{/if}}{{#if wrapper}} grid-wrapper{{#if wrapper-fluid}} grid-wrapper-fluid{{/if}}{{/if}}"
+  data-partial="organisms/section{{#if section-name}}/{{{section-name}}}{{/if}}" {{#block "attributes"}}{{/block}}>
+  {{#block "content"}}
+    {{{mixin "atoms/text" content}}}
+  {{/block}}
+</section>

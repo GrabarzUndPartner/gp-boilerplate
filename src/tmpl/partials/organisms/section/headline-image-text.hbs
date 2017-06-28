@@ -1,0 +1,14 @@
+---
+class: #String
+article:
+  headline:
+    text: "Article Headline"
+  scrollableMask: {}
+  content:
+    text: "Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und dazu noch in dieser engen Gasse mitten im übel beleumundeten Hafenviertel?"
+---
+{{#mixin "organisms/section" this section-name="headline-image-text"}}
+  {{#content "content"}}
+    {{{mixin "molecules/article" article}}}
+  {{/content}}
+{{/mixin}}

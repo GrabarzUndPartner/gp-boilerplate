@@ -1,0 +1,24 @@
+---
+picture:
+  svg:
+    mask: '#masking'
+figcaption: {}
+---
+<figure class="partial controller" data-partial="molecules/scrollable-mask" data-controller="./partials/molecules/ScrollableMask" data-extended-range="true"{{#if target}} data-target="{{{target}}}"{{/if}}>
+  <div class="masked-content">
+    {{#block "content"}}
+      {{{mixin "atoms/picture" picture}}}
+    {{/block}}
+    <div class="header"></div>
+    <div class="footer"></div>
+  </div>
+  {{#block "caption"}}
+    <div class="grid-wrapper">
+      <div class="grid-g">
+        <div class="grid-col-12-12">
+          {{{mixin "atoms/figcaption" figcaption}}}
+        </div>
+      </div>
+    </div>
+  {{/block}}
+</figure>

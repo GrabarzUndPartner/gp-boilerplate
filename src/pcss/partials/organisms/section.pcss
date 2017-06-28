@@ -1,0 +1,11 @@
+.partial[data-partial*="organisms/section"] {
+  margin-top: calc(40 / 375 * 100)vw;
+  margin-bottom: @margin-top;
+  @media (--screen-xs) {
+    margin-top: calc(60 / 16)em;
+    margin-bottom: @margin-top;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+}

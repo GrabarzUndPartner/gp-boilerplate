@@ -1,0 +1,11 @@
+---
+overline: {}
+headline: {}
+subline: {}
+accordeon: {}
+---
+{{#mixin "organisms/section" this section-name="catalog"}}
+  {{#content "content"}}
+    {{{mixin "molecules/scrollable-sticky-accordeon" accordeon}}}
+  {{/content}}
+{{/mixin}}
