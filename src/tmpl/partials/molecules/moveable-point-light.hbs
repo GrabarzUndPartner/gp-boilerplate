@@ -1,10 +1,15 @@
 ---
-
+docs:
+  scrollable-mask: 'ref:molecules/scrollable-mask'
+  picture: 'ref:atoms/picture'
+data:
+  scrollable-mask: {}
+  picture: {}
 ---
 <div class="partial controller" data-partial="molecules/moveable-point-light" data-controller="./partials/molecules/MoveablePointLight">
-  {{#mixin "molecules/scrollable-mask"}}
+  {{#mixin "molecules/scrollable-mask" scrollable-mask}}
     {{#content "content"}}
-      {{{mixin "atoms/picture"}}}
+      {{{mixin "atoms/picture" picture}}}
       <div class="mask" touch-action="none">
           <div class="point-light"></div>
       </div>
