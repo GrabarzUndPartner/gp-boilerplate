@@ -28,7 +28,7 @@ module.exports = [
             indent_size: 4  ,
             indent_char: ' ',
             max_char: 0,
-            unformatted: ["sub", "sup", "b", "i", "u", "script", "span"]
+            unformatted: ["sub", "sup", "b", "i", "u", "script", "span", "code", "svg"]
         })
     }
 ];
