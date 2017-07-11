@@ -1,10 +1,8 @@
 "use strict";
 
-import 'es5-ext/array/#/find/implement';
-import 'classlist-polyfill';
-import dataset from 'element-dataset';
-dataset();
+// IE 11
 import 'element-closest';
+
 import 'script-loader!fg-loadcss';
 import 'script-loader!fg-loadcss/src/cssrelpreload';
 import 'gp-module-polyfills';

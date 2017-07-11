@@ -1,4 +1,4 @@
-.partial[data-partial="svgs/symbol"] {
+.partial[data-partial^="svgs/symbol"] {
   <% _.forEach( icons, function( icon) {
 
   var width = icon.width, height = icon.height;
@@ -8,10 +8,6 @@
   }
 
   %>&<%=icon.className %> {
-    /*
-    width: <%=width %>;
-    height: <%=height %>;
-    */
     &:before {
       padding-top: calc(<%= parseFloat(width) %> / <%= parseFloat(height) %> * 100)%;
     }
