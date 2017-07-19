@@ -36,6 +36,7 @@ build/Release
 # Dependency directory
 # https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
 .DS_Store
+/package-lock.json
 node_modules
 node_modules*
 /dev
