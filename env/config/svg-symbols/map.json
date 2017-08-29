@@ -13,9 +13,16 @@
       "name": "icon",
       "config": "<%= root %>/env/config/svg-symbols/config.icon.js",
       "files": {
-        "src": ["<%= root %>/src/assets/svg-symbols/icons/*.svg"],
+        "src": ["<%= root %>/src/assets/svg-symbols/icon/*.svg"],
         "dest": "<%= destination_root %>/generated/svg-symbols"
       }
+    }],
+    "watch": [{
+      "src": ["<%= root %>/src/assets/svg-symbols/default/*.svg"],
+      "tasks": ["default"]
+    },{
+      "src": ["<%= root %>/src/assets/svg-symbols/icon/*.svg"],
+      "tasks": ["icon"]
     }]
   }
 }

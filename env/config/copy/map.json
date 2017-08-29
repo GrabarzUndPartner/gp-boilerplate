@@ -28,8 +28,8 @@
       "src": ["src/external/**/*"],
       "tasks": ["external"]
     }, {
-      "src": ["src/assets/svg/**/*.svg"],
-      "tasks": ["svgo:default"]
+      "src": ["generated/svg-symbols/**/*.svg"],
+      "tasks": ["svg-symbols"]
     }]
   }
 }

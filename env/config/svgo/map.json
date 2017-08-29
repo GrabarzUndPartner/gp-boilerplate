@@ -18,7 +18,7 @@
       }
     }],
     "watch": [{
-      "src": ["<%= root %>/src/assets/svg/**/*.svg", "!<%= root %>/src/assets/svg/symbols/**/*.svg"],
+      "src": ["<%= root %>/src/assets/svg/**/*.svg", "!<%= root %>/src/assets/svg-symbols/**/*.svg"],
       "tasks": ["default"]
     }]
   }
