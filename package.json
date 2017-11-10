@@ -21,7 +21,8 @@
     "svg-opt": "yo gp-boilerplate:svg-opt",
     "test-task-grid": "NODE_ENV=build node node_modules/gulp/bin/gulp grid --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/",
     "test-task-svg-symbols": "NODE_ENV=build node node_modules/gulp/bin/gulp svg-symbols --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/",
-    "test-task-svgo": "NODE_ENV=build node node_modules/gulp/bin/gulp svgo --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/"
+    "test-task-svgo": "NODE_ENV=build node node_modules/gulp/bin/gulp svgo --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/",
+    "test-task-handlebars": "NODE_ENV=development node node_modules/gulp/bin/gulp handlebars --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/ --server=gp-boilerplate-webserver"
   },
   "repository": {
     "type": "git",
@@ -80,7 +81,7 @@
     "fg-loadcss": "^1.2.1",
     "fontfaceobserver": "^1.6.1",
     "gp-boilerplate-documentation": "https://github.com/GrabarzUndPartner/gp-boilerplate-documentation.git",
-    "gp-boilerplate-environment": "https://github.com/GrabarzUndPartner/gp-boilerplate-environment.git",
+    "gp-boilerplate-environment": "https://github.com/GrabarzUndPartner/gp-boilerplate-environment.git#feature/partial-watcher",
     "gp-boilerplate-webserver": "https://github.com/GrabarzUndPartner/gp-boilerplate-webserver.git",
     "gp-module-base": "https://github.com/GrabarzUndPartner/gp-module-base.git",
     "gp-module-history": "https://github.com/GrabarzUndPartner/gp-module-history.git",
