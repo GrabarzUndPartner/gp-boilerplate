@@ -22,14 +22,11 @@
       }
     }],
     "watch": [{
-      "src": ["src/assets/**/*.{ttf,woff,eot,svg,ico,png,jpg,gif}", "!src/assets/svg/**/*.svg", "!src/assets/svg-symbols/**/*.svg"],
+      "src": ["src/assets/**/*.{ttf,woff,eot,svg,ico,png,jpg,gif}", "src/assets/svg/**/*.svg", "!src/assets/svg-symbols/**/*.svg"],
       "tasks": ["default"]
     }, {
       "src": ["src/external/**/*"],
       "tasks": ["external"]
-    }, {
-      "src": ["generated/svg-symbols/**/*.svg"],
-      "tasks": ["svg-symbols"]
     }]
   }
 }
