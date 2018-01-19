@@ -21,9 +21,8 @@ data:
       text: "Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und dazu noch in dieser engen Gasse mitten im übel beleumundeten Hafenviertel?"
 ---
 
-{{#mixin "organisms/section" this section-name="teaser" wrapper=true}}
+{{#mixin "organisms/section" this partial-name="organisms/section/teaser" controller-name="./partials/organisms/section/ScrollParallaxImage" wrapper=true}}
   {{#content "attributes"}}
-    data-controller="./partials/organisms/section/ScrollParallaxImage"
     data-extended-range="{{{extendedRange}}}"
   {{/content}}
   {{#content "content"}}

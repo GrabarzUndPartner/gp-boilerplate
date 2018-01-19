@@ -1,10 +1,7 @@
 ---
 class: "controller"
 ---
-{{#mixin "organisms/section" this section-name="scroll-container"}}
-  {{#content "attributes"}}
-    data-controller="./partials/organisms/section/ScrollContainer"
-  {{/content}}
+{{#mixin "organisms/section" this partial-name="organisms/section/scroll-container" controller-name="./partials/organisms/section/ScrollContainer"}}
   {{#content "content"}}
     {{#mixin "molecules/article" article}}
       {{#content "placeholder"}}

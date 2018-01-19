@@ -7,7 +7,7 @@ title: "Link"
 target: "_self"
 rel: "next"
 ---
-{{#mixin "gp-module-ui-link" this partial="atoms/link"}}
+{{#mixin "gp-module-ui-link" this partial-name="atoms/link"}}
   {{#content "link-content"}}
     {{#if touch-indicator}}<span class="touch-indicator touch-indicator--{{{touch-indicator}}}"></span>{{/if}}
     {{#block "status"}}{{{status}}}{{/block}}{{#block "title"}}{{{title}}}{{/block}}

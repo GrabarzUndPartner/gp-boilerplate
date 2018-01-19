@@ -9,8 +9,7 @@ subline:
 content:
   text: "Text"
 ---
-<section class="partial{{#if class}} {{{class}}}{{/if}}{{#if wrapper}} grid-wrapper{{#if wrapper-fluid}} grid-wrapper-fluid{{/if}}{{/if}}"
-  data-partial="organisms/section{{#if section-name}}/{{{section-name}}}{{/if}}" {{#block "attributes"}}{{/block}}>
+<section class="partial{{#if controller-name}} controller{{/if}}{{#if class}} {{{class}}}{{/if}}{{#if wrapper}} grid-wrapper{{#if wrapper-fluid}} grid-wrapper-fluid{{/if}}{{/if}}" data-partial="{{#if partial-name}}{{{partial-name}}}{{else}}organisms/Section{{/if}}"{{#if controller-name}} data-controller="{{#if controller-name}}{{{controller-name}}}{{else}}organisms/Section{{/if}}"{{/if}} {{#block "attributes"}}{{/block}}>
   {{#block "content"}}
     {{{mixin "atoms/text" content}}}
   {{/block}}
