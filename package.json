@@ -59,7 +59,8 @@
     "fb": "^1.0.2",
     "htmlescape": "^1.1.0",
     "jshint": "^2.8.0",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.0",
+    "os-homedir": "^1.0.2"
   },
   "dependencies": {
     "ampersand-collection": "^2.0.0",
@@ -78,7 +79,7 @@
     "fontfaceobserver": "^1.6.1",
     "gp-boilerplate-documentation": "https://github.com/GrabarzUndPartner/gp-boilerplate-documentation.git",
     "gp-boilerplate-environment": "https://github.com/GrabarzUndPartner/gp-boilerplate-environment.git",
-    "gp-boilerplate-webserver": "https://github.com/GrabarzUndPartner/gp-boilerplate-webserver.git",
+    "gp-boilerplate-webserver": "https://github.com/GrabarzUndPartner/gp-boilerplate-webserver.git#feature/hapi-added-config-tls",
     "gp-module-base": "https://github.com/GrabarzUndPartner/gp-module-base.git",
     "gp-module-history": "https://github.com/GrabarzUndPartner/gp-module-history.git",
     "gp-module-parser": "https://github.com/GrabarzUndPartner/gp-module-parser.git",
