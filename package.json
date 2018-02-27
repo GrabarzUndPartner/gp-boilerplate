@@ -77,7 +77,7 @@
     "fg-loadcss": "^1.2.1",
     "fontfaceobserver": "^1.6.1",
     "gp-boilerplate-documentation": "https://github.com/GrabarzUndPartner/gp-boilerplate-documentation.git",
-    "gp-boilerplate-environment": "https://github.com/GrabarzUndPartner/gp-boilerplate-environment.git#feature/partial-watcher",
+    "gp-boilerplate-environment": "https://github.com/GrabarzUndPartner/gp-boilerplate-environment.git",
     "gp-boilerplate-webserver": "https://github.com/GrabarzUndPartner/gp-boilerplate-webserver.git",
     "gp-module-base": "https://github.com/GrabarzUndPartner/gp-module-base.git",
     "gp-module-history": "https://github.com/GrabarzUndPartner/gp-module-history.git",
