@@ -1,11 +1,10 @@
-"use strict";
+'use strict';
 
 import Controller from 'gp-module-base/Controller';
 import DomModel from 'gp-module-base/DomModel';
 import Viewport from 'gp-module-viewport/Viewport';
 
 export default Controller.extend({
-
     modelConstructor: DomModel.extend({
         session: {
             viewport: {
@@ -38,15 +37,10 @@ function onMeasure() {
     this.model.viewport.offset.subtractLocal(this.model.viewport.offset);
 }
 
-function onInit() {
+function onInit() {}
 
-}
-
-function onResize() {
-
-}
+function onResize() {}
 
 function onScroll() {
-
     // console.log('SCROLL', this.model.viewport.scrollY, this.model.viewport.bounds.min.y);
 }

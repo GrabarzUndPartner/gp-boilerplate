@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 import 'pepjs';
 import PositionObserver from 'gp-module-scroll/PositionObserver';
@@ -6,7 +6,6 @@ import viewport from 'gp-module-viewport';
 import Vector from 'gp-module-base/Vector';
 
 export default PositionObserver.extend({
-
     events: {
         'pointerdown .masked-content': onPointerDown
     },
@@ -19,13 +18,11 @@ export default PositionObserver.extend({
 
         this.onViewportMeasure = onViewportMeasure.bind(this);
 
-        viewport
-            .on(viewport.EVENT_TYPES.MEASURE, this.onViewportMeasure);
+        viewport.on(viewport.EVENT_TYPES.MEASURE, this.onViewportMeasure);
     },
 
     destroy: function() {
-        viewport
-            .off(viewport.EVENT_TYPES.MEASURE, this.onMeasure);
+        viewport.off(viewport.EVENT_TYPES.MEASURE, this.onMeasure);
         PositionObserver.prototype.destroy.apply(this, arguments);
     }
 });
@@ -36,7 +33,10 @@ function onViewportMeasure() {
 
 function onPointerDown() {
     global.animationFrame.addOnce(onPaint.bind(this));
-    $(document).on('pointermove.' + this.cid, global.animationFrame.throttle(onPointerMeasure.bind(this), onPaint.bind(this)));
+    $(document).on(
+        'pointermove.' + this.cid,
+        global.animationFrame.throttle(onPointerMeasure.bind(this), onPaint.bind(this))
+    );
     $(document).on('pointerup.' + this.cid, onPointerUp.bind(this));
 }
 
@@ -46,7 +46,9 @@ function onPointerUp() {
 
 function onPointerMeasure(e) {
     e.preventDefault();
-    this.movePoint.setX(e.pageX).setY(e.pageY)
+    this.movePoint
+        .setX(e.pageX)
+        .setY(e.pageY)
         .subtractLocal(this.bounds.min)
         .subtractLocal(this.dimension)
         .divideLocal(this.dimension)
@@ -55,5 +57,6 @@ function onPointerMeasure(e) {
 }
 
 function onPaint() {
-    this.mask.style.cssText = 'transform: translate(' + this.movePoint.x + '%, ' + this.movePoint.y + '%)';
+    this.mask.style.cssText =
+        'transform: translate(' + this.movePoint.x + '%, ' + this.movePoint.y + '%)';
 }

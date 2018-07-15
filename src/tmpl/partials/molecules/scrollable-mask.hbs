@@ -8,7 +8,8 @@ data:
       mask: '#masking'
   figcaption: {}
 ---
-<figure class="partial controller" data-partial="molecules/scrollable-mask" data-controller="./partials/molecules/ScrollableMask" data-extended-range="true"{{#if target}} data-target="{{{target}}}"{{/if}}>
+<figure class="partial controller" data-partial="molecules/scrollable-mask" data-controller="./partials/molecules/ScrollableMask"
+  data-extended-range="true" {{#if target}} data-target="{{{target}}}" {{/if}}>
   <div class="masked-content">
     {{#block "content"}}
       {{{mixin "atoms/picture" picture}}}

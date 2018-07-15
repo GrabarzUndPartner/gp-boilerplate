@@ -1,9 +1,8 @@
-"use strict";
+'use strict';
 
 import PositionObserver from 'gp-module-scroll/PositionObserver';
 
 export default PositionObserver.extend({
-
     modelConstructor: PositionObserver.prototype.modelConstructor.extend({
         session: {
             offset: {
@@ -22,10 +21,6 @@ export default PositionObserver.extend({
     },
 
     onActive: function(info) {
-        this.pictureStyle.cssText = 'box-shadow' + ': 0px ' + (info.y * 10) + 'px 10px rgba(0, 0, 0, 0.5);';
-    },
-
-    onInactive: function() {
-        // console.log('inactive',info);
+        this.pictureStyle.cssText = `box-shadow: 0px ${info.y * 10}px 10px rgba(0, 0, 0, 0.5);`;
     }
 });

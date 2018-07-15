@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = {
     noInfo: false,
@@ -36,6 +36,6 @@ module.exports = {
     reporter: null,
     // Provide a custom reporter to change the way how logs are shown.
 
-    serverSideRender: false,
+    serverSideRender: false
     // Turn off the server-side rendering mode. See Server-Side Rendering part for more info.
 };

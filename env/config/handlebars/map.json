@@ -9,7 +9,11 @@
       "assets": "<%= destination %>/assets/",
       "layouts": {
         "files": {
-          "src": ["./src/tmpl/partials/layouts/**/*.hbs", "./node_modules/gp-module-*/layouts/**/*.hbs", "./node_modules/gp-boilerplate-*/modules/layouts/**/*.hbs"]
+          "src": [
+            "./src/tmpl/partials/layouts/**/*.hbs",
+            "./node_modules/gp-module-*/layouts/**/*.hbs",
+            "./node_modules/gp-boilerplate-*/modules/layouts/**/*.hbs"
+          ]
         },
         "options": {
           "base": "./src/tmpl/partials"
@@ -17,7 +21,12 @@
       },
       "partials": {
         "files": {
-          "src": ["./src/tmpl/partials/**/*.hbs", "./src/tmpl/docs/**/*.hbs", "./node_modules/gp-module-*/**/*.hbs", "./node_modules/gp-boilerplate-*/**/*.hbs"]
+          "src": [
+            "./src/tmpl/partials/**/*.hbs",
+            "./src/tmpl/docs/**/*.hbs",
+            "./node_modules/gp-module-*/**/*.hbs",
+            "./node_modules/gp-boilerplate-*/**/*.hbs"
+          ]
         },
         "options": {
           "base": "./src/tmpl/partials"
@@ -42,59 +51,73 @@
         "docCritical": "<%= destination %>/css/doc.critical.css"
       }
     },
-    "subtasks": [{
-      "name": "pages",
-      "layout": "layouts/default",
-      "config": "<%= root %>/env/config/handlebars/config",
-      "files": {
-        "src": ["./src/tmpl/**/*.hbs", "!./src/tmpl/partials/**/*.hbs"],
-        "dest": "<%= destination %>",
-        "base": "./src/tmpl/"
+    "subtasks": [
+      {
+        "name": "pages",
+        "layout": "layouts/default",
+        "config": "<%= root %>/env/config/handlebars/config",
+        "files": {
+          "src": ["./src/tmpl/**/*.hbs", "!./src/tmpl/partials/**/*.hbs"],
+          "dest": "<%= destination %>",
+          "base": "./src/tmpl/"
+        },
+        "data": {
+          "cwd": "./src/data/",
+          "src": ["./**/*.{json,yaml}", "!./globals/**/*.{json,yaml}"]
+        },
+        "partialRendering": {
+          "options": {
+            "cwd": "<%= root %>/src/tmpl/"
+          }
+        }
       },
-      "data": {
-        "cwd": "./src/data/",
-        "src": ["./**/*.{json,yaml}", "!./globals/**/*.{json,yaml}"]
+      {
+        "name": "docs",
+        "layout": "gp-boilerplate-documentation/modules/layouts/detail",
+        "config": "<%= root %>/env/config/handlebars/config",
+        "files": {
+          "src": [
+            "./src/tmpl/partials/**/*.hbs",
+            "!./src/tmpl/partials/commons/**/*.hbs",
+            "!./src/tmpl/partials/layouts/**/*.hbs"
+          ],
+          "dest": "<%= destination %>/docs",
+          "base": "./src/tmpl/"
+        },
+        "partialRendering": {
+          "options": {
+            "base": "./src/tmpl/",
+            "cwd": "<%= root %>/src/tmpl/partials/"
+          }
+        }
       },
-      "partialRendering": {
-        "options": {
-          "cwd": "<%= root %>/src/tmpl/"
+      {
+        "name": "modules-docs",
+        "once": true,
+        "layout": "gp-boilerplate-documentation/modules/layouts/detail",
+        "config": "<%= root %>/env/config/handlebars/config",
+        "files": {
+          "src": [
+            "./node_modules/gp-module-ui-*/**/*.hbs",
+            "!./node_modules/gp-boilerplate-*/**/*.hbs"
+          ],
+          "dest": "<%= destination %>/docs/",
+          "base": "./"
         }
       }
-    }, {
-      "name": "docs",
-      "layout": "gp-boilerplate-documentation/modules/layouts/detail",
-      "config": "<%= root %>/env/config/handlebars/config",
-      "files": {
-        "src": ["./src/tmpl/partials/**/*.hbs", "!./src/tmpl/partials/commons/**/*.hbs", "!./src/tmpl/partials/layouts/**/*.hbs"],
-        "dest": "<%= destination %>/docs",
-        "base": "./src/tmpl/"
-      },
-      "partialRendering": {
+    ],
+    "watch": [
+      {
+        "src": ["src/tmpl/**/*.hbs", "!src/tmpl/docs/index.hbs"],
+        "partialRendering": true,
         "options": {
-          "base": "./src/tmpl/",
-          "cwd": "<%= root %>/src/tmpl/partials/"
+          "ignoreInitial": false,
+          "base": "./src/tmpl/"
         }
+      },
+      {
+        "src": ["src/data/**/*.json"]
       }
-    }, {
-      "name": "modules-docs",
-      "once": true,
-      "layout": "gp-boilerplate-documentation/modules/layouts/detail",
-      "config": "<%= root %>/env/config/handlebars/config",
-      "files": {
-        "src": ["./node_modules/gp-module-ui-*/**/*.hbs", "!./node_modules/gp-boilerplate-*/**/*.hbs"],
-        "dest": "<%= destination %>/docs/",
-        "base": "./"
-      }
-    }],
-    "watch": [{
-      "src": ["src/tmpl/**/*.hbs", "!src/tmpl/docs/index.hbs"],
-      "partialRendering": true,
-      "options": {
-        "ignoreInitial": false,
-        "base": "./src/tmpl/"
-      }
-    }, {
-      "src": ["src/data/**/*.json"]
-    }]
+    ]
   }
 }

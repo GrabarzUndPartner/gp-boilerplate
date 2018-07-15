@@ -1,23 +1,27 @@
 .partial[data-partial="organisms/section/stage"] {
   position: relative;
-  .stage{
+
+  .stage {
     &__headline {
       position: absolute;
       bottom: 0;
       width: 100%;
+
       @media (--screen-xs) {
-        left: -100%;
         right: -100%;
+        left: -100%;
       }
     }
   }
+
   [data-partial="atoms/picture"] {
-    &:before {
+    &::before {
       position: relative;
-      content: "";
       display: block;
-      padding-top: calc(9 / 16 * 100)%;
+      padding-top: calc(9 / 16 * 100%);
+      content: "";
     }
+
     img {
       position: absolute;
       top: 0;

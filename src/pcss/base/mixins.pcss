@@ -1,11 +1,13 @@
 /* Mixins */
 
 @define-mixin clearfix {
-  &:after {
-    content: "";
-    clear: both;
+  clear: fix;
+
+  /* &::after {
     display: block;
+    height: 0;
+    clear: both;
     visibility: hidden;
-    height: 0px;
-  }
+    content: '';
+  } */
 }

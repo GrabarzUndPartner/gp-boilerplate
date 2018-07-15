@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 import Controller from 'gp-module-base/Controller';
 import DomModel from 'gp-module-base/DomModel';
@@ -6,7 +6,7 @@ import dataTypeDefinition from 'gp-module-base/dataTypeDefinition';
 import Vector from 'gp-module-base/Vector';
 import Bounds from 'gp-module-base/Bounds';
 
-import {updateBounds} from 'gp-module-scroll/utils';
+import { updateBounds } from 'gp-module-scroll/utils';
 import viewport from 'gp-module-viewport';
 
 var viewportDimension = new Vector();
@@ -40,7 +40,7 @@ export default Controller.extend({
         this.headerOutOfViewportInfo = null;
         this.footerOutOfViewportInfo = null;
 
-        if(this.model.extendedRange) {
+        if (this.model.extendedRange) {
             this.operation = 'addLocal';
         }
 
@@ -57,32 +57,31 @@ export default Controller.extend({
     },
 
     onActive: function(infoFooter, infoHeader) {
-        if(infoFooter.y === 1) {
+        if (infoFooter.y === 1) {
             this.footer.classList.remove('js-scroll-sticky-bottom');
-        } else if(infoFooter.y > -1) {
+        } else if (infoFooter.y > -1) {
             this.footer.classList.remove('out-of-screen');
             this.footer.classList.add('js-scroll-sticky-bottom');
         } else {
             this.footer.classList.remove('js-scroll-sticky-bottom');
         }
 
-        if(infoHeader.y === 1) {
+        if (infoHeader.y === 1) {
             this.header.classList.remove('js-scroll-sticky-top');
-        } else if(infoHeader.y > -1) {
+        } else if (infoHeader.y > -1) {
             this.header.classList.remove('out-of-screen');
             this.header.classList.add('js-scroll-sticky-top');
-
         } else {
             this.header.classList.remove('js-scroll-sticky-top');
         }
     },
 
     onInactive: function(infoFooter) {
-        if(infoFooter.y === -1) {
+        if (infoFooter.y === -1) {
             this.footer.classList.add('out-of-screen');
         }
 
-        if(infoFooter.y === 1) {
+        if (infoFooter.y === 1) {
             this.header.classList.add('out-of-screen');
         }
 
@@ -101,16 +100,51 @@ export default Controller.extend({
 });
 
 function onScroll(viewportBounds, direction) {
-    if(this.contentBoundsFooter.intersects(viewportBounds) || this.contentBoundsHeader.intersects(viewportBounds)) {
+    if (
+        this.contentBoundsFooter.intersects(viewportBounds) ||
+        this.contentBoundsHeader.intersects(viewportBounds)
+    ) {
         this.headerOutOfViewportInfo = null;
         this.footerOutOfViewportInfo = null;
-        this.onActive(getIntersectionInfo(this.contentBoundsFooter, objectDimension, viewportBounds, 'addLocal').clampLocal(-1, 1), getIntersectionInfo(this.contentBoundsHeader, objectDimension, viewportBounds, 'addLocal').clampLocal(-1, 1), direction);
+        this.onActive(
+            getIntersectionInfo(
+                this.contentBoundsFooter,
+                objectDimension,
+                viewportBounds,
+                'addLocal'
+            ).clampLocal(-1, 1),
+            getIntersectionInfo(
+                this.contentBoundsHeader,
+                objectDimension,
+                viewportBounds,
+                'addLocal'
+            ).clampLocal(-1, 1),
+            direction
+        );
     } else {
-        if(!this.headerOutOfViewportInfo && !this.footerOutOfViewportInfo) {
+        if (!this.headerOutOfViewportInfo && !this.footerOutOfViewportInfo) {
             this.headerOutOfViewportInfo = new Vector();
-            this.headerOutOfViewportInfo.reset(getIntersectionInfo(this.contentBoundsHeader, objectDimension, viewportBounds, 'addLocal')).clampLocal(-1, 1);
+            this.headerOutOfViewportInfo
+                .reset(
+                    getIntersectionInfo(
+                        this.contentBoundsHeader,
+                        objectDimension,
+                        viewportBounds,
+                        'addLocal'
+                    )
+                )
+                .clampLocal(-1, 1);
             this.footerOutOfViewportInfo = new Vector();
-            this.footerOutOfViewportInfo.reset(getIntersectionInfo(this.contentBoundsFooter, objectDimension, viewportBounds, 'addLocal')).clampLocal(-1, 1);
+            this.footerOutOfViewportInfo
+                .reset(
+                    getIntersectionInfo(
+                        this.contentBoundsFooter,
+                        objectDimension,
+                        viewportBounds,
+                        'addLocal'
+                    )
+                )
+                .clampLocal(-1, 1);
             this.onInactive(this.footerOutOfViewportInfo, this.headerOutOfViewportInfo, direction);
         }
     }
@@ -125,13 +159,33 @@ function onMeasure() {
 function onInit(viewportBounds, direction) {
     this.contentBoundsHeader.reset(this.contentBounds.min, this.contentBounds.max);
     this.contentBoundsHeader.min.addValuesLocal(0, viewportBounds.max.y - viewportBounds.min.y, 0);
-    this.contentBoundsHeader.max.subtractValuesLocal(0, this.footerBounds.max.y - this.footerBounds.min.y, 0);
-    this.contentBoundsHeader.max.subtractValuesLocal(0, this.headerBounds.max.y - this.headerBounds.min.y, 0);
+    this.contentBoundsHeader.max.subtractValuesLocal(
+        0,
+        this.footerBounds.max.y - this.footerBounds.min.y,
+        0
+    );
+    this.contentBoundsHeader.max.subtractValuesLocal(
+        0,
+        this.headerBounds.max.y - this.headerBounds.min.y,
+        0
+    );
 
     this.contentBoundsFooter.reset(this.contentBounds.min, this.contentBounds.max);
-    this.contentBoundsFooter.min.addValuesLocal(0, this.headerBounds.max.y - this.headerBounds.min.y, 0);
-    this.contentBoundsFooter.min.addValuesLocal(0, this.footerBounds.max.y - this.footerBounds.min.y, 0);
-    this.contentBoundsFooter.max.subtractValuesLocal(0, viewportBounds.max.y - viewportBounds.min.y, 0);
+    this.contentBoundsFooter.min.addValuesLocal(
+        0,
+        this.headerBounds.max.y - this.headerBounds.min.y,
+        0
+    );
+    this.contentBoundsFooter.min.addValuesLocal(
+        0,
+        this.footerBounds.max.y - this.footerBounds.min.y,
+        0
+    );
+    this.contentBoundsFooter.max.subtractValuesLocal(
+        0,
+        viewportBounds.max.y - viewportBounds.min.y,
+        0
+    );
 
     viewportDimension = viewportBounds.getDimension(viewportDimension);
     onScroll.bind(this)(viewportBounds, direction);
@@ -140,20 +194,43 @@ function onInit(viewportBounds, direction) {
 function onResize(viewportBounds, direction) {
     this.contentBoundsHeader.reset(this.contentBounds.min, this.contentBounds.max);
     this.contentBoundsHeader.min.addValuesLocal(0, viewportBounds.max.y - viewportBounds.min.y, 0);
-    this.contentBoundsHeader.max.subtractValuesLocal(0, this.footerBounds.max.y - this.footerBounds.min.y, 0);
-    this.contentBoundsHeader.max.subtractValuesLocal(0, this.headerBounds.max.y - this.headerBounds.min.y, 0);
+    this.contentBoundsHeader.max.subtractValuesLocal(
+        0,
+        this.footerBounds.max.y - this.footerBounds.min.y,
+        0
+    );
+    this.contentBoundsHeader.max.subtractValuesLocal(
+        0,
+        this.headerBounds.max.y - this.headerBounds.min.y,
+        0
+    );
 
     this.contentBoundsFooter.reset(this.contentBounds.min, this.contentBounds.max);
-    this.contentBoundsFooter.min.addValuesLocal(0, this.headerBounds.max.y - this.headerBounds.min.y, 0);
-    this.contentBoundsFooter.min.addValuesLocal(0, this.footerBounds.max.y - this.footerBounds.min.y, 0);
-    this.contentBoundsFooter.max.subtractValuesLocal(0, viewportBounds.max.y - viewportBounds.min.y, 0);
+    this.contentBoundsFooter.min.addValuesLocal(
+        0,
+        this.headerBounds.max.y - this.headerBounds.min.y,
+        0
+    );
+    this.contentBoundsFooter.min.addValuesLocal(
+        0,
+        this.footerBounds.max.y - this.footerBounds.min.y,
+        0
+    );
+    this.contentBoundsFooter.max.subtractValuesLocal(
+        0,
+        viewportBounds.max.y - viewportBounds.min.y,
+        0
+    );
 
     viewportDimension = viewportBounds.getDimension(viewportDimension);
     onScroll.bind(this)(viewportBounds, direction);
 }
 
 function getIntersectionInfo(bounds, dimension, viewportBounds, operation) {
-    return normalizeIntersectionInfoByRange(bounds.getIntersectionInfo(viewportBounds), getRange(bounds, dimension, operation));
+    return normalizeIntersectionInfoByRange(
+        bounds.getIntersectionInfo(viewportBounds),
+        getRange(bounds, dimension, operation)
+    );
 }
 
 function getRange(bounds, dimension, operation) {

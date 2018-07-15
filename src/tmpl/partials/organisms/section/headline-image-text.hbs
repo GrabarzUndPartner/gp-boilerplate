@@ -7,12 +7,11 @@ article:
   content:
     text: "Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und dazu noch in dieser engen Gasse mitten im übel beleumundeten Hafenviertel?"
 ---
-{{#mixin "organisms/section" this partial-name="organisms/section/headline-image-text"}}
+{{#mixin "organisms/section" this partial-name="organisms/section/headline-image-text" }}
   {{#content "content"}}
     {{#mixin "molecules/article" article}}
       {{#content "placeholder"}}
-        {{{mixin "atoms/text" content}}}
-        {{{mixin "molecules/scrollable-mask" scrollableMask}}}
+        {{{mixin "atoms/text" content}}} {{{mixin "molecules/scrollable-mask" scrollableMask}}}
       {{/content}}
     {{/mixin}}
   {{/content}}

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = [
     {
@@ -11,7 +11,8 @@ module.exports = [
             exclude: /node_modules/,
             loader: 'jshint-loader'
         }
-    }, {
+    },
+    {
         development: true,
         production: true,
         build: true,
@@ -27,7 +28,8 @@ module.exports = [
                 }
             ]
         }
-    }, {
+    },
+    {
         development: true,
         production: true,
         build: true,
@@ -37,19 +39,16 @@ module.exports = [
                 {
                     loader: 'handlebars-loader',
                     options: {
-                        helperDirs: [
-
-                        ],
+                        helperDirs: [],
                         runtime: 'handlebars/runtime',
-                        partialDirs: [
-                            process.cwd() + '/src/tmpl/partials'
-                        ],
+                        partialDirs: [process.cwd() + '/src/tmpl/partials'],
                         debug: false
                     }
                 }
             ]
         }
-    }, {
+    },
+    {
         development: true,
         production: true,
         build: true,
@@ -58,15 +57,18 @@ module.exports = [
             use: [
                 {
                     loader: 'style-loader'
-                }, {
+                },
+                {
                     loader: 'css-loader'
-                }, {
+                },
+                {
                     loader: 'postcss-loader',
                     options: require('../postcss/config.js')
                 }
             ]
         }
-    }, {
+    },
+    {
         development: true,
         production: true,
         build: true,
@@ -81,7 +83,8 @@ module.exports = [
                 }
             ]
         }
-    }, {
+    },
+    {
         development: true,
         production: true,
         build: true,
@@ -93,7 +96,8 @@ module.exports = [
                     options: {
                         window: 'global'
                     }
-                },{
+                },
+                {
                     loader: 'modernizr-loader'
                 }
             ]

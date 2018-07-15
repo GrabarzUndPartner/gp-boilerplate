@@ -10,18 +10,16 @@
       {{!-- {{{mixin "organisms/section/headline-text" intro}}} --}}
 
       {{#each teasers}}
-            {{{mixin "organisms/section/teaser" this}}}
+          {{{mixin "organisms/section/teaser" this}}}
       {{/each}}
 
       {{!-- {{{mixin "organisms/section/headline-text" main}}} --}}
 
-          {{{mixin "organisms/section/interactive-spotlight"}}}
+      {{{mixin "organisms/section/interactive-spotlight"}}}
 
       {{!-- {{{mixin "organisms/section/headline-image-text"}}} --}}
 
-          {{{mixin "organisms/section/headline-text"}}}
-
-      </div>
+      {{{mixin "organisms/section/headline-text"}}}
 
       {{#mixin "gp-module-ui-modal" modal}}
         {{#content "content"}}

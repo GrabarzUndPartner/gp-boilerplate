@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /* jshint ignore:start */
 if (global.webpackPublicPath) {

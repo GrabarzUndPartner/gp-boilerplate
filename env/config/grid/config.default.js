@@ -1,43 +1,46 @@
-"use strict";
+'use strict';
 var path = require('upath');
 module.exports = {
     options: {
         fontSize: 16,
-        filePrefix: "",
-        prefix: "grid",
-        columnPrefix: "grid-col",
+        filePrefix: '',
+        prefix: 'grid',
+        columnPrefix: 'grid-col',
         columns: 12,
-        breakpoints: [{
-                name: "default",
-                width: "20rem",
-                gutter: "0.9375rem"
+        breakpoints: [
+            {
+                name: 'default',
+                width: '20rem',
+                gutter: '0.9375rem'
             },
             {
-                name: "xs",
-                width: "30rem"
+                name: 'xs',
+                width: '30rem'
             },
             {
-                name: "sm",
-                width: "48rem",
+                name: 'sm',
+                width: '48rem'
             },
             {
-                name: "md",
-                width: "62rem",
+                name: 'md',
+                width: '62rem'
             },
             {
-                name: "lg",
-                width: "75rem",
+                name: 'lg',
+                width: '75rem'
             }
         ]
     },
-    features: [{
+    features: [
+        {
             name: 'base',
             file: require('gp-boilerplate-environment/lib/tasks/grid/base'),
             options: {
                 root: path.join('node_modules/purecss/build'),
-                pureFiles: ["base", "grids-core"]
+                pureFiles: ['base', 'grids-core']
             }
-        }, {
+        },
+        {
             name: 'variables',
             file: require('gp-boilerplate-environment/lib/tasks/grid/variables')
         },
@@ -53,23 +56,24 @@ module.exports = {
             name: 'wrapper',
             file: require('gp-boilerplate-environment/lib/tasks/grid/wrapper'),
             options: {
-                breakpoints: [{
-                        name: "xs",
+                breakpoints: [
+                    {
+                        name: 'xs',
                         properties: {
-                            "margin-left": "auto",
-                            "margin-right": "auto"
+                            'margin-left': 'auto',
+                            'margin-right': 'auto'
                         }
                     },
                     {
-                        name: "md",
+                        name: 'md',
                         properties: {
-                            "max-width": "$screen-md"
+                            'max-width': '$screen-md'
                         }
                     },
                     {
-                        name: "lg",
+                        name: 'lg',
                         properties: {
-                            "max-width": "$screen-lg"
+                            'max-width': '$screen-lg'
                         }
                     }
                 ]

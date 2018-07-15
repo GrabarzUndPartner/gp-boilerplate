@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var path = require('upath');
 module.exports = {
@@ -14,7 +14,7 @@ module.exports = {
         }),
         require('precss'),
         require('postcss-cssnext')({
-            'browsers': ['> 2%', 'last 2 versions', 'IE 11', 'Firefox ESR']
+            browsers: ['> 2%', 'last 2 versions', 'IE 11', 'Firefox ESR']
         }),
         require('postcss-calc'),
         require('postcss-clearfix'),
@@ -30,8 +30,17 @@ module.exports = {
 
 function resolve(id, basedir, importOptions) {
     if (id.match(/gp-boilerplate-|gp-module-/)) {
-        if (id.match(RegExp(process.env.npm_package_name + '\/.*')) || id.match(RegExp('^' + process.env.npm_package_name + '$'))) {
-            id = path.relative(basedir, path.resolve(importOptions.root, id.replace(/gp-boilerplate-[^/]*|gp-module-[^/]*/, 'src')));
+        if (
+            id.match(RegExp(process.env.npm_package_name + '/.*')) ||
+            id.match(RegExp('^' + process.env.npm_package_name + '$'))
+        ) {
+            id = path.relative(
+                basedir,
+                path.resolve(
+                    importOptions.root,
+                    id.replace(/gp-boilerplate-[^/]*|gp-module-[^/]*/, 'src')
+                )
+            );
         } else {
             id = path.relative(basedir, path.resolve(importOptions.root, 'node_modules', id));
         }

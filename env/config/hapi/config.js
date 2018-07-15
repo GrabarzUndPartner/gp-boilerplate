@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
 module.exports = {
-    dev: (process.env.NODE_ENV === 'development'),
-    dest: (process.env.NODE_ENV === 'development') ? 'dev' : process.env.NODE_ENV,
-    root: './' + ((process.env.NODE_ENV === 'development') ? '' : process.env.NODE_ENV),
+    dev: process.env.NODE_ENV === 'development',
+    dest: process.env.NODE_ENV === 'development' ? 'dev' : process.env.NODE_ENV,
+    root: './' + (process.env.NODE_ENV === 'development' ? '' : process.env.NODE_ENV),
 
     hapi: {
         host: 'localhost',

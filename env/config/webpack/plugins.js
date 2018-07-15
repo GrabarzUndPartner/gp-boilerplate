@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var webpack = require('webpack');
 var OptimizeJsPlugin = require('optimize-js-plugin');
@@ -11,7 +11,8 @@ module.exports = function(name) {
             production: true,
             build: true,
             config: new webpack.BannerPlugin('Agency Boilerplate')
-        }, {
+        },
+        {
             development: true,
             production: true,
             build: true,
@@ -20,25 +21,28 @@ module.exports = function(name) {
                 //     'NODE_ENV': JSON.stringify('production')
                 // }
             })
-        }, {
+        },
+        {
             development: true,
             production: true,
             build: true,
             config: new webpack.ProvidePlugin({
-                '$': 'jquery',
-                'jQuery': 'jquery',
+                $: 'jquery',
+                jQuery: 'jquery',
                 'window.jQuery': 'jquery',
                 'root.jQuery': 'jquery'
-            }),
-        }, {
+            })
+        },
+        {
             development: true,
             production: true,
             build: true,
             config: new webpack.LoaderOptionsPlugin({
                 minimize: true,
                 debug: false
-            }),
-        }, {
+            })
+        },
+        {
             development: false,
             production: true,
             build: true,
@@ -71,15 +75,17 @@ module.exports = function(name) {
                     drop_console: true,
                     warnings: true
                 }
-            }),
-        }, {
+            })
+        },
+        {
             development: false,
             production: true,
             build: true,
             config: new OptimizeJsPlugin({
                 sourceMap: false
-            }),
-        }, {
+            })
+        },
+        {
             development: false,
             production: true,
             build: true,
@@ -91,12 +97,14 @@ module.exports = function(name) {
                 statsFilename: name + '.stats.json',
                 logLevel: 'info'
             })
-        }, {
+        },
+        {
             development: true,
             production: false,
             build: false,
             config: new webpack.HotModuleReplacementPlugin()
-        }, {
+        },
+        {
             development: true,
             production: false,
             build: false,

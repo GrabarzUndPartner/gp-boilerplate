@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var path = require('upath');
 var prefix = 'svg_symbol_default_';

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 import uniq from 'lodash/uniq';
 import unionBy from 'lodash/unionBy';

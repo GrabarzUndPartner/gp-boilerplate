@@ -10,16 +10,12 @@ article:
   content:
     text: "Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und dazu noch in dieser engen Gasse mitten im übel beleumundeten Hafenviertel?"
 ---
-
 {{#mixin "organisms/section" this partial-name="organisms/section/headline-text" wrapper=true}}
   {{#content "content"}}
-
     <div class="grid-g">
       <div class="grid-col-12-12">
-        {{{mixin "molecules/article" article}}}
-        {{{mixin "atoms/link" deep="modal"}}}
+        {{{mixin "molecules/article" article}}} {{{mixin "atoms/link" deep="modal"}}}
       </div>
     </div>
-
   {{/content}}
 {{/mixin}}

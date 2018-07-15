@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
 export function getContent(node) {
-    if("content" in document.createElement("template")) {
+    if ('content' in document.createElement('template')) {
         return document.importNode(node.content, true);
     } else {
         var fragment = document.createDocumentFragment();

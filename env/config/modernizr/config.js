@@ -1,14 +1,7 @@
-"use strict";
+'use strict';
 
 module.exports = {
-    'minify': true,
-    'options': [
-        'setClasses',
-        'addTest',
-        'prefixedCSS'
-    ],
-    'feature-detects': [
-        'touchevents',
-        'dom/passiveeventlisteners'
-    ]
+    minify: true,
+    options: ['setClasses', 'addTest', 'prefixedCSS'],
+    'feature-detects': ['touchevents', 'dom/passiveeventlisteners']
 };

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // IE 11
 import 'element-closest';

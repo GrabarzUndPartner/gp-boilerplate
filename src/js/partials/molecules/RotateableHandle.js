@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 import 'pepjs';
 import Controller from 'gp-module-base/Controller';
@@ -7,7 +7,6 @@ import Viewport from 'gp-module-viewport/Viewport';
 import Vector from 'gp-module-base/Vector';
 
 export default Controller.extend({
-
     modelConstructor: DomModel.extend({
         session: {
             angle: {
@@ -40,8 +39,8 @@ export default Controller.extend({
         Controller.prototype.initialize.apply(this, arguments);
 
         this.handle = this.el.querySelector('.handle');
-        this.pointStart = new Vector(1,0,0);
-        this.pointMove = new Vector().resetByRad((this.model.angle) * (Math.PI / 180));
+        this.pointStart = new Vector(1, 0, 0);
+        this.pointMove = new Vector().resetByRad(this.model.angle * (Math.PI / 180));
         this.radiant = 0;
         this.onInit = onInit.bind(this);
         this.onResize = onResize.bind(this);
@@ -49,7 +48,7 @@ export default Controller.extend({
         this.rootViewport = new Viewport(this.el, this.el);
         this.handleViewport = new Viewport(this.handle, this.handle);
         this.handleViewport
-            .on(this.handleViewport.EVENT_TYPES.INIT,  this.onInit)
+            .on(this.handleViewport.EVENT_TYPES.INIT, this.onInit)
             .on(this.handleViewport.EVENT_TYPES.RESIZE, this.onResize);
     }
 });
@@ -72,30 +71,43 @@ function onPointerDown(e) {
     e.preventDefault();
 
     this.radiant += this.pointStart.radBetween(this.pointMove);
-    this.pointStart.setX(e.pageX).setY(e.pageY)
+    this.pointStart
+        .setX(e.pageX)
+        .setY(e.pageY)
         .subtractLocal(this.rootViewport.offset)
         .subtractLocal(this.rootViewport.dimension)
         .divideLocal(this.rootViewport.dimension)
         .multiplyValueLocal(-1);
 
-    $(document).on('pointermove.' + this.cid, global.animationFrame.throttle(onMeasure.bind(this), onPointerMove.bind(this)));
+    $(document).on(
+        'pointermove.' + this.cid,
+        global.animationFrame.throttle(onMeasure.bind(this), onPointerMove.bind(this))
+    );
     $(document).on('pointerup.' + this.cid, onPointerUp.bind(this));
 }
 
 function onPointerMove() {
-    this.handle.style.cssText = 'transform: rotateZ(' + (this.radiant + this.pointStart.radBetween(this.pointMove)) + 'rad) translate(-' + this.rootViewport.dimension.x + 'px, 0px);';
+    this.handle.style.cssText =
+        'transform: rotateZ(' +
+        (this.radiant + this.pointStart.radBetween(this.pointMove)) +
+        'rad) translate(-' +
+        this.rootViewport.dimension.x +
+        'px, 0px);';
 }
 
 function onPointerUp(e) {
     e.preventDefault();
 
     $(document).off('pointermove.' + this.cid + ' pointerup.' + this.cid);
-    this.model.radiant = (this.radiant + this.pointStart.radBetween(this.pointMove) + Math.PI * 2) % ( Math.PI * 2);
+    this.model.radiant =
+        (this.radiant + this.pointStart.radBetween(this.pointMove) + Math.PI * 2) % (Math.PI * 2);
 }
 
 function onMeasure(e) {
     e.preventDefault();
-    this.pointMove.setX(e.pageX).setY(e.pageY)
+    this.pointMove
+        .setX(e.pageX)
+        .setY(e.pageY)
         .subtractLocal(this.rootViewport.offset)
         .subtractLocal(this.rootViewport.dimension)
         .divideLocal(this.rootViewport.dimension)

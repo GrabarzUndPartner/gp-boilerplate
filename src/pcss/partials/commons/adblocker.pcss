@@ -1,14 +1,13 @@
 .partial[data-partial="commons/adblocker"] {
   position: fixed;
   bottom: 0;
+  display: none;
   width: 100%;
   padding: 0.5em;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   border-top: 1px solid red;
 
-  display: none;
-
-  &.js-active {
+  &.js--active {
     display: block;
   }
 }

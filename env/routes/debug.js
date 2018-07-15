@@ -1,21 +1,30 @@
-"use strict";
+'use strict';
 
-exports.register = function (server, options, next) {
-
+exports.register = function(server, options, next) {
     server.route({
         method: ['GET'],
-        path: "/debug",
+        path: '/debug',
         config: {
             auth: false
         },
         handler: function(request, reply) {
-            reply(generateResponseData(request, server).then(function(info) {
-                return info;
-            }).then(function(data) {
-                return request.generateResponse({code: '200', data: data}).code(200);
-            }).catch(function(message) {
-                return request.generateResponse({code: '403', error: {message: message.toString()}}).code(403);
-            }));
+            reply(
+                generateResponseData(request, server)
+                    .then(function(info) {
+                        return info;
+                    })
+                    .then(function(data) {
+                        return request.generateResponse({ code: '200', data: data }).code(200);
+                    })
+                    .catch(function(message) {
+                        return request
+                            .generateResponse({
+                                code: '403',
+                                error: { message: message.toString() }
+                            })
+                            .code(403);
+                    })
+            );
         }
     });
 
@@ -39,7 +48,6 @@ function generateResponseData(request, server) {
             })
         });
     });
-
 }
 
 exports.register.attributes = {

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 import StateObserver from 'gp-module-scroll/StateObserver';
 import anime from 'animejs';
@@ -34,17 +34,21 @@ export default StateObserver.extend({
             direction: 'reverse'
         });
 
-        this.model.on('change:triggered', function() {
-            this.tween.play();
-        }.bind(this));
+        this.model.on(
+            'change:triggered',
+            function() {
+                this.tween.play();
+            }.bind(this)
+        );
 
         this.pictureStyle = picture.style;
     },
 
     onActive: function(info) {
         StateObserver.prototype.onActive.apply(this, arguments);
-        if(this.pictureStyle) {
-            this.pictureStyle.cssText = global.prefix.css + 'transform' + ': translateY(' + info.y * -10 + '%);';
+        if (this.pictureStyle) {
+            this.pictureStyle.cssText =
+                global.prefix.css + 'transform' + ': translateY(' + info.y * -10 + '%);';
         }
     },
 

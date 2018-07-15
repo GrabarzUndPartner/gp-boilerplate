@@ -1,6 +1,5 @@
 'use strict';
 
-
 export function updateBounds(node, bounds, viewport) {
     var box = node.getBoundingClientRect();
     bounds.min

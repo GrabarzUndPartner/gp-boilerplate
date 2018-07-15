@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var path = require('upath');
 var devtool = {
@@ -14,20 +14,17 @@ module.exports = function(dest) {
             rules: require('./loaders').reduce(reduceList, [])
         },
         resolve: {
-            modules: [
-                path.resolve(process.cwd(), '/src/js'),
-                'node_modules'
-            ],
+            modules: [path.resolve(process.cwd(), '/src/js'), 'node_modules'],
             alias: {
-                'jquery': 'jquery/src/core.js',
-                'modernizr$': process.cwd() + '/env/config/modernizr/config.js'
+                jquery: 'jquery/src/core.js',
+                modernizr$: process.cwd() + '/env/config/modernizr/config.js'
             }
         }
     };
 };
 
 function reduceList(result, item) {
-    if(item[process.env.NODE_ENV]) {
+    if (item[process.env.NODE_ENV]) {
         result.push(item.config);
     }
     return result;

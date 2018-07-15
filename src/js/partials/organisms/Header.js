@@ -1,50 +1,50 @@
-"use strict";
+'use strict';
 
 import ScrollDirectionObserver from 'gp-module-scroll/DirectionObserver';
-import anime from 'animejs';
 
 export default ScrollDirectionObserver.extend({
     outOfViewport: false,
     handler: null,
     tween: null,
 
-    initialize: function() {
+    modelConstructor: ScrollDirectionObserver.prototype.modelConstructor.extend({
+        session: {
+            isHide: {
+                type: 'boolean',
+                required: true,
+                default: false
+            }
+        }
+    }),
+
+    bindings: {
+        'model.isHide': {
+            type: 'booleanClass',
+            name: 'js--is-hide'
+        }
+    },
+
+    initialize() {
         ScrollDirectionObserver.prototype.initialize.apply(this, arguments);
-        this.tween = anime({
-            targets: this.el,
-            translateY: {
-                value: '-100%',
-                duration: 350
-            },
-            autoplay: false,
-            direction: 'reverse',
-            easing: 'easeInOutQuad'
-        });
     },
 
-    onInit: function() {
-        this.classList = this.el.classList;
-        updateClass(this, true);
-        this.tween.pause();
+    updateClass(flag) {
+        this.model.isHide = !flag;
     },
 
-    onUp: function() {
-
-        updateClass(this, true);
+    isOutOfViewport(viewportBounds) {
+        return viewportBounds.min.y < this.bounds.max.y - this.bounds.min.y;
     },
 
-    onDown: function(viewportBounds) {
-        updateClass(this, isOutOfViewport(this.bounds, viewportBounds));
+    onInit(info) {
+        this.updateClass(info.min.y === 0);
+    },
+
+    onUp() {
+        this.updateClass(true);
+    },
+
+    onDown(viewportBounds) {
+        this.updateClass(this.isOutOfViewport(viewportBounds));
     }
 });
-
-function updateClass(scope, flag) {
-    if(scope.outOfViewport !== flag) {
-        scope.tween.play();
-    }
-    scope.outOfViewport = flag;
-}
-
-function isOutOfViewport(bounds, viewportBounds) {
-    return (viewportBounds.min.y < bounds.max.y - bounds.min.y);
-}

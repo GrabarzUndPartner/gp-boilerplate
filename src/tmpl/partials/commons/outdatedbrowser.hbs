@@ -13,5 +13,9 @@ close:
 <section id="outdated" class="partial controller js-hidden" data-partial="commons/outdatedbrowser" data-controller="./partials/commons/OutdatedBrowser">
     <h6>{{headline}}</h6>
     <p>{{{message}}} {{{mixin "atoms/link" link}}}</p>
-    <p class="last">{{#mixin "atoms/link" close}}{{#content "title"}}&times;{{/content}}{{/mixin}}</p>
+    <p class="last">
+        {{#mixin "atoms/link" close}}
+            {{#content "title"}}&times;{{/content}}
+        {{/mixin}}
+    </p>
 </section>

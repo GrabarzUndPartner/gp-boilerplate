@@ -8,6 +8,9 @@
 out
 gen
 
+# VisualCode project files
+.vscode
+
 ### Node template
 # Logs
 logs
