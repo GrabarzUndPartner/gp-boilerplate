@@ -1,4 +1,5 @@
 # Boilerplate
+
 [![NPM version](https://badge.fury.io/gh/GrabarzUndPartner%2gp-boilerplate.svg)](https://badge.fury.io/gh/GrabarzUndPartner%2gp-boilerplate)
 [![Build Status](https://img.shields.io/travis/GrabarzUndPartner/gp-boilerplate.svg?style=flat&label=Linux%20build)](https://travis-ci.org/GrabarzUndPartner/gp-boilerplate)
 [![Windows Build status](https://img.shields.io/appveyor/ci/GrabarzUndPartner/gp-boilerplate.svg?style=flat&label=Windows%20build)](https://ci.appveyor.com/project/GrabarzUndPartner/gp-boilerplate)
@@ -8,6 +9,7 @@
 This boilerplate structure including tasks and servers should help you to develop modular websites + documentation per partial.
 
 ## Recommended IDE
+
 Please use [Atom.io](https://atom.io/) to develop your project.
 I tested some other IDEs (IntelliJ, Netbeans, Eclipse, Sublime, ...) but no one offers working support for handlebars and postcss.
 
@@ -68,9 +70,11 @@ When nodejs is installed you can run
 ```
 npm install
 ```
+
 The installation process should run without some errors.
 
 ### Test the environment
+
 To verify a working environment just run the following command in the root folder of your project.
 
 ```
@@ -85,11 +89,15 @@ It should build all sources into the 'build'-directory of your project root fold
 npm run dev
 ```
 
+Url: http://127.0.0.1:8050/dev/
+
 ## Run production-environment
 
 ```
 npm run prod
 ```
+
+Url: http://127.0.0.1:8050/
 
 ## Build production-environment
 
@@ -97,19 +105,27 @@ npm run prod
 npm run build
 ```
 
-## Deployment to heroku
+## Documentation
+
+The documentation can be found in the subdirectory "docs".
+
+| Enviroment | Url                            |
+| ---------- | ------------------------------ |
+| dev        | http://127.0.0.1:8050/dev/docs |
+| production | http://127.0.0.1:8050/docs     |
 
 
 ## Configuration
 
 ### Modernizr
+
 modernizr-build can be customized by `.modernizrrc` inside the root directory of your project. [Here](https://github.com/Modernizr/Modernizr/blob/master/lib/config-all.json) you will find all available configuration options.
 
 ### jshint
 
-
 ToDo:
-- [x] Check CSSNano - doesn't remove comments  
+
+- [x] Check CSSNano - doesn't remove comments
 - [x] Doc Helper
 - [x] Related Links to included partials
 - [x] Sample Controller/Model/Target, Handlebars, CSS
@@ -124,6 +140,8 @@ short version (cmd): npm config set registry http://registry.npmjs.org/
 long version: https://github.com/npm/npm/issues/7945
 
 ## heroku
----------
+
+---
+
 to install dev dependencies
 heroku config:set NPM_CONFIG_PRODUCTION=false
