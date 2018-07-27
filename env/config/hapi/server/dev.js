@@ -16,8 +16,8 @@ module.exports = {
     // use the same as in webpack
 
     watchOptions: {
-        ignored: /node_modules/,
-        aggregateTimeout: 300,
+        ignored: /node_modules|dev|build|production|env|generated/,
+        aggregateTimeout: 1000,
         poll: true
     },
     // watch options (only lazy: false)
@@ -25,10 +25,14 @@ module.exports = {
     index: 'dev/index.html',
     // the index path for web server
 
-    headers: { 'X-Custom-Header': 'yes' },
+    headers: {
+        'X-Custom-Header': 'yes'
+    },
     // custom headers
 
     stats: {
+        clearInvalid: true,
+        strictHeader: false,
         colors: true
     },
     // options for formating the statistics
