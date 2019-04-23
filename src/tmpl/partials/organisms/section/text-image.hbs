@@ -1,0 +1,15 @@
+---
+imageRight: true
+article:
+  headline: 'Image-Text'
+  text: '<p>Laboriosam ratione nostra nascetur dignissim hymenaeos sodales odio. Sit, venenatis fames vestibulum hac temporibus deleniti sapiente duis at corporis praesent velit, delectus, sapiente ratione! Laboriosam justo aliquid autem mollis bibendum proin voluptatem repellendus. Potenti augue aptent? Ac orci sit porta.</p>'
+---
+{{#mixin "organisms/section" this partial-name="organisms/section/text-image" class=(class-mapping class text-image--right=imageRight)}}
+  {{#content "content"}}
+    <div class="row">
+      <div class="col-12 col-md-6 text-image__image">{{{mixin "atoms/picture"}}}</div>
+      <div class="col-12 col-md-6 text-image__text">{{{mixin "molecules/article" article }}}</div>
+    </div>
+  {{/content}}
+{{/mixin}}
+

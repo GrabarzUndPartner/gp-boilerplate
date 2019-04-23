@@ -1,6 +1,6 @@
 {
   "processors": [
-    "stylelint-processor-html"
+    "@mapbox/stylelint-processor-arbitrary-tags"
   ],
   "extends": [
     "stylelint-config-standard",

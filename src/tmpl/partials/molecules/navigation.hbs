@@ -1,0 +1,7 @@
+<nav class="partial" data-partial="molecules/navigation">
+  <ul>
+    {{#each links}}
+      <li>{{{mixin "atoms/link" this}}}</li>
+    {{/each}}
+  </ul>
+</nav>

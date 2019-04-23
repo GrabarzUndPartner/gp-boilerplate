@@ -1,6 +1,6 @@
 {
   "name": "webpack",
-  "task": "gp-boilerplate-environment/lib/tasks/webpack",
+  "task": "./lib/tasks/webpack",
   "config": {
     "subtasks": [
       {
@@ -25,7 +25,7 @@
         },
         "config": "<%= root %>/env/config/webpack/config",
         "files": {
-          "src": ["./src/js/embed"],
+          "src": ["./src/js/embed.js"],
           "dest": "<%= destination %>/js/[name].js",
           "library": ["[name]"]
         }

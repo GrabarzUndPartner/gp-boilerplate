@@ -1,6 +1,6 @@
 {
   "name": "postcss",
-  "task": "gp-boilerplate-environment/lib/tasks/postcss",
+  "task": "./lib/tasks/postcss",
   "config": {
     "subtasks": [
       {
@@ -16,25 +16,11 @@
             "src": ["**/style.css"]
           }
         }
-      },
-      {
-        "name": "docs",
-        "sourcemap": true,
-        "config": "<%= root %>/env/config/postcss/config",
-        "files": {
-          "src": ["./src/pcss/doc.style.pcss", "./src/pcss/doc.critical.pcss"],
-          "dest": "<%= destination %>/css"
-        },
-        "development": {
-          "watch": {
-            "src": ["**/doc.style.css"]
-          }
-        }
       }
     ],
     "watch": [
       {
-        "src": ["src/pcss/**/*.pcss", "node_modules/gp-boilerplate-documentation/**/*.pcss"]
+        "src": ["src/pcss/**/*.pcss"]
       }
     ]
   }

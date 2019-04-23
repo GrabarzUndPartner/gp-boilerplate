@@ -1,0 +1,39 @@
+.partial[data-partial="common/breakpoint"] {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 99999;
+  padding: 10px 20px 7px;
+  font-family: Helvetica Neue, Helvetica, Arial;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+
+  &::before {
+    --retina: "2x";
+    --content: "MOBILE PORTRAIT (default)";
+
+    content: var(--content);
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      content: var(--content) " " var(--retina);
+    }
+
+    @media (--sm) {
+      --content: "TABLET PORTRAIT (sm)";
+    }
+
+    @media (--md) {
+      --content: "TABLET PORTRAIT (md)";
+    }
+
+    @media (--lg) {
+      --content: "TABLET PORTRAIT (lg)";
+    }
+
+    @media (--xl) {
+      --content: "TABLET PORTRAIT (xl)";
+    }
+  }
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "http-equiv": "Content-Type",
+    "content": "text/html; charset=utf-8"
+  },
+  { "http-equiv": "X-UA-Compatible", "content": "IE=Edge" },
+
+  {
+    "name": "viewport",
+    "content": "initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"
+  },
+  {
+    "name": "apple-mobile-web-app-capable",
+    "content": "yes"
+  },
+  {
+    "name": "apple-mobile-web-app-status-bar-style",
+    "content": "black"
+  },
+  {
+    "name": "theme-color",
+    "content": "black"
+  },
+  {
+    "name": "format-detection",
+    "content": "telephone=no"
+  },
+  {
+    "name": "author",
+    "content": "AUTHOR"
+  },
+  {
+    "name": "description",
+    "content": "DESCRIPTION"
+  },
+  {
+    "name": "keywords",
+    "content": "KEYWORDS"
+  }
+]

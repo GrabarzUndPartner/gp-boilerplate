@@ -1,0 +1,23 @@
+.partial[data-partial="organisms/section/text-image"] {
+  @media (--md) {
+    &.text-image--right {
+      .text-image__image {
+        order: 1;
+      }
+
+      .text-image__text {
+        order: 0;
+      }
+    }
+  }
+
+  @media (--sm-max) {
+    .text-image__image {
+      order: 0;
+    }
+
+    .text-image__text {
+      order: 1;
+    }
+  }
+}

@@ -8,7 +8,7 @@
 out
 gen
 
-# VisualCode project files
+# VSCode
 .vscode
 
 ### Node template
@@ -40,10 +40,9 @@ build/Release
 # https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
 .DS_Store
 /package-lock.json
-node_modules
-node_modules*
+node_modules/*
 /dev
 /build
 /generated
 /production
-/src/js/packages*
+/src/js/packages.js

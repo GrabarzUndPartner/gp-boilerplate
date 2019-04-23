@@ -17,7 +17,9 @@
     },
     "prettier.eslintIntegration": false,
     "prettier.stylelintIntegration": true,
-    "prettier.disableLanguages": ["vue"],
+    "prettier.disableLanguages": [
+      "vue"
+    ],
     "prettier.printWidth": 0,
 
     "html.format.enable": true,
@@ -25,10 +27,10 @@
     "html.format.maxPreserveNewLines": 0,
 
     "files.exclude": {
-      "build/": true,
-      "production/": true,
-      "dev/": true,
-      "node_modules/": true,
+      "build/": false,
+      "production/": false,
+      "dev/": false,
+      "node_modules/": false,
       "**/.idea": true,
       "**/*.iml": true,
       "**/out": true,

@@ -1,25 +1,17 @@
----
-overline:
-  text: "Overline"
-headline:
-  text: "Headline"
-subline:
-  text: "Subline"
-picture: {}
----
-{{#mixin "organisms/section" this partial-name="organisms/section/stage" wrapper=true wrapper-fluid=true}}
+{{#mixin "organisms/section" partial-name="organisms/section/stage" fluid=true}}
+
   {{#content "content"}}
-    <div class="grid-g">
-      <div class="grid-col-12-12 grid-no-gutter">
-        {{{mixin "atoms/picture" picture}}}
-      </div>
-    </div>
-    <div class="stage__headline grid-wrapper">
-      <div class="grid-g">
-        <div class="grid-col-12-12">
-          {{{mixin "atoms/headline/h3" overline}}} {{{mixin "atoms/headline/h1" headline}}} {{{mixin "atoms/headline/h2" subline}}}
-        </div>
-      </div>
-    </div>
+
+    {{{mixin "atoms/picture" class="stage__image"}}}
+
+    {{#if headline}}
+
+      <h1>{{{headline}}}</h1>
+
+    {{/if}}
+
   {{/content}}
+
 {{/mixin}}
+
+

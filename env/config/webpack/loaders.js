@@ -9,7 +9,7 @@ module.exports = [
             test: /\.js$/,
             enforce: 'pre',
             exclude: /node_modules/,
-            loader: 'jshint-loader'
+            loader: 'eslint-loader'
         }
     },
     {
@@ -39,10 +39,9 @@ module.exports = [
                 {
                     loader: 'handlebars-loader',
                     options: {
-                        helperDirs: [],
-                        runtime: 'handlebars/runtime',
+                        runtime: 'handlebars.runtime',
                         partialDirs: [process.cwd() + '/src/tmpl/partials'],
-                        debug: false
+                        debug: true
                     }
                 }
             ]
@@ -62,8 +61,7 @@ module.exports = [
                     loader: 'css-loader'
                 },
                 {
-                    loader: 'postcss-loader',
-                    options: require('../postcss/config.js')
+                    loader: 'postcss-loader'
                 }
             ]
         }
@@ -83,24 +81,24 @@ module.exports = [
                 }
             ]
         }
-    },
-    {
-        development: true,
-        production: true,
-        build: true,
-        config: {
-            test: /\.modernizr.js$/,
-            use: [
-                {
-                    loader: 'imports-loader',
-                    options: {
-                        window: 'global'
-                    }
-                },
-                {
-                    loader: 'modernizr-loader'
-                }
-            ]
-        }
     }
+    // {
+    //     development: true,
+    //     production: true,
+    //     build: true,
+    //     config: {
+    //         test: /\.modernizr.js$/,
+    //         use: [
+    //             {
+    //                 loader: 'imports-loader',
+    //                 options: {
+    //                     window: 'global'
+    //                 }
+    //             },
+    //             {
+    //                 loader: 'modernizr-loader'
+    //             }
+    //         ]
+    //     }
+    // }
 ];

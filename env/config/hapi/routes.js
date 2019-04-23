@@ -1,18 +1,13 @@
-'use strict';
-
 module.exports = [
     {
         development: true,
         production: false,
         config: {
-            module: require('@danielbayerlein/hapi-webpack-middleware'),
+            module: require('../../server/lib/hapi/route/hapi-webpack-middleware'),
             options: {
                 webpack: Object.assign(require('../webpack/config')('app'), {
                     entry: {
-                        app: [
-                            './src/js/main',
-                            'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true'
-                        ]
+                        app: ['./src/js/main', 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true']
                     },
                     output: {
                         path: '/dev/js',
@@ -22,35 +17,24 @@ module.exports = [
                         chunkFilename: 'app.[chunkhash].js'
                     }
                 }),
-                webpackDev: require('./server/dev'),
-                webpackHot: require('./server/hot')
+                webpackDev: require('../../config/hapi/server/dev'),
+                webpackHot: require('../../config/hapi/server/hot')
             }
         }
     },
-    {
-        development: true,
-        production: false,
-        config: {
-            module: require('../../routes/debug'),
-            options: {}
-        }
-    },
-    {
-        development: true,
-        production: false,
-        config: {
-            module: require('gp-boilerplate-webserver/lib/hapi/route/auth/session'),
-            options: {
-                appId: '1649448378651481',
-                appSecret: 'f6ef2995e1483b161d013c49e86c0273'
-            }
-        }
-    },
+    // {
+    //     development: true,
+    //     production: false,
+    //     config: {
+    //         module: require('./routes/debug'),
+    //         options: {}
+    //     }
+    // },
     {
         development: true,
         production: true,
         config: {
-            module: require('gp-boilerplate-webserver/lib/hapi/route/static'),
+            module: require('../../server/lib/hapi/route/static'),
             options: {
                 config: {
                     state: {
@@ -60,13 +44,13 @@ module.exports = [
                 }
             }
         }
-    },
-    {
-        development: true,
-        production: false,
-        config: {
-            module: require('gp-boilerplate-webserver/lib/hapi/route/proxy'),
-            options: {}
-        }
     }
+    // {
+    //     development: true,
+    //     production: false,
+    //     config: {
+    //         module: require('../../server/lib/hapi/route/proxy'),
+    //         options: {}
+    //     }
+    // }
 ];

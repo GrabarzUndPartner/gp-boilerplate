@@ -1,20 +1,14 @@
-'use strict';
-
 var gulp = require('gulp');
-var runSequence = require('run-sequence').use(gulp);
-require('gp-boilerplate-environment');
-require('gp-boilerplate-webserver');
+// Environments
+require('./env/core');
+require('./env/server');
 
-gulp.task('default', ['watch', 'server']);
+gulp.task('default', gulp.series('server'));
 
-gulp.task('run', function(callback) {
+gulp.task('run', function(cb) {
     if (process.env.NODE_ENV === 'development') {
-        runSequence('prebuild', 'default', callback);
+        gulp.series('prebuild', 'watch', 'default')(cb);
     } else if (process.env.NODE_ENV === 'production') {
-        runSequence('build', 'server', callback);
+        gulp.series('build', 'server')(cb);
     }
-});
-
-process.once('SIGINT', function() {
-    process.exit(0);
 });

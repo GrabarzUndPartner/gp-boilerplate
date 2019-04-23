@@ -1,21 +1,3 @@
----
-id: #string
-class: #string
-url: "#image-link"
-title: "Image Link"
-target: "_self"
-rel: "next"
-picture: {}
-headline: {}
----
-{{#mixin "atoms/link" this}}
-  {{#content "attributes"}}
-    data-partial="atoms/link/image"
-  {{/content}}
-  {{#content "title"}}
-    {{{mixin "atoms/picture" picture}}}
-    {{#block "placeholder"}}
-      {{{mixin "atoms/headline/h4" headline}}}
-    {{/block}}
-  {{/content}}
-{{/mixin}}
+{{#extend "atoms/link" this}}
+  {{#content "title"}}Das Bild{{/content}}
+{{/extend}}

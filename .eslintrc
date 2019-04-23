@@ -1,0 +1,46 @@
+{
+  "root": true,
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "plugins": [
+    "chai-friendly",
+    "mocha",
+    "json"
+  ],
+  "extends": [
+    "eslint:recommended"
+  ],
+  "rules": {
+    "no-debugger": "off",
+    "no-console": "off",
+    "semi": [
+      "error",
+      "always"
+    ],
+    "complexity": [
+      "error",
+      {
+        "max": 7
+      }
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "mocha/no-exclusive-tests": "error",
+    "no-unused-expressions": 0,
+    "chai-friendly/no-unused-expressions": 2
+  },
+  "globals": {
+    "$": "readonly"
+  }
+}

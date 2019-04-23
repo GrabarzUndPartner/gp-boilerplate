@@ -1,15 +1,12 @@
 {
   "name": "copy",
-  "task": "gp-boilerplate-environment/lib/tasks/copy",
+  "task": "./lib/tasks/copy",
   "config": {
     "subtasks": [
       {
         "name": "default",
         "files": {
-          "src": [
-            "src/assets/**/*.{ttf,woff,eot,svg,ico,png,jpg,gif}",
-            "!src/assets/svg-symbols/**/*.svg"
-          ],
+          "src": ["src/assets/**/*.{ttf,woff,eot,svg,ico,png,jpg,gif}", "!src/assets/svg-symbols/**/*.svg"],
           "dest": "<%= destination %>/assets"
         }
       },
@@ -30,11 +27,7 @@
     ],
     "watch": [
       {
-        "src": [
-          "src/assets/**/*.{ttf,woff,eot,svg,ico,png,jpg,gif}",
-          "src/assets/svg/**/*.svg",
-          "!src/assets/svg-symbols/**/*.svg"
-        ],
+        "src": ["src/assets/**/*.{ttf,woff,eot,svg,ico,png,jpg,gif}", "src/assets/svg/**/*.svg", "!src/assets/svg-symbols/**/*.svg"],
         "tasks": ["default"]
       },
       {
