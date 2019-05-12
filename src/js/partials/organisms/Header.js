@@ -1,5 +1,3 @@
-'use strict';
-
 import Controller from '../../base/Controller';
 import DomModel from '../../base/DomModel';
 
@@ -10,7 +8,7 @@ export default Controller.extend({
 
     bindings: {},
 
-    initialize() {
+    initialize () {
         Controller.prototype.initialize.apply(this, arguments);
         console.log('Header INIT');
     }

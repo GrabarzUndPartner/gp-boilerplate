@@ -4,22 +4,22 @@ const notify = require('gulp-notify');
 const colors = require('ansi-colors');
 
 module.exports = {
-    handlebars: function(error) {
+    handlebars: function (error) {
         if (error.view) {
             notifyOS('handlebars', error.view.relative, error);
-            report(error.view.relative, error.reason);
+            report(error.view.relative, error.message, error.stack);
             this.emit('end');
         } else {
             console.log(error);
         }
     },
-    postcss: function(error) {
+    postcss: function (error) {
         const fail = error.message.split(': ');
         notifyOS(error.plugin, fail[0], error);
         report(fail[0], fail[1]);
         this.emit('end');
     },
-    validate: function(error) {
+    validate: function (error) {
         const fail = error.message.split(': ');
         notifyOS(error.plugin, fail[0], error);
         report(fail[0], fail[1]);
@@ -35,10 +35,13 @@ function notifyOS(plugin, file, error) {
     }).write(error);
 }
 
-function report(file, reason) {
+function report(file, reason, stack) {
     var log = '';
     var chalk = colors.white.bgRed;
     log += chalk('FILE:') + ' ' + file + '\n';
     log += chalk('PROB:') + ' ' + reason + '\n';
+    if (stack) {
+        log += chalk('STACK:') + ' ' + stack + '\n';
+    }
     console.error(log);
 }

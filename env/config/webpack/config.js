@@ -8,7 +8,7 @@ const mode = {
     production: 'production'
 };
 
-module.exports = function(dest) {
+module.exports = function (dest) {
     const config = {
         mode: mode[process.env.NODE_ENV],
         devtool: devtool[process.env.NODE_ENV],
@@ -18,7 +18,9 @@ module.exports = function(dest) {
             rules: require('./loaders').reduce(reduceList, [])
         },
         resolve: {
-            modules: [path.resolve(process.cwd(), '/src/js'), 'node_modules'],
+            modules: [
+                path.resolve(process.cwd(), '/src/js'), 'node_modules'
+            ],
             alias: {
                 jquery: 'jquery/src/core.js'
             }
@@ -27,15 +29,15 @@ module.exports = function(dest) {
     return config;
 };
 
-function getOptimization() {
+function getOptimization () {
     return require('./optimization')
         .reduce(reduceList, [])
-        .reduce(function(result, value) {
+        .reduce(function (result, value) {
             return Object.assign(result, value);
         }, {});
 }
 
-function reduceList(result, item) {
+function reduceList (result, item) {
     if (item[process.env.NODE_ENV]) {
         result.push(item.config);
     }

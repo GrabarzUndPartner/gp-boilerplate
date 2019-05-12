@@ -1,17 +1,22 @@
+---
+docs:
+  extend: 'organisms/section'
+  refs:
+    picture: 'ref:atoms/picture'
+    headline:
+      type: 'string'
+      required: false
+data:
+  picture: 'ref:atoms/picture'
+  headline: 'Stage Headline'
+---
 {{#mixin "organisms/section" partial-name="organisms/section/stage" fluid=true}}
-
   {{#content "content"}}
-
-    {{{mixin "atoms/picture" class="stage__image"}}}
-
-    {{#if headline}}
-
+  {{{mixin "atoms/picture" picture class="stage__image"}}}
+  {{#if headline}}
+    <div class="stage__headline">
       <h1>{{{headline}}}</h1>
-
-    {{/if}}
-
+    </div>
+  {{/if}}
   {{/content}}
-
 {{/mixin}}
-
-

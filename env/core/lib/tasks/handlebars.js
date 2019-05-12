@@ -12,13 +12,13 @@ const WatcherObserver = require('./handlebars/WatcherObserver');
 const registry = require('./handlebars/registry');
 const micromatch = require('micromatch');
 
-module.exports = function(name, config, watch) {
+module.exports = function (name, config, watch) {
     // Registriert Partials und Layouts in Assemble
-    gulp.task('handlebars_update', function(cb) {
+    gulp.task('handlebars_update', function (cb) {
         app.layouts(config.options.layouts.files.src, config.options.layouts.options);
         app.partials(config.options.partials.files.src, config.options.partials.options);
         app.data(config.options.globals.files.src, {
-            namespace: function(filename, data, options) {
+            namespace: function (filename, data, options) {
                 return upath
                     .relative(options.cwd, filename)
                     .replace(upath.extname(filename), '')
@@ -35,13 +35,13 @@ module.exports = function(name, config, watch) {
         name,
         config,
         watch,
-        function(taskName, task, options) {
-            gulp.task(taskName, function() {
+        function (taskName, task, options) {
+            gulp.task(taskName, function () {
                 if (!watcherInitialized) {
                     if (task.partialRendering && options.watchers) {
                         // Register WatcherHelper for partial file rendering
                         var watcherObserver = new WatcherObserver();
-                        options.watchers.forEach(function(watcher) {
+                        options.watchers.forEach(function (watcher) {
                             if (watcher.options.partialRendering) {
                                 watcherObserver.register(watcher);
                             }
@@ -52,7 +52,7 @@ module.exports = function(name, config, watch) {
 
                 if (task.data) {
                     app.data(task.data.src, {
-                        namespace: function(filename, data, options) {
+                        namespace: function (filename, data, options) {
                             return upath.relative(options.cwd, filename).replace(upath.extname(filename), '');
                         },
                         cwd: task.data.cwd,
@@ -60,17 +60,12 @@ module.exports = function(name, config, watch) {
                     });
                 }
 
-                app.create(task.name).use(function() {
-                    return function(view) {
+                app.create(task.name).use(function () {
+                    return function (view) {
                         if (!view.layout) {
                             view.layout = task.layout;
                         }
                     };
-                });
-
-                app[task.name](task.files.src, {
-                    base: task.files.base,
-                    ignore: task.files.ignore
                 });
 
                 /**
@@ -78,13 +73,13 @@ module.exports = function(name, config, watch) {
                  */
 
                 if (task.partialRendering && watcherObserver && watcherObserver.hasChanges()) {
-                    const src = watcherObserver.watchers.reduce(function(result, watcher) {
+                    const src = watcherObserver.watchers.reduce(function (result, watcher) {
                         const src = micromatch(
-                            watcher.changedFiles.map(function(file) {
+                            watcher.changedFiles.map(function (file) {
                                 return './' + upath.relative(process.cwd(), file);
                             }),
                             task.files.src
-                        ).map(function(file) {
+                        ).map(function (file) {
                             return upath.relative(upath.join(task.partialRendering.options.cwd), file);
                         });
                         watcher.resetChangedFiles();
@@ -111,6 +106,10 @@ module.exports = function(name, config, watch) {
                         ignore: task.files.ignore
                     });
                 }
+                // app[task.name](task.files.src, {
+                //     base: task.files.base,
+                //     ignore: task.files.ignore
+                // });
 
                 var stream = app
                     .toStream(task.name)
@@ -119,7 +118,7 @@ module.exports = function(name, config, watch) {
                     .pipe(extname())
                     .on('error', errorHandler);
 
-                require(task.config).forEach(function(item) {
+                require(task.config).forEach(function (item) {
                     if (item[process.env.NODE_ENV]) {
                         stream.pipe(item.module).on('error', errorHandler);
                     }
@@ -128,9 +127,9 @@ module.exports = function(name, config, watch) {
                 return stream.pipe(app.dest(task.files.dest)).on('error', errorHandler);
             });
         },
-        function(config, tasks, cb) {
-            gulp.series(['handlebars_update'].concat(tasks))(function() {
-                registerController(config.options.registerController).then(function() {
+        function (config, tasks, cb) {
+            gulp.series(['handlebars_update'].concat(tasks))(function () {
+                registerController(config.options.registerController).then(function () {
                     livereload.changed('all');
                     cb();
                 });
@@ -141,10 +140,10 @@ module.exports = function(name, config, watch) {
 
 function registerController(options) {
     if (options) {
-        return new Promise(function(resolve) {
+        return new Promise(function (resolve) {
             gulp.src(options.src)
                 .on('data', registry.collectFromFile())
-                .on('end', function() {
+                .on('end', function () {
                     resolve(registry.createRegistry());
                 })
                 .on('error', errorHandler);

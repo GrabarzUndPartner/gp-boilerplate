@@ -15,8 +15,8 @@ function applyStack(context, engine) {
     const stack = getStack(context);
 
     const results = [];
-    while (stack.length) {
-        (engine.asyncHelpers.matches(stack.shift()(context)) || []).forEach(function(id) {
+    while (stack && stack.length) {
+        (engine.asyncHelpers.matches(stack.shift()(context)) || []).forEach(function (id) {
             if (engine.asyncHelpers.hasAsyncId(id)) {
                 // eslint-disable-next-line no-useless-escape
                 results.push(co(engine.asyncHelpers.resolveId(id.match(/({\$[^\{\}]+\$})/, '{$1}')[0])));
@@ -27,7 +27,7 @@ function applyStack(context, engine) {
 }
 
 function getActions(context) {
-    return context.$$layoutActions;
+    return context.$$layoutActions = context.$$layoutActions || [];
 }
 
 function getActionsByName(context, name) {
@@ -106,7 +106,7 @@ function layouts(engine) {
          * @param {Object} options.hash
          * @return {String} Rendered partial.
          */
-        extend: function(name, customContext, options, cb) {
+        extend: function (name, customContext, options, cb) {
             // Make `customContext` optional
             if (arguments.length < 4) {
                 cb = options;
@@ -155,7 +155,7 @@ function layouts(engine) {
          * @param {Object} options.hash
          * @return {String} Rendered partial.
          */
-        embed: function() {
+        embed: function () {
             const context = mixin({}, this || {});
 
             // Reset context
@@ -173,7 +173,7 @@ function layouts(engine) {
          * @param {Function(Object)} options.fn
          * @return {String} Modified block content.
          */
-        block: function(name, options, cb) {
+        block: function (name, options, cb) {
             options = options || {};
 
             let fn = options.fn || noop,
@@ -181,13 +181,13 @@ function layouts(engine) {
                 context = this || {};
 
             return applyStack(context, engine).then(
-                function(stack) {
-                    stack.forEach(function(d) {
+                function (stack) {
+                    stack.forEach(function (d) {
                         context.$$layoutActions = Object.assign(context.$$layoutActions || {}, d.$$layoutActions);
                     });
 
                     const result = getActionsByName(context, name).reduce(
-                        function(result, value) {
+                        function (result, value) {
                             result = applyAction.bind(context._parent)(result, value);
                             return result;
                         },
@@ -211,7 +211,7 @@ function layouts(engine) {
          * @param {String} options.hash.mode
          * @return {String} Always empty.
          */
-        content: function(name, options, cb) {
+        content: function (name, options, cb) {
             options = options || {};
 
             let fn = options.fn,
@@ -221,7 +221,7 @@ function layouts(engine) {
                 context = this || {};
 
             return applyStack(context, engine).then(
-                function() {
+                function () {
                     // Getter
                     if (!fn) {
                         cb(null, name in getActions(context));
@@ -242,7 +242,7 @@ function layouts(engine) {
             );
         },
 
-        mixin: function(name) {
+        mixin: function (name) {
             let context,
                 cb = arguments[3],
                 options = arguments[2];

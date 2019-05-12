@@ -4,17 +4,19 @@ import 'jquery/../event';
 import 'jquery/../event/trigger';
 import 'jquery/../data';
 
+import 'lazysizes';
+
 parser.parse();
 
 // await async test
 
-async function asyncTest() {
+async function asyncTest () {
     return new Promise(resolve => {
         setTimeout(resolve, 2000);
     });
 }
 
-async function startTest() {
+async function startTest () {
     await asyncTest();
     console.log('jaaa?');
 }

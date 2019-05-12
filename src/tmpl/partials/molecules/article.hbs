@@ -1,6 +1,19 @@
 ---
-headline: 'Article'
-text: '<p>Laboriosam ratione nostra nascetur dignissim hymenaeos sodales odio. Sit, venenatis fames vestibulum hac temporibus deleniti sapiente duis at corporis praesent velit, delectus, sapiente ratione! Laboriosam justo aliquid autem mollis bibendum proin voluptatem repellendus. Potenti augue aptent? Ac orci sit porta.</p>'
+docs:
+  refs:
+    class:
+      type: 'string'
+      required: false
+    headline:
+      type: 'string'
+      required: false
+    text:
+      type: 'string'
+      required: true
+data:
+  class: null
+  headline: 'Article Headline'
+  text: '<p>Laboriosam ratione nostra nascetur dignissim hymenaeos sodales odio. Sit, venenatis fames vestibulum hac temporibus deleniti sapiente duis at corporis praesent velit, delectus, sapiente ratione! Laboriosam justo aliquid autem mollis bibendum proin voluptatem repellendus. Potenti augue aptent? Ac orci sit porta.</p>'
 ---
 <article class="partial {{{class}}}" data-partial="molecules/article">
   {{#if headline}}

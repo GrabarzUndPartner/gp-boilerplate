@@ -11,10 +11,33 @@
         },
         "config": "<%= root %>/env/config/webpack/config",
         "files": {
-          "src": ["./src/js/main.js"],
+          "src": [
+            "./src/js/main.js"
+          ],
           "dest": "<%= destination %>/js/[name].js",
           "publicPath": "js/",
-          "library": ["[name]"],
+          "library": [
+            "[name]"
+          ],
+          "chunkFilename": "app.[chunkhash].js"
+        }
+      },
+      {
+        "name": "docs",
+        "hotReplacement": true,
+        "entry": {
+          "docs": "./src/js/docs"
+        },
+        "config": "<%= root %>/env/config/webpack/config",
+        "files": {
+          "src": [
+            "./src/js/docs.js"
+          ],
+          "dest": "<%= destination %>/js/[name].js",
+          "publicPath": "js/",
+          "library": [
+            "[name]"
+          ],
           "chunkFilename": "app.[chunkhash].js"
         }
       },
@@ -25,9 +48,13 @@
         },
         "config": "<%= root %>/env/config/webpack/config",
         "files": {
-          "src": ["./src/js/embed.js"],
+          "src": [
+            "./src/js/embed.js"
+          ],
           "dest": "<%= destination %>/js/[name].js",
-          "library": ["[name]"]
+          "library": [
+            "[name]"
+          ]
         }
       }
     ]

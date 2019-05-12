@@ -1,0 +1,49 @@
+---
+headlines:
+  html: 'HTML'
+  hbs: 'Handlebars/Mustache'
+  json: 'JSON'
+  refs: 'References'
+  related-partials: 'Related Partials'
+---
+
+<div class="partial" data-partial="docs/detail">
+  <section class="preview">
+    <div>{{{preview}}}</div>
+    <style type="text/css">
+    {{{style}}}
+    </style>
+  </section>
+  <section class="code">
+    {{#if code.html}}
+      <h3>{{{headlines.html}}}</h3>
+      <pre role="code-html"><code class="hljs">{{{code.html}}}</code></pre>
+    {{/if}}
+    {{#if code.hbs}}
+      <h3>{{{headlines.hbs}}}</h3>
+      <pre role="code-hbs"><code class="hljs">{{{code.hbs}}}</code></pre>
+    {{/if}}
+    {{#if code.json}}
+      <h3>{{{headlines.json}}}</h3>
+      <pre role="code-json"><code class="hljs">{{{code.json}}}</code></pre>
+    {{/if}}
+    {{#if code.refs}}
+      <h3>{{{headlines.refs}}}</h3>
+      <pre role="code-refs"><code class="hljs">{{{code.refs}}}</code></pre>
+    {{/if}}
+  </section>
+  {{#if relatedPartials.length}}
+  <section class="related-partials">
+    <h3>{{{headlines.related-partials}}}</h3>
+    <nav aria-label="integrated partials">
+      <ul>
+        {{#each relatedPartials}}
+          <li><a href="{{{url}}}">{{{title}}}</a></li>
+        {{/each}}
+      </ul>
+    </nav>
+  </section>
+  {{/if}}
+</div>
+
+

@@ -1,1 +1,19 @@
-<a class="partial" data-partial="atoms/link" href="{{{url}}}" title="{{{title}}}">{{#block "title"}}{{{title}}}{{/block}}</a>
+---
+docs:
+  refs:
+    url:
+      url: 'string'
+      required: true
+    title:
+      type: 'string'
+      required: false
+    target:
+      type: 'string'
+      required: false
+      values: ['_self', '_blank']
+data:
+  url: '#url'
+  title: 'Default Link Title'
+  target: null
+---
+<a class="partial {{{class}}}" data-partial="{{{fallback partial-name "atoms/link"}}}" href="{{{url}}}" title="{{{title}}}" target="{{fallback target "_self"}}">{{#block "title"}}{{{title}}}{{/block}}</a>

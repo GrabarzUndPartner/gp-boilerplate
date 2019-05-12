@@ -1,10 +1,10 @@
 import packages from '../packages';
 
 export class ControllerParser {
-    constructor(packages) {
+    constructor (packages) {
         this.packages = packages;
     }
-    parse(node) {
+    parse (node) {
         var selector = '.controller[data-controller]';
         node = node || document.documentElement;
         var nodes = Array.prototype.slice.call(node.querySelectorAll(selector));
@@ -17,11 +17,11 @@ export class ControllerParser {
 
 export default new ControllerParser(packages);
 
-function render(scope, selector, nodes) {
+function render (scope, selector, nodes) {
     // reverse the initializing order to initialize inner atoms before outer atoms
     Array.prototype.reverse.call(nodes);
-    return new Promise(function(fulfill, reject) {
-        nodes.forEach(function(node) {
+    return new Promise(function (fulfill, reject) {
+        nodes.forEach(function (node) {
             try {
                 initController(scope, selector, node);
             } catch (e) {
@@ -32,7 +32,7 @@ function render(scope, selector, nodes) {
     });
 }
 
-function initController(scope, selector, node) {
+function initController (scope, selector, node) {
     if (!node.init) {
         node.init = true;
         var targetNode = null;
@@ -43,13 +43,13 @@ function initController(scope, selector, node) {
                 initController(scope, selector, targetNode);
             }
         }
-        var controllerClass = scope.packages.find(function(controller) {
+        var controllerClass = scope.packages.find(function (controller) {
             return controller.name === node.getAttribute('data-controller');
         });
 
         if (controllerClass && controllerClass.controller) {
             if (controllerClass.chunk) {
-                controllerClass.controller(function(controller) {
+                controllerClass.controller(function (controller) {
                     new controller({
                         el: node,
                         target: targetNode
@@ -65,6 +65,6 @@ function initController(scope, selector, node) {
     }
 }
 
-function matches(el, selector) {
+function matches (el, selector) {
     return (el.matches || el.matchesSelector || el.msMatchesSelector || el.mozMatchesSelector || el.webkitMatchesSelector || el.oMatchesSelector).call(el, selector);
 }

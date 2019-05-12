@@ -1,11 +1,20 @@
 picture[data-partial="atoms/picture"] {
-  img {
+  & img {
     display: block;
     width: 100%;
+
+    &.lazyload,
+    &.lazyloading {
+      opacity: 0;
+    }
+
+    &.lazyloaded {
+      opacity: 1;
+    }
   }
 
   &.picture--focal-point {
-    img {
+    & img {
       object-fit: cover;
     }
   }

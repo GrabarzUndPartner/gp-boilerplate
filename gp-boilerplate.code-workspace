@@ -18,7 +18,9 @@
     "prettier.eslintIntegration": false,
     "prettier.stylelintIntegration": true,
     "prettier.disableLanguages": [
-      "vue"
+      "vue",
+      "javascript",
+      "json"
     ],
     "prettier.printWidth": 0,
 
@@ -40,6 +42,7 @@
       "**/.DS_Store": true
     },
     "files.associations": {
+      ".eslintrc": "json",
       ".postcssrc": "json",
       ".stylelintrc": "json",
       ".vcmrc": "json",

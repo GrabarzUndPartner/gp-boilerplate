@@ -4,11 +4,16 @@
   "config": {
     "options": {
       "registerController": {
-        "src": ["<%= destination %>/**/*.html"]
+        "src": [
+          "<%= destination %>/**/*.html"
+        ]
       },
       "layouts": {
         "files": {
-          "src": ["./src/tmpl/partials/layouts/**/*.hbs"]
+          "src": [
+            "./src/tmpl/partials/layouts/**/*.hbs",
+            "./src/tmpl/partials/docs/layouts/**/*.hbs"
+          ]
         },
         "options": {
           "base": "./src/tmpl/partials"
@@ -16,7 +21,9 @@
       },
       "partials": {
         "files": {
-          "src": ["./src/tmpl/partials/**/*.hbs"]
+          "src": [
+            "./src/tmpl/partials/**/*.hbs"
+          ]
         },
         "options": {
           "base": "./src/tmpl/partials"
@@ -25,18 +32,23 @@
       "globals": {
         "files": {
           "cwd": "./src/data/",
-          "src": ["./globals/**/*.{json,yaml}"]
+          "src": [
+            "./globals/**/*.{json,yaml}"
+          ]
         }
       }
     },
     "resources": {
       "js": {
         "main": "js/app.js",
+        "docs": "js/docs.js",
         "embed": "<%= destination %>/js/embed.js"
       },
       "css": {
         "main": "css/style.css",
-        "critical": "<%= destination %>/css/critical.css"
+        "critical": "<%= destination %>/css/critical.css",
+        "docs-main": "css/docs.style.css",
+        "docs-critical": "<%= destination %>/css/docs.critical.css"
       }
     },
     "subtasks": [
@@ -45,15 +57,46 @@
         "layout": "layouts/default",
         "config": "<%= root %>/env/config/handlebars/config",
         "files": {
-          "src": ["./src/tmpl/**/*.hbs"],
-          "ignore": ["./src/tmpl/partials/**/*.hbs"],
+          "src": [
+            "./src/tmpl/**/*.hbs"
+          ],
+          "ignore": [
+            "./src/tmpl/partials/**/*.hbs",
+            "./src/tmpl/docs/detail.hbs"
+          ],
           "dest": "<%= destination %>",
           "base": "./src/tmpl/"
         },
         "data": {
           "cwd": "./src/data/",
-          "src": ["./**/*.{json,yaml}"],
-          "ignore": ["./globals/**/*.{json,yaml}"]
+          "src": [
+            "./**/*.{json,yaml}"
+          ],
+          "ignore": [
+            "./globals/**/*.{json,yaml}"
+          ]
+        },
+        "partialRendering": {
+          "options": {
+            "cwd": "<%= root %>/src/tmpl/"
+          }
+        }
+      },
+      {
+        "name": "docs",
+        "layout": "docs/layouts/detail",
+        "config": "<%= root %>/env/config/handlebars/config",
+        "files": {
+          "src": [
+            "./src/tmpl/partials/**/*.hbs"
+          ],
+          "ignore": [
+            "./src/tmpl/partials/commons/**/*.hbs",
+            "./src/tmpl/partials/layouts/**/*.hbs",
+            "./src/tmpl/partials/docs/**/*.hbs"
+          ],
+          "dest": "<%= destination %>/docs",
+          "base": "./src/tmpl"
         },
         "partialRendering": {
           "options": {
@@ -64,14 +107,18 @@
     ],
     "watch": [
       {
-        "src": ["src/tmpl/**/*.hbs"],
+        "src": [
+          "src/tmpl/**/*.hbs"
+        ],
         "partialRendering": true,
         "options": {
           "base": "./src/tmpl/"
         }
       },
       {
-        "src": ["src/data/**/*.json"]
+        "src": [
+          "src/data/**/*.json"
+        ]
       }
     ]
   }

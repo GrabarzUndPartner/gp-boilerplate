@@ -1,27 +1,32 @@
 ---
 docs:
   refs:
+    lazy:
+      type: "boolean"
+      required: true
+      values: [true, false]
     title:
       type: "string"
       required: true
     class:
       type: "string"
       required: false
-      values: ["align-left-[default,xs,sm,md,lg]", "align-right-[default,xs,sm,md,lg]"]
+      values: ["align-left-[default,sm,md,lg,xl]", "align-right-[default,sm,md,lg,xl]"]
     sources:
       type: "array"
       required: true
       item:
-        type: {type: "string", required: true, values: ["lg", "md", "sm", "xs", "default"]}
+        type: {type: "string", required: true, values: ["xl", "lg", "md", "sm", "default"]}
         absolute: {type: "boolean", required: false, values: [true, false]}
         srcset: {type: "string", required: true}
     sizes:
       type: "map"
       required: false
-    fallback:
+    placeholder:
       type: "string"
       required: false
 data:
+  lazy: false
   title: "sample image"
   class: #css-class
   sources:
@@ -35,8 +40,7 @@ data:
       lg: '(min-width: 992px)'
       md: '(min-width: 768px)'
       sm: '(min-width: 576px)'
-  fallback:
-      img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
+  placeholder: '//dummyimage.com/479x269/000000/000'
   focal-point:
     x: 0.5
     y: 1
@@ -44,9 +48,11 @@ data:
 <picture class="partial{{#if focal-point}} picture--focal-point{{/if}}{{#if class}} {{class}}{{/if}}" data-partial="atoms/picture">
   <!--[if IE 9]><video><![endif]-->
   {{#each sources}}
-    <source class="{{type}}"{{#if (lookup ../sizes type)}} media="{{lookup ../sizes type}}"{{/if}}{{#if src}} src="{{#unless absolute}}{{{../relativeToRoot}}}{{/unless}}{{src}}"{{/if}}{{#if srcset}} srcset="{{#unless absolute}}{{{../relativeToRoot}}}{{/unless}}{{srcset}}"{{/if}}/>
+    <source class="{{type}}"{{#if (lookup ../sizes type)}} media="{{lookup ../sizes type}}"{{/if}}{{#if src}} {{#if ../lazy}}data-src{{else}}src{{/if}}="{{#unless absolute}}{{{../relativeToRoot}}}{{/unless}}{{src}}"{{/if}}{{#if srcset}} {{#if ../lazy}}data-srcset{{else}}srcset{{/if}}="{{#unless absolute}}{{{../relativeToRoot}}}{{/unless}}{{srcset}}"{{/if}}/>
   {{/each}}
   <!--[if IE 9]></video><![endif]-->
-  <img src="{{#unless sources.0.absolute}}{{{relativeToRoot}}}{{/unless}}{{sources.0.srcset}}" alt="{{title}}" {{#if focal-point}} style="object-position: {{multiply focal-point.x 100}}% {{multiply focal-point.y 100}}%;" {{/if}}
-      loading="{{fallback loading "lazy"}}"/>
+
+  <img {{#if lazy}}class="lazyload" src="{{{placeholder}}}" data-src{{else}}src{{/if}}="{{#unless sources.0.absolute}}{{{relativeToRoot}}}{{/unless}}{{sources.0.srcset}}" alt="{{title}}" {{#if focal-point}} style="object-position: {{multiply focal-point.x 100}}% {{multiply focal-point.y 100}}%;" {{/if}}
+      />
 </picture>
+

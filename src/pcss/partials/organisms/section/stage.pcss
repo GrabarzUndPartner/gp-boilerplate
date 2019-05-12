@@ -1,11 +1,14 @@
 .partial[data-partial="organisms/section/stage"] {
-  padding: 0;
+  & > div {
+    position: relative;
+    padding: 0;
+  }
 
-  .stage__image {
+  & .stage__image {
     position: relative;
     display: block;
 
-    img {
+    & img {
       position: absolute;
       top: 0;
       left: 0;
@@ -17,5 +20,12 @@
       padding-top: calc(9 / 16 * 100%);
       content: "";
     }
+  }
+
+  & .stage__headline {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    font-size: 3vw;
   }
 }

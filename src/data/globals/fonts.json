@@ -1,0 +1,17 @@
+[
+  {
+    "name": "OpenSans",
+    "path": "assets/fonts/open-sans/OpenSans-Regular.woff",
+    "style": "normal",
+    "weight": "400",
+    "testString": "ABCD"
+  },
+  {
+    "name": "OpenSans",
+    "base64": true,
+    "path": "assets/fonts/open-sans/OpenSans-Bold.woff",
+    "style": "normal",
+    "weight": "700",
+    "testString": "ABCD"
+  }
+]

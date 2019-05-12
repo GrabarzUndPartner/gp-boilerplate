@@ -1,13 +1,14 @@
 ---
-text: '<p>Laboriosam ratione nostra nascetur dignissim hymenaeos sodales odio. Sit, venenatis fames vestibulum hac temporibus deleniti sapiente duis at corporis praesent velit, delectus, sapiente ratione! Laboriosam justo aliquid autem mollis bibendum proin voluptatem repellendus. Potenti augue aptent? Ac orci sit porta.</p>'
+docs:
+  extend: 'organisms/section'
+  refs:
+    article: 'ref:molecules/article'
+data:
+  article: 'ref:molecules/article'
 ---
-{{#mixin "organisms/section" this partial-name="organisms/section/text-image"}}
-
+{{#mixin "organisms/section" this partial-name="organisms/section/text"}}
   {{#content "content"}}
-
     {{{mixin "molecules/article" article class="text-image__content"}}}
-
   {{/content}}
-
 {{/mixin}}
 

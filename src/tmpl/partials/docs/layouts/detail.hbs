@@ -1,0 +1,10 @@
+---
+layout: 'docs/layouts/default'
+---
+{{{{doc-detail}}}}
+  {% body %}
+{{{{/doc-detail}}}}
+
+{{#if (is env "development")}}{{{mixin "commons/breakpoint"}}}{{/if}}
+
+<script type="text/javascript" src="{{{relativeToRoot}}}{{options.resources.js.main}}" async defer></script>

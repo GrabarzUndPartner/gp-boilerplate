@@ -1,3 +1,12 @@
+---
+docs:
+  extend: "atoms/link"
+  refs:
+    picture: 'ref:atoms/picture'
+data:
+  picture: 'ref:atoms/picture'
+---
 {{#extend "atoms/link" this}}
-  {{#content "title"}}Das Bild{{/content}}
+  {{#content "title"}}{{{mixin "atoms/picture" picture}}}{{/content}}
 {{/extend}}
+

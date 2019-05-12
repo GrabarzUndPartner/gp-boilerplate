@@ -8,16 +8,34 @@
         "file": "../../../config/generates/subtasks/partial-imports",
         "config": {
           "development": {
-            "watch": { "src": ["src/pcss/partials/**/*.pcss"] }
+            "watch": {
+              "src": [
+                "src/pcss/partials/**/*.pcss"
+              ]
+            }
           },
           "files": [
             {
               "src": "src/pcss/partials/**/!(*.critical).pcss",
+              "ignore": [
+                "src/pcss/partials/docs/**/*.pcss"
+              ],
               "dest": "generated/pcss/partials.pcss"
             },
             {
               "src": "src/pcss/partials/**/*.critical.pcss",
+              "ignore": [
+                "src/pcss/partials/docs/**/*.pcss"
+              ],
               "dest": "generated/pcss/partials.critical.pcss"
+            },
+            {
+              "src": "src/pcss/partials/docs/**/!(*.critical).pcss",
+              "dest": "generated/pcss/docs.partials.pcss"
+            },
+            {
+              "src": "src/pcss/partials/docs/**/*.critical.pcss",
+              "dest": "generated/pcss/docs.partials.critical.pcss"
             }
           ]
         }

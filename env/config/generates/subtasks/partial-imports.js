@@ -9,8 +9,8 @@ const fs = require('fs-extra');
  * \/src\/pcss\/**\/*.critical.pcss -> partials.critical.pcss
  */
 
-module.exports = function generateImports(config) {
-    const render = function() {
+module.exports = function generateImports (config) {
+    const render = function () {
         updateImports(config.files);
     };
     if (process.env.NODE_ENV === 'development' && config.development && config.development.watch && config.development.watch.src) {
@@ -21,11 +21,11 @@ module.exports = function generateImports(config) {
     render();
 };
 
-function updateImports(files) {
-    return files.map(function(data) {
+function updateImports (files) {
+    return files.map(function (data) {
         const css = glob
-            .sync(data.src, {})
-            .map(function(file) {
+            .sync(data.src, { ignore: data.ignore })
+            .map(function (file) {
                 return `@import "${path.resolve(file)}";`;
             })
             .join('\n');

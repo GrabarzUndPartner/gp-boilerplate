@@ -2,7 +2,7 @@ module.exports = {
     plugins: {
         'postcss-import': {},
         'postcss-assets': {},
-        precss: {},
+        // precss: {},
         'postcss-preset-env': {
             browsers: ['> 2%', 'last 2 versions', 'IE 11', 'Firefox ESR'],
             stage: 0,
@@ -20,6 +20,7 @@ module.exports = {
             autoprefixer: false,
             zindex: false
         },
+        'postcss-momentum-scrolling': ['scroll'],
         'postcss-browser-reporter': {},
         'postcss-reporter': {}
     }

@@ -2,7 +2,7 @@ import AmpersandView from 'ampersand-view';
 import dataTypeDefinition from './dataTypeDefinition';
 
 export default AmpersandView.extend(dataTypeDefinition, {
-    initialize: function(options) {
+    initialize: function (options) {
         AmpersandView.prototype.initialize.apply(this, arguments);
 
         $(this.el).data('controller', this);
@@ -24,12 +24,12 @@ export default AmpersandView.extend(dataTypeDefinition, {
         //        }.bind(this));
     },
 
-    destroy: function() {
+    destroy: function () {
         this.model.destroy();
     }
 });
 
-function onDestroy() {
+function onDestroy () {
     this.unset('model');
     this.remove();
 }

@@ -12,9 +12,9 @@ export default {
     }
 };
 
-function getDefinition(type, constructor) {
+function getDefinition (type, constructor) {
     return {
-        set: function(obj) {
+        set: function (obj) {
             if (obj instanceof constructor) {
                 return {
                     val: obj,
@@ -33,11 +33,11 @@ function getDefinition(type, constructor) {
             }
         },
 
-        compare: function(currentObj, obj) {
+        compare: function (currentObj, obj) {
             return currentObj === obj;
         },
 
-        default: function() {
+        default: function () {
             return new constructor();
         }
     };

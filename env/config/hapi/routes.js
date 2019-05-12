@@ -7,7 +7,13 @@ module.exports = [
             options: {
                 webpack: Object.assign(require('../webpack/config')('app'), {
                     entry: {
-                        app: ['./src/js/main', 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true']
+                        app: [
+                            './src/js/main', 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true'
+                        ],
+                        docs: [
+                            './src/js/docs', 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true'
+                        ]
+
                     },
                     output: {
                         path: '/dev/js',

@@ -5,45 +5,12 @@ layout: 'layouts/default'
 {{#mixin "commons/content"}}
   {{#content "main"}}
 
- {{{mixin "organisms/section/stage"}}}
+  {{{mixin "organisms/section/stage"}}}
 
-{{{mixin "organisms/section/text"}}}
+  {{{mixin "organisms/section/text"}}}
 
-{{{mixin "organisms/section/text-image"}}}
-
-{{!--
-
-{{#mixin "organisms/section"}}
-  {{#content "content"}}
-
-
-
-
-{{{mixin "atoms/picture"}}}
-
-<div class="container">
-<div class="row">
-
-<div class="col-12 col-sm-6">1</div>
-<div class="col-12 col-sm-6">2</div>
-
-</div>
-
-</div>
-{{#mixin "atoms/mixin-test"  }}
-  {{#content "block-1"}}1
-    {{#mixin "atoms/mixin-test" testA }}
-      {{#content "block-3"}}2
-        {{{stringify testB}}}
-      {{/content}}
-    {{/mixin}}
-  {{/content}}
-{{/mixin}}
-
-{{#extend "atoms/link" title="2000" url="#BLA"}}{{#content "title"}}BAAAAMMM{{/content}}{{/extend}}
+  {{{mixin "organisms/section/text-image"}}}
 
   {{/content}}
 {{/mixin}}
---}}
-  {{/content}}
-{{/mixin}}
+

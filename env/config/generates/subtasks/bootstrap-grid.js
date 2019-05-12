@@ -2,7 +2,7 @@ const postcss = require('postcss');
 const fs = require('fs-extra');
 const postcssBootstrap4Grid = require('postcss-bootstrap-4-grid');
 
-module.exports = async function(config) {
+module.exports = async function (config) {
     await postcss([postcssBootstrap4Grid(config.options)])
         .process('@bootstrap-4-grid;', { from: null })
         .then(async result => {
@@ -12,7 +12,7 @@ module.exports = async function(config) {
     await createMediaFile(config);
 };
 
-async function createMediaFile(config) {
+async function createMediaFile (config) {
     const vars = {};
     const DEFEAULT_UNIT = 'px';
 
@@ -20,7 +20,7 @@ async function createMediaFile(config) {
     const breakpointValues = config.options.gridBreakpoints;
     const breakpoints = ['default'].concat(Object.keys(config.options.gridBreakpoints));
 
-    breakpoints.forEach(function(breakpoint, i) {
+    breakpoints.forEach(function (breakpoint, i) {
         if (breakpointValues[breakpoint]) {
             vars[`--${breakpoint}`] = `(min-width: ${breakpointValues[breakpoint]})`;
         } else {
@@ -38,7 +38,7 @@ async function createMediaFile(config) {
     await fs.writeFile(
         config.dest.mediaVars,
         Object.keys(vars)
-            .map(function(name) {
+            .map(function (name) {
                 return `@custom-media ${name} ${vars[name]};`;
             })
             .join('\n') + '\n'

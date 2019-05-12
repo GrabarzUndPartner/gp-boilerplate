@@ -1,12 +1,10 @@
 ---
-navigation:
-  links:
-    - title: 'Header-Link 1'
-      url: '#'
-    - title: 'Header-Link 2'
-      url: '#'
+docs:
+  refs:
+    navigation: 'ref:molecules/navigation'
+data:
+  navigation: 'ref:molecules/navigation'
 ---
-
 <header class="partial controller" data-partial="organisms/header" data-controller="./partials/organisms/Header">
   {{{mixin "molecules/navigation" navigation}}}
 </header>

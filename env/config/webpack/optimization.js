@@ -1,11 +1,9 @@
-module.exports = [
-    {
+module.exports = [{
         development: false,
         production: true,
         build: true,
         config: {
-            minimizer: [
-                compiler => {
+            minimizer: [compiler => {
                     const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
                     new UglifyJsPlugin({
                         sourceMap: true,
@@ -14,6 +12,7 @@ module.exports = [
                             mangle: true,
                             ie8: false,
                             acorn: true,
+                            warnings: true,
                             compress: {
                                 sequences: true,
                                 properties: true,
@@ -31,13 +30,10 @@ module.exports = [
                                 join_vars: true,
                                 negate_iife: true,
                                 pure_getters: false,
-                                drop_console: true,
-                                warnings: true
+                                drop_console: true
                             }
                         }
                     }).apply(compiler);
-                }
-            ]
+                }]
         }
-    }
-];
+    }];
