@@ -2,18 +2,18 @@
 
 const gulp = require('gulp');
 
-module.exports = function(name, config, watch, taskPattern, mainTask) {
+module.exports = function (name, config, watch, taskPattern, mainTask) {
     let options = {
         watchers: []
     };
 
-    const tasks = (config.subtasks || []).map(function(task) {
+    const tasks = (config.subtasks || []).map(function (task) {
         var taskName = name + ':' + task.name;
         taskPattern(taskName, task, options);
         return taskName;
     });
 
-    gulp.task(name, function(cb) {
+    gulp.task(name, function (cb) {
         if (cb) {
             if (mainTask) {
                 mainTask(config, tasks, cb);
@@ -26,7 +26,7 @@ module.exports = function(name, config, watch, taskPattern, mainTask) {
     });
 
     if (watch[process.env.NODE_ENV]) {
-        options.watchers = (config.watch || []).map(function(watch) {
+        options.watchers = (config.watch || []).map(function (watch) {
             watch.options = Object.assign({ partialRendering: watch.partialRendering }, watch.options);
             if (!watch.tasks) {
                 return gulp.watch(watch.src, watch.options || {}, gulp.series(name));
@@ -35,7 +35,7 @@ module.exports = function(name, config, watch, taskPattern, mainTask) {
                     watch.src,
                     watch.options || {},
                     gulp.series(
-                        watch.tasks.map(function(task) {
+                        watch.tasks.map(function (task) {
                             return name + ':' + task;
                         })
                     )

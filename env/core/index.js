@@ -12,7 +12,7 @@ if (tasksDir) {
      */
     const watch = require(process.cwd() + tasksDir + 'watch/config');
 
-    gulp.task('watch', function(cb) {
+    gulp.task('watch', function (cb) {
         if (watch[process.env.NODE_ENV]) {
             livereload.listen(watch.config);
         }
@@ -31,7 +31,7 @@ if (tasksDir) {
         absolute: false
     });
 
-    files.forEach(function(file) {
+    files.forEach(function (file) {
         createTask(
             getJSON(process.cwd() + tasksDir + file, {
                 destination: upath.join(serverConfig.dest),
@@ -55,14 +55,14 @@ if (tasksDir) {
     }
 }
 
-function createTask(options, watch) {
+function createTask (options, watch) {
     require(options.task)(options.name, options.config, watch);
 }
 
-function getJSON(path, options) {
+function getJSON (path, options) {
     return JSON.parse(template(JSON.stringify(require(path)))(options));
 }
 
-process.once('SIGINT', function() {
+process.once('SIGINT', function () {
     process.exit(0);
 });

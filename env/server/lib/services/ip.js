@@ -1,7 +1,7 @@
 const ifaces = require('os').networkInterfaces();
 let lookupIpAddress = null;
 
-module.exports = function() {
+module.exports = function () {
     for (var dev in ifaces) {
         if (ifaces.hasOwnProperty(dev)) {
             if (dev !== 'en1' && dev !== 'en0') {
@@ -17,7 +17,7 @@ module.exports = function() {
     return lookupIpAddress;
 };
 
-function getIP(details) {
+function getIP (details) {
     if (details.family === 'IPv4') {
         lookupIpAddress = details.address;
         return;

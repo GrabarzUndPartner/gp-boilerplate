@@ -7,7 +7,7 @@ module.exports = function (filepath, options, cb) {
     });
 };
 
-function getBuffer(content, encoding = 'base64') {
+function getBuffer (content, encoding = 'base64') {
     if (Buffer.from && Buffer.from !== Uint8Array.from) {
         return Buffer.from(content, encoding);
     } else {

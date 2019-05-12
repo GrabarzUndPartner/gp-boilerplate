@@ -7,7 +7,7 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 const pkg = require(process.cwd() + '/package.json');
 
-module.exports = function(name) {
+module.exports = function (name) {
     return [
         {
             development: true,

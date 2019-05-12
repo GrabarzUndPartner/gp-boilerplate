@@ -3,7 +3,7 @@
 const co = require('co');
 
 module.exports = engine =>
-    async function(value, context, cb) {
+    async function (value, context, cb) {
         const isAsync = typeof arguments[arguments.length - 1] === 'function';
         const attributes = [];
 
@@ -48,7 +48,7 @@ module.exports = engine =>
         }
     };
 
-function toSnakeCase(text, sep = '_') {
+function toSnakeCase (text, sep = '_') {
     var result = text.replace(/([A-Z])/g, `${sep}$1`);
     return result.toLowerCase();
 }

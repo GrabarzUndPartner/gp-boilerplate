@@ -4,9 +4,9 @@ const webpack = require('webpack');
 const upath = require('upath');
 const taskGenerator = require('../taskGenerator');
 
-module.exports = function(name, config, serverConfig) {
-    return taskGenerator(name, config, serverConfig, function(taskName, task) {
-        gulp.task(taskName, function() {
+module.exports = function (name, config, serverConfig) {
+    return taskGenerator(name, config, serverConfig, function (taskName, task) {
+        gulp.task(taskName, function () {
             return gulp
                 .src(task.files.src)
                 .pipe(

@@ -3,15 +3,15 @@ const hasOwn = Object.prototype.hasOwnProperty;
 const co = require('co');
 const merge = require('extend-shallow');
 
-function noop() {
+function noop () {
     return '';
 }
 
-function getStack(context) {
+function getStack (context) {
     return context.$$layoutStack;
 }
 
-function applyStack(context, engine) {
+function applyStack (context, engine) {
     const stack = getStack(context);
 
     const results = [];
@@ -26,20 +26,20 @@ function applyStack(context, engine) {
     return Promise.all(results);
 }
 
-function getActions(context) {
+function getActions (context) {
     return context.$$layoutActions = context.$$layoutActions || [];
 }
 
-function getActionsByName(context, name) {
+function getActionsByName (context, name) {
     var actions = getActions(context);
 
     return actions[name] || (actions[name] = []);
 }
 
-function applyAction(val, action) {
+function applyAction (val, action) {
     const context = this;
 
-    function fn() {
+    function fn () {
         return action.fn(context, action.options);
     }
 
@@ -62,7 +62,7 @@ function applyAction(val, action) {
     }
 }
 
-function mixin(target) {
+function mixin (target) {
     let arg,
         key,
         len = arguments.length,
@@ -93,7 +93,7 @@ function mixin(target) {
  * @param {Object} handlebars Handlebars instance.
  * @return {Object} Object of helpers.
  */
-function layouts(engine) {
+function layouts (engine) {
     const handlebars = engine.Handlebars;
 
     const helpers = {
@@ -274,7 +274,7 @@ function layouts(engine) {
     return helpers;
 }
 
-function getContextData(context) {
+function getContextData (context) {
     if (context) {
         if (context.data) {
             if (context.data.root) {

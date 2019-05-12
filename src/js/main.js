@@ -8,21 +8,6 @@ import 'lazysizes';
 
 parser.parse();
 
-// await async test
-
-async function asyncTest () {
-    return new Promise(resolve => {
-        setTimeout(resolve, 2000);
-    });
-}
-
-async function startTest () {
-    await asyncTest();
-    console.log('jaaa?');
-}
-
-startTest();
-
 if (process.env.NODE_ENV === 'production') {
     // PWA
     if ('serviceWorker' in navigator) {

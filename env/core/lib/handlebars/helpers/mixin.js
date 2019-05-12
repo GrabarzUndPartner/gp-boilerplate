@@ -1,11 +1,11 @@
 var merge = require('extend-shallow');
 
-module.exports = function(engine, assemble) {
+module.exports = function (engine, assemble) {
     if (require('handlebars-layouts')(engine) !== engine.helpers.extend) {
         engine.registerHelper(require('handlebars-layouts')(engine));
     }
 
-    return function(name) {
+    return function (name) {
         var options = arguments[2] || arguments[1];
         var context = {};
         if (arguments[2]) {
@@ -26,7 +26,7 @@ module.exports = function(engine, assemble) {
     };
 };
 
-function getContextData(context) {
+function getContextData (context) {
     if (context) {
         if (context.data) {
             if (context.data.root) {

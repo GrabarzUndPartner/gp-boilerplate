@@ -1,5 +1,3 @@
-"use strict";
-
 exports.register = function (server, options, next) {
     server.route({
         method: 'GET',
@@ -10,7 +8,7 @@ exports.register = function (server, options, next) {
         handler: {
             proxy: {
                 redirects: 5,
-                mapUri: function(request, callback){
+                mapUri: function (request, callback) {
                     callback(null, request.query.url);
                 }
             }

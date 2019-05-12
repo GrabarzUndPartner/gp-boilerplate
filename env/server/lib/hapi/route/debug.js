@@ -1,5 +1,3 @@
-"use strict";
-
 exports.register = function (server, options, next) {
     server.route({
         method: 'GET',
@@ -7,10 +5,10 @@ exports.register = function (server, options, next) {
         config: {
             auth: {
                 mode: 'optional'
-//                strategy: 'facebook',
-//                mode: 'try'
+                //                strategy: 'facebook',
+                //                mode: 'try'
             },
-            handler: function (request, reply) {                
+            handler: function (request, reply) {
                 reply();
             }
         }

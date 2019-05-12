@@ -1,22 +1,22 @@
 'use strict';
 
-exports.register = function(server, options, next) {
+exports.register = function (server, options, next) {
     server.route({
         method: ['GET'],
         path: '/debug',
         config: {
             auth: false
         },
-        handler: function(request, reply) {
+        handler: function (request, reply) {
             reply(
                 generateResponseData(request, server)
-                    .then(function(info) {
+                    .then(function (info) {
                         return info;
                     })
-                    .then(function(data) {
+                    .then(function (data) {
                         return request.generateResponse({ code: '200', data: data }).code(200);
                     })
-                    .catch(function(message) {
+                    .catch(function (message) {
                         return request
                             .generateResponse({
                                 code: '403',
@@ -31,15 +31,15 @@ exports.register = function(server, options, next) {
     next();
 };
 
-function generateResponseData(request, server) {
-    return new Promise(function(resolve) {
+function generateResponseData (request, server) {
+    return new Promise(function (resolve) {
         resolve({
             node: process.version,
             hapi: server.version,
             host: server.info.host,
             port: server.info.port,
             uri: server.info.uri,
-            routes: server.table()[0].table.map(function(item) {
+            routes: server.table()[0].table.map(function (item) {
                 return {
                     path: item.path,
                     method: item.method,

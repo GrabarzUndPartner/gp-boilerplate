@@ -10,11 +10,11 @@ const regex_isHBS = new RegExp(/\.hbs$/);
 const regex_partial = new RegExp(/\{\{?[#]?(mixin|extend|>) ["']([\-\w\/]+)["']/g);
 
 class WatcherWrapper {
-    constructor(watcher) {
+    constructor (watcher) {
         this.watcher = watcher;
         this.fileParentMap = {};
         this.changedFiles = null;
-        this.ready = new Promise(function(resolve) {
+        this.ready = new Promise(function (resolve) {
             if (watcher.options.ignoreInitial) {
                 resolve();
             } else {
@@ -29,7 +29,7 @@ class WatcherWrapper {
      * Functions
      */
 
-    getRenderFiles(path) {
+    getRenderFiles (path) {
         let files = [path];
         (this.fileParentMap[path] || []).forEach(parent => {
             files = files.concat(this.getRenderFiles(parent));
@@ -37,7 +37,7 @@ class WatcherWrapper {
         return files;
     }
 
-    addedParentsFromFile(path) {
+    addedParentsFromFile (path) {
         var content = fs.readFileSync(path).toString();
         var result,
             childs = [];
@@ -69,7 +69,7 @@ class WatcherWrapper {
      * Events
      */
 
-    onAll(type, path) {
+    onAll (type, path) {
         switch (type) {
             case 'rename':
                 return this.onRename(path);
@@ -84,14 +84,14 @@ class WatcherWrapper {
         }
     }
 
-    cwd() {
+    cwd () {
         return process.cwd();
     }
 
     /**
      * Ruft aus dem Watcher alle Dateien ab und registriert diese.
      */
-    registerFiles() {
+    registerFiles () {
         const files = [];
         const filesMap = this.watcher.getWatched();
         getFilesFromMap(filesMap).map(path => {
@@ -106,7 +106,7 @@ class WatcherWrapper {
         return files;
     }
 
-    onReady() {
+    onReady () {
         const watcher = this.watcher;
 
         watcher.on('all', (type, value) => {
@@ -119,11 +119,11 @@ class WatcherWrapper {
         return this;
     }
 
-    onChange(path) {
+    onChange (path) {
         this.addedParentsFromFile(path);
         var files = this.getRenderFiles(path);
         uniq(files);
-        files = files.map(function(file) {
+        files = files.map(function (file) {
             return file;
         });
         if (DEBUG) {
@@ -133,13 +133,13 @@ class WatcherWrapper {
         debugFileMap(this.fileParentMap);
     }
 
-    onAdded(path) {
+    onAdded (path) {
         debugFileMap(this.fileParentMap, 'From');
         this.addedParentsFromFile(path);
         debugFileMap(this.fileParentMap, 'To');
     }
 
-    onUnlink(path) {
+    onUnlink (path) {
         debugFileMap(this.fileParentMap, 'From');
         for (var key in this.fileParentMap) {
             if (this.fileParentMap[key]) {
@@ -151,7 +151,7 @@ class WatcherWrapper {
         debugFileMap(this.fileParentMap, 'To');
     }
 
-    onRename(path) {
+    onRename (path) {
         debugFileMap(this.fileParentMap, 'From');
         this.addedParentsFromFile(path);
         debugFileMap(this.fileParentMap, 'To');
@@ -159,7 +159,7 @@ class WatcherWrapper {
 }
 
 class WatcherObserver {
-    constructor() {
+    constructor () {
         this.watchers = [];
     }
 
@@ -167,18 +167,18 @@ class WatcherObserver {
      * Functions
      */
 
-    hasChanges() {
-        return !!this.watchers.find(function(watcher) {
+    hasChanges () {
+        return !!this.watchers.find(function (watcher) {
             return watcher.changedFiles && watcher.changedFiles.length > 0;
         });
     }
 
-    register(watcher) {
+    register (watcher) {
         this.watchers.push(new WatcherWrapper(watcher));
     }
 }
 
-function getFilesFromMap(filesMap) {
+function getFilesFromMap (filesMap) {
     return Object.keys(filesMap).reduce((result, path) => {
         filesMap[path].forEach(name => {
             const file = upath.resolve(path, name);
@@ -190,10 +190,10 @@ function getFilesFromMap(filesMap) {
     }, []);
 }
 
-function getFilesFromPath(path, files) {
+function getFilesFromPath (path, files) {
     files = files || [];
     if (fs.lstatSync(path).isDirectory()) {
-        fs.readdirSync(path).forEach(function(file) {
+        fs.readdirSync(path).forEach(function (file) {
             getFilesFromPath(upath.join(path, file), files);
         });
     } else {
@@ -202,7 +202,7 @@ function getFilesFromPath(path, files) {
     return files;
 }
 
-function debugFileMap(fileMap, title) {
+function debugFileMap (fileMap, title) {
     if (DEBUG) {
         if (title) {
             console.log(ansiColors.bold('-----------------------'));
@@ -221,8 +221,8 @@ function debugFileMap(fileMap, title) {
     }
 }
 
-function debugFileMapLogFiles(fileMap) {
-    fileMap.forEach(function(file) {
+function debugFileMapLogFiles (fileMap) {
+    fileMap.forEach(function (file) {
         console.log(ansiColors.bold.gray('File:'), ansiColors.bold.black(file));
     });
 }

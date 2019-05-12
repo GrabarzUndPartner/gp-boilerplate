@@ -138,7 +138,7 @@ module.exports = function (name, config, watch) {
     );
 };
 
-function registerController(options) {
+function registerController (options) {
     if (options) {
         return new Promise(function (resolve) {
             gulp.src(options.src)
@@ -153,7 +153,7 @@ function registerController(options) {
     }
 }
 
-function getData(watch, resources, fonts) {
+function getData (watch, resources, fonts) {
     return {
         options: {
             watch: {

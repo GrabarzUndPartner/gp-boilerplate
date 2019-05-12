@@ -4,7 +4,7 @@ var extend = require('lodash/extend');
 module.exports = {
     name: 'static',
     version: '1.0.0',
-    register: async function(server, options) {
+    register: async function (server, options) {
         try {
             await server.register(Inert);
             await server.route({

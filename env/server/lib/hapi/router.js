@@ -1,15 +1,15 @@
-'use strict';
-
 module.exports = {
-    createDefaultRoutes: async function(server, root, options) {
+    createDefaultRoutes: async function (server, root, options) {
         // optional security gate - auth must be configured inside route plugins
         try {
-            await server.register([require('hapi-auth-jwt2'), require('h2o2')]);
+            await server.register([
+                require('hapi-auth-jwt2'), require('h2o2')
+            ]);
             server.auth.strategy('jwt', 'jwt', {
                 key: options.secret, // Never Share your secret key
                 validate: validate // validate function defined above
             });
-            const routes = options.routes.reduce(function(result, item) {
+            const routes = options.routes.reduce(function (result, item) {
                 if (item[process.env.NODE_ENV]) {
                     result.push({ plugin: item.config.module, options: Object.assign({ root: root }, item.config.options) });
                 }
@@ -22,7 +22,7 @@ module.exports = {
     }
 };
 
-function validate(decoded, request, callback) {
+function validate (decoded, request, callback) {
     if (!decoded.auth_id) {
         return callback(null, false);
     } else {

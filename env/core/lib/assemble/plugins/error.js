@@ -27,7 +27,7 @@ module.exports = {
     }
 };
 
-function notifyOS(plugin, file, error) {
+function notifyOS (plugin, file, error) {
     notify({
         title: 'task failed: ' + plugin,
         message: file + '... - See console.',
@@ -35,7 +35,7 @@ function notifyOS(plugin, file, error) {
     }).write(error);
 }
 
-function report(file, reason, stack) {
+function report (file, reason, stack) {
     var log = '';
     var chalk = colors.white.bgRed;
     log += chalk('FILE:') + ' ' + file + '\n';

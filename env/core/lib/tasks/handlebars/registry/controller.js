@@ -9,22 +9,22 @@ const getDirName = upath.dirname;
 let list = [];
 
 module.exports = {
-    reset: function() {
+    reset: function () {
         list = [];
     },
-    collect: function($) {
+    collect: function ($) {
         addControllersToList($('.controller[data-controller]'));
         return $;
     },
-    createRegistry: function(registry) {
-        return new Promise(function(resolve) {
+    createRegistry: function (registry) {
+        return new Promise(function (resolve) {
             list = uniqBy(list, 'controller');
             writeFile(
                 (registry || {}).file || upath.join('src', 'js', 'packages.js'),
                 template({
                     sources: list
                 }),
-                function() {
+                function () {
                     console.log(ansiColors.bold.green('saved file:'), ansiColors.bold.black('packages.js'));
                     resolve();
                 }
@@ -33,7 +33,7 @@ module.exports = {
     }
 };
 
-function addControllersToList(nodes) {
+function addControllersToList (nodes) {
     for (let i = 0; i < nodes.length; i++) {
         const name = nodes.eq(i).data('controller');
         const controller = name;
@@ -45,8 +45,8 @@ function addControllersToList(nodes) {
     }
 }
 
-function writeFile(path, content, cb) {
-    mkdirp(getDirName(path), function(err) {
+function writeFile (path, content, cb) {
+    mkdirp(getDirName(path), function (err) {
         if (err) {
             return cb(err);
         }
