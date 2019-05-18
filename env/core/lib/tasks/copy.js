@@ -7,7 +7,7 @@ module.exports = function (name, config, serverConfig) {
     return taskGenerator(name, config, serverConfig, function (taskName, task) {
         gulp.task(taskName, function () {
             return gulp
-                .src(task.files.src)
+                .src(task.files.src, { ignore: task.files.ignore })
                 .pipe(changed(task.files.dest, { hasChanged: changed.compareSha1Digest }))
                 .pipe(gulp.dest(task.files.dest))
                 .pipe(livereload());

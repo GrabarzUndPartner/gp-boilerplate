@@ -49,6 +49,9 @@
         "critical": "<%= destination %>/css/critical.css",
         "docs-main": "css/docs.style.css",
         "docs-critical": "<%= destination %>/css/docs.critical.css"
+      },
+      "symbols": {
+        "default": "<%= destination %>/assets/svg-symbols/default.svg"
       }
     },
     "subtasks": [

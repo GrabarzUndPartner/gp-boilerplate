@@ -20,14 +20,33 @@
     border-right: solid #bbb 1px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 
-    & h3 {
-      padding: 10px 20px;
-      margin: 0;
-      font-size: 15px;
-      letter-spacing: 1px;
-      background: rgba(0, 0, 0, 0.05);
-      border-top: solid #ddd 1px;
-      border-bottom: solid #ddd 1px;
+    & > div {
+      & > label {
+        cursor: pointer;
+      }
+
+      & h3 {
+        padding: 10px 20px;
+        margin: 0;
+        font-size: 15px;
+        letter-spacing: 1px;
+        background: rgba(0, 0, 0, 0.05);
+        border-top: solid #ddd 1px;
+        border-bottom: solid #ddd 1px;
+      }
+
+      & > input {
+        display: none;
+      }
+    }
+
+    & > div > label + input + div {
+      overflow: hidden;
+      transition: height 0.2s linear;
+    }
+
+    & > div > label + input:not(:checked) + div {
+      height: 0 !important;
     }
   }
 

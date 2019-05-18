@@ -1,0 +1,27 @@
+{
+  "name": "svg-symbols",
+  "task": "./lib/tasks/svg-symbols",
+  "config": {
+    "dest": "<%= destination_root %>/generated/svg-symbols",
+    "subtasks": [
+      {
+        "name": "default",
+        "files": {
+          "src": [
+            "<%= root %>/src/assets/svg/**/*.svg"
+          ]
+        }
+      }
+    ],
+    "watch": [
+      {
+        "src": [
+          "<%= root %>/src/assets/svg-symbols/*.svg"
+        ],
+        "tasks": [
+          "default"
+        ]
+      }
+    ]
+  }
+}

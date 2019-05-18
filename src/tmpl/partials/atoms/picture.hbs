@@ -11,7 +11,6 @@ docs:
     class:
       type: "string"
       required: false
-      values: ["align-left-[default,sm,md,lg,xl]", "align-right-[default,sm,md,lg,xl]"]
     sources:
       type: "array"
       required: true
@@ -20,11 +19,15 @@ docs:
         absolute: {type: "boolean", required: false, values: [true, false]}
         srcset: {type: "string", required: true}
     sizes:
-      type: "map"
+      type: "object"
       required: false
     placeholder:
       type: "string"
       required: false
+    focal-point:
+      type: "object"
+      required: false
+      values: [{x: 0.5, y: 1}]
 data:
   lazy: false
   title: "sample image"
@@ -52,7 +55,7 @@ data:
   {{/each}}
   <!--[if IE 9]></video><![endif]-->
 
-  <img {{#if lazy}}class="lazyload" src="{{{placeholder}}}" data-src{{else}}src{{/if}}="{{#unless sources.0.absolute}}{{{relativeToRoot}}}{{/unless}}{{sources.0.srcset}}" alt="{{title}}" {{#if focal-point}} style="object-position: {{multiply focal-point.x 100}}% {{multiply focal-point.y 100}}%;" {{/if}}
+  <img {{#if lazy}}class="lazyload" src="{{{placeholder}}}" data-src{{else}}src{{/if}}="{{#unless sources.0.absolute}}{{{relativeToRoot}}}{{/unless}}{{fallback placeholder sources.0.srcset}}" alt="{{title}}" {{#if focal-point}} style="object-position: {{multiply focal-point.x 100}}% {{multiply focal-point.y 100}}%;" {{/if}}
       />
 </picture>
 

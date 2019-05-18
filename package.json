@@ -15,6 +15,8 @@
     "task-handlebars": "cross-env NODE_ENV=build node node_modules/gulp/bin/gulp handlebars --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/",
     "task-generates": "cross-env NODE_ENV=build node node_modules/gulp/bin/gulp generates --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/",
     "task-webpack-app": "cross-env NODE_ENV=production node node_modules/gulp/bin/gulp webpack:app --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/",
+    "task-svgo": "cross-env NODE_ENV=build node node_modules/gulp/bin/gulp svgo --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/",
+    "task-svg-symbols": "cross-env NODE_ENV=build node node_modules/gulp/bin/gulp svg-symbols --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/",
     "deploy-now": "npm run build && now ./build -A ../now.json"
   },
   "dependencies": {
@@ -41,6 +43,9 @@
     "gulp-nodemon": "^2.4.2",
     "gulp-notify": "^3.2.0",
     "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-svg-symbols": "^3.2.3",
+    "gulp-svgo": "^2.1.1",
     "h2o2": "^8.2.0",
     "handlebars-layouts": "^3.1.4",
     "handlebars-utils": "^1.0.6",

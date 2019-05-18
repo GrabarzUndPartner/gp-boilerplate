@@ -19,6 +19,7 @@ const base64Helper = require('../handlebars/helpers/base64');
 const concatHelper = require('../handlebars/helpers/concat');
 const classMappingHelper = require('../handlebars/helpers/classMapping');
 const dataAttributesHelper = require('../handlebars/helpers/dataAttributes');
+const svgSymbolHelpers = require('../handlebars/helpers/svgSymbol');
 
 const globHelper = require('../handlebars/helpers/glob');
 const globTreeHelper = require('../handlebars/helpers/globTree');
@@ -28,6 +29,8 @@ assemble.helpers(templateHelpers);
 assemble.asyncHelpers(layoutsHelpers);
 assemble.asyncHelper('raw', rawHelper);
 assemble.asyncHelper('base64', base64Helper);
+assemble.asyncHelper('svg-symbol', svgSymbolHelpers.svgSymbol);
+assemble.asyncHelper('svg-symbols', svgSymbolHelpers.svgSymbols);
 assemble.helper('concat', concatHelper);
 assemble.helper('class-mapping', classMappingHelper(engine));
 assemble.helper('data-attrs', dataAttributesHelper(engine));

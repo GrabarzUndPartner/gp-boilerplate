@@ -22,18 +22,20 @@ preview-sizes:
 ---
 <div class="partial" data-partial="docs/overview">
   <div class="overview__menu" id="overviewMenu">
-    <div>
-      {{#each lists}}
+    {{#each lists}}
       <div>
-        <h3>{{{headline}}}</h3>
-        {{#globTree glob}}
-          {{#each this}}
-            {{{mixin "docs/accordeon" this}}}
-          {{/each}}
-        {{/globTree}}
+        <label for="{{{camelcase headline }}}"><h3>{{{headline}}}</h3></label><input type="checkbox" id="{{{camelcase headline }}}" checked />
+        <div>
+          <div>
+          {{#globTree glob}}
+            {{#each this}}
+              {{{mixin "docs/accordeon" this}}}
+            {{/each}}
+          {{/globTree}}
+          </div>
+        </div>
       </div>
-      {{/each}}
-    </div>
+    {{/each}}
     <span class="overview__menu__size-helper" id="overviewMenuSizeHelper"></span>
   </div>
   <div class="overview__content" id="overviewContent">

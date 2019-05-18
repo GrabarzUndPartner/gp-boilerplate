@@ -7,8 +7,10 @@
         "name": "default",
         "files": {
           "src": [
-            "src/assets/**/*.{ttf,woff,eot,svg,ico,png,jpg,gif}",
-            "!src/assets/svg-symbols/**/*.svg"
+            "src/assets/**/*.{ttf,woff,eot,svg,ico,png,jpg,gif}"
+          ],
+          "ignore": [
+            "src/assets/svg-symbols/**/*.svg"
           ],
           "dest": "<%= destination %>/assets"
         }
@@ -36,11 +38,21 @@
       {
         "src": [
           "src/assets/**/*.{ttf,woff,eot,svg,ico,png,jpg,gif}",
-          "src/assets/svg/**/*.svg",
-          "!src/assets/svg-symbols/**/*.svg"
+          "src/assets/svg/**/*.svg"
+        ],
+        "ignore": [
+          "src/assets/svg-symbols/**/*.svg"
         ],
         "tasks": [
           "default"
+        ]
+      },
+      {
+        "src": [
+          "generated/svg-symbols/**/*.svg"
+        ],
+        "tasks": [
+          "svg-symbols"
         ]
       },
       {

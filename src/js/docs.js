@@ -9,6 +9,14 @@ function refreshPreviewSize () {
 }
 
 window.onload = function () {
+    const resize = function () {
+        Array.from(document.querySelectorAll('.auto-max-height')).forEach(function (el) {
+            el.style.height = `${el.children[0].offsetHeight}px`;
+        });
+    };
+    document.addEventListener('resize', resize);
+    resize();
+
     previewContainer = document.getElementById('overviewContentPreview');
 
     if (previewContainer) {

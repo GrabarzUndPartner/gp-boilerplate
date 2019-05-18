@@ -7,10 +7,23 @@ layout: 'layouts/default'
 
   {{{mixin "organisms/section/stage"}}}
 
+
+  {{#mixin "organisms/section"}}
+  
+  {{#content "content"}}
+    {{{svg-symbol "default" "logo" }}}
+    {{{svg-symbol "default" "logo" extern=true}}}
+    {{{svg-symbol "default" "logo" embed=true}}}
+  {{/content}}
+  
+  {{/mixin}}
+
   {{{mixin "organisms/section/text"}}}
 
   {{{mixin "organisms/section/text-image"}}}
 
   {{/content}}
 {{/mixin}}
+
+
 

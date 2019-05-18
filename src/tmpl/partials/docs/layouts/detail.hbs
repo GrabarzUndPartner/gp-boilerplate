@@ -6,5 +6,8 @@ layout: 'docs/layouts/default'
 {{{{/doc-detail}}}}
 
 {{#if (is env "development")}}{{{mixin "commons/breakpoint"}}}{{/if}}
+  
+{{!-- rendering used svg symbols if not embed or extern --}}
+{{{svg-symbols force=true}}}
 
 <script type="text/javascript" src="{{{relativeToRoot}}}{{options.resources.js.main}}" async defer></script>

@@ -3,13 +3,14 @@ import DomModel from '../../base/DomModel';
 
 export default Controller.extend({
     modelConstructor: DomModel.extend({
-        session: {}
+        session: {
+        }
     }),
 
-    bindings: {},
+    bindings: {
+    },
 
     initialize () {
         Controller.prototype.initialize.apply(this, arguments);
-        console.log('Header INIT');
     }
 });

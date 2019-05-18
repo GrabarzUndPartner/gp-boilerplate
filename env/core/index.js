@@ -47,7 +47,7 @@ if (tasksDir) {
      */
 
     if (!gulp.task('prebuild')) {
-        gulp.task('prebuild', gulp.series('clean', gulp.parallel('generates', 'copy', 'webpack:embed'), 'postcss', 'handlebars'));
+        gulp.task('prebuild', gulp.series('clean', 'svg-symbols', gulp.parallel('generates', 'copy', 'webpack:embed'), 'postcss', 'svgo', 'handlebars'));
     }
 
     if (!gulp.task('build')) {

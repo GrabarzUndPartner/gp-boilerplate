@@ -15,7 +15,7 @@ data:
 {{#mixin "organisms/section" this partial-name="organisms/section/text-image" class=(class-mapping class text-image--right=imageRight)}}
   {{#content "content"}}
     <div class="row">
-      <div class="col-12 col-md-6 text-image__image">{{{mixin "atoms/picture" picture lazy=true}}}</div>
+      <div class="col-12 col-md-6 text-image__image">{{{mixin "atoms/picture" picture lazy=false}}}</div>
       <div class="col-12 col-md-6 text-image__text">{{{mixin "molecules/article" article }}}</div>
     </div>
   {{/content}}

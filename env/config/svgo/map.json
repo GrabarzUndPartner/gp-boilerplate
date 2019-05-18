@@ -1,0 +1,29 @@
+{
+  "name": "svgo",
+  "task": "./lib/tasks/svgo",
+  "config": {
+    "subtasks": [
+      {
+        "name": "default",
+        "config": "<%= root %>/env/config/svgo/default.json",
+        "files": {
+          "src": [
+            "<%= root %>/src/assets/svg/**/*.svg"
+          ],
+          "ignore": [],
+          "dest": "<%= destination %>/assets/svg"
+        }
+      }
+    ],
+    "watch": [
+      {
+        "src": [
+          "<%= root %>/src/assets/svg/**/*.svg"
+        ],
+        "tasks": [
+          "default"
+        ]
+      }
+    ]
+  }
+}
