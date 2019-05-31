@@ -109,7 +109,9 @@ module.exports = function (name) {
         //         // filepath: '',
         //         minify: true,
         //         // navigateFallback: PUBLIC_PATH + 'index.html',
-        //         staticFileGlobsIgnorePatterns: [/\.map$/, /manifest\.json$/]
+        //         staticFileGlobsIgnorePatterns: [
+        //             /\.map$/, /manifest\.json$/
+        //         ]
         //     })
         // }
     ];

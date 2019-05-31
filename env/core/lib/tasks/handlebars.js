@@ -106,10 +106,6 @@ module.exports = function (name, config, watch) {
                         ignore: task.files.ignore
                     });
                 }
-                // app[task.name](task.files.src, {
-                //     base: task.files.base,
-                //     ignore: task.files.ignore
-                // });
 
                 var stream = app
                     .toStream(task.name)
@@ -118,17 +114,13 @@ module.exports = function (name, config, watch) {
                     .pipe(extname())
                     .on('error', errorHandler);
 
-                require(task.config).forEach(function (item) {
-                    if (item[process.env.NODE_ENV]) {
-                        stream.pipe(item.module).on('error', errorHandler);
-                    }
-                });
-
                 return stream.pipe(app.dest(task.files.dest)).on('error', errorHandler);
             });
         },
         function (config, tasks, cb) {
-            gulp.series(['handlebars_update'].concat(tasks))(function () {
+            gulp.series([
+                'handlebars_update'
+            ].concat(tasks))(function () {
                 registerController(config.options.registerController).then(function () {
                     livereload.changed('all');
                     cb();

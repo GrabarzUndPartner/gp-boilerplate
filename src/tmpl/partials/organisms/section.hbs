@@ -7,10 +7,9 @@ docs:
 data:
   fluid: false
 ---
-<section class="partial {{{class}}}" data-partial="{{{fallback partial-name "organisms/section"}}}" {{{data-attributes}}}>
+<section class="partial{{#if controller-name}} controller{{/if}} {{{class}}}" data-partial="{{{fallback partial-name "organisms/section"}}}"{{#if controller-name}} data-controller="{{{controller-name}}}"{{#if controller-lazy}} data-controller-lazy="true"{{/if}} {{/if}} {{{data-attributes}}}>
   <div class="{{{class-mapping container=(is fluid false) container-fluid=fluid}}}">
     {{#block "content"}}{{/block}}
   </div>
 </section>
-
 

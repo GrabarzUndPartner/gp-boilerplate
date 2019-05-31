@@ -30,7 +30,7 @@ module.exports = [{
                         join_vars: true,
                         negate_iife: true,
                         pure_getters: false,
-                        drop_console: true
+                        drop_console: false
                     }
                 }
             }).apply(compiler);

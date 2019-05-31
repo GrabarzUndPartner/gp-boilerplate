@@ -8,8 +8,10 @@ import 'lazysizes';
 
 parser.parse();
 
-if (process.env.NODE_ENV === 'production') {
-    // PWA
+/**
+ * PWA
+ */
+if ((process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'build') && document.querySelector('link[rel="manifest"]')) {
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
             navigator.serviceWorker

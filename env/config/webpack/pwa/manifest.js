@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+    start_url: './index.html',
     filename: '../manifest.json',
     publicPath: 'js/',
     includeDirectory: true,

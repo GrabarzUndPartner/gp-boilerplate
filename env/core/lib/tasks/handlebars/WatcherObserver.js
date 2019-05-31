@@ -3,7 +3,7 @@ const fs = require('fs');
 const uniq = require('uniq');
 const ansiColors = require('ansi-colors');
 
-const DEBUG = true;
+const DEBUG = false;
 
 const regex_isHBS = new RegExp(/\.hbs$/);
 // eslint-disable-next-line no-useless-escape
@@ -30,7 +30,9 @@ class WatcherWrapper {
      */
 
     getRenderFiles (path) {
-        let files = [path];
+        let files = [
+            path
+        ];
         (this.fileParentMap[path] || []).forEach(parent => {
             files = files.concat(this.getRenderFiles(parent));
         });

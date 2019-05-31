@@ -39,6 +39,9 @@
       }
     },
     "resources": {
+      "json": {
+        "manifest": "manifest.json"
+      },
       "js": {
         "main": "js/app.js",
         "docs": "js/docs.js",
@@ -58,7 +61,6 @@
       {
         "name": "pages",
         "layout": "layouts/default",
-        "config": "<%= root %>/env/config/handlebars/config",
         "files": {
           "src": [
             "./src/tmpl/**/*.hbs"
@@ -88,7 +90,6 @@
       {
         "name": "docs",
         "layout": "docs/layouts/detail",
-        "config": "<%= root %>/env/config/handlebars/config",
         "files": {
           "src": [
             "./src/tmpl/partials/**/*.hbs"

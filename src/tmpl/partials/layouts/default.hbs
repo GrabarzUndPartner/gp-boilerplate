@@ -24,6 +24,12 @@
       {{{mixin "commons/head/fonts" fonts=globals.fonts}}}
     {{/if}}
 
+    {{#if globals.settings.pwa}}
+    {{#if (or (is env "production") (is env "build"))}}
+    <link rel="manifest" href="{{{options.resources.json.manifest}}}">
+    {{/if}}
+    {{/if}}
+    
     <link rel="preload" href="{{relativeToRoot}}{{options.resources.css.main}}" as="style" onload="this.rel='stylesheet';" media="screen">
     <noscript><link rel="stylesheet" href="{{relativeToRoot}}{{options.resources.css.main}}"></noscript>
 
@@ -43,7 +49,7 @@
   <body>
 
     {% body %}
-
+    
     {{!-- rendering used svg symbols if not embed or extern --}}
     {{{svg-symbols}}}
 
