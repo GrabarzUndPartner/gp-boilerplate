@@ -4,7 +4,7 @@
 [![Build Status](https://img.shields.io/travis/GrabarzUndPartner/gp-boilerplate.svg?style=flat&label=Linux%20build)](https://travis-ci.org/GrabarzUndPartner/gp-boilerplate)
 [![Windows Build status](https://img.shields.io/appveyor/ci/GrabarzUndPartner/gp-boilerplate.svg?style=flat&label=Windows%20build)](https://ci.appveyor.com/project/GrabarzUndPartner/gp-boilerplate)
 [![Dependency Status](https://img.shields.io/david/GrabarzUndPartner/gp-boilerplate.svg?style=flat)](https://david-dm.org/GrabarzUndPartner/gp-boilerplate)
-[![devDependency Status](https://img.shields.io/david/dev/GrabarzUndPartner/gp-boilerplate.svg?style=flat)](https://david-dm.org/GrabarzUndPartner/gp-boilerplate#info=devDependencies)
+[![devDependency Status](https://img.shields.io/david/dev/GrabarzUndPartner/gp-boilerplate.svg?style=flat)](https://david-dm.org/GrabarzUndPartner/gp-boilerplate#info=devDependencies) [![Greenkeeper badge](https://badges.greenkeeper.io/GrabarzUndPartner/gp-boilerplate.svg)](https://greenkeeper.io/)
 
 This boilerplate structure including tasks and servers should help you to develop modular websites + documentation per partial.
 
