@@ -1,0 +1,14 @@
+---
+docs:
+  extend: 'organisms/section'
+  refs:
+    article: 'ref:molecules/article'
+data:
+  article: 'ref:molecules/article'
+---
+{{#mixin "organisms/section" this partial-name="organisms/section/text"}}
+  {{#content "content"}}
+    {{{mixin "molecules/article" article class="text-image__content"}}}
+  {{/content}}
+{{/mixin}}
+

@@ -1,0 +1,21 @@
+---
+docs:
+  refs:
+    links:
+      type: 'array'
+      required: false
+      values: ['ref:atoms/link']
+data:
+  links:
+    - 'ref:atoms/link'
+    - 'ref:atoms/link'
+    - 'ref:atoms/link'
+    - 'ref:atoms/link'
+---
+<nav class="partial" data-partial="molecules/navigation">
+  <ul>
+    {{#each links}}
+      <li>{{{mixin "atoms/link" this}}}</li>
+    {{/each}}
+  </ul>
+</nav>

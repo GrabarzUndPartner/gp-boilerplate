@@ -1,9 +1,21 @@
 {
   "presets": [
-    ["es2015", {"modules": false}],
-    "stage-2"
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "modules": false,
+        "targets": [
+          "ie >= 11"
+        ],
+        "corejs": {
+          "version": 3,
+          "proposals": true
+        }
+      }
+    ]
   ],
   "plugins": [
-    "syntax-dynamic-import"
+    "@babel/plugin-syntax-dynamic-import"
   ]
 }

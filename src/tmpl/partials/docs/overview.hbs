@@ -1,0 +1,50 @@
+---
+lists:
+  - headline: 'Organisms'
+    glob: "src/tmpl/partials/organisms/**/*.hbs"
+  - headline: 'Molecules'
+    glob: "src/tmpl/partials/molecules/**/*.hbs"
+  - headline: 'Atoms'
+    glob: "src/tmpl/partials/atoms/**/*.hbs"
+preview-sizes:
+  - value: ''
+    title: 'Full Width'
+  - value: 'custom'
+    title: 'Custom'
+  - value: '576'
+    title: 'Breakpoint SM'
+  - value: '768'
+    title: 'Breakpoint MD'
+  - value: '992'
+    title: 'Breakpoint LG'
+  - value: '1200'
+    title: 'Breakpoint XL'
+---
+<div class="partial" data-partial="docs/overview">
+  <div class="overview__menu" id="overviewMenu">
+    {{#each lists}}
+      <div>
+        <label for="{{{camelcase headline }}}"><h3>{{{headline}}}</h3></label><input type="checkbox" id="{{{camelcase headline }}}" checked />
+        <div>
+          <div>
+          {{#globTree glob}}
+            {{#each this}}
+              {{{mixin "docs/accordeon" this}}}
+            {{/each}}
+          {{/globTree}}
+          </div>
+        </div>
+      </div>
+    {{/each}}
+    <span class="overview__menu__size-helper" id="overviewMenuSizeHelper"></span>
+  </div>
+  <div class="overview__content" id="overviewContent">
+    <div class="overview__content__preview">
+      <iframe id="overviewContentPreview" name="content"></iframe>
+    </div>
+    <div class="overview__content__panel"><label><span>Width:</span> <input type="number" id="overviewContentSizeInput"
+          disabled /><select id="overviewContentSizeSelect">{{#each preview-sizes}}
+            <option value="{{{value}}}">{{{title}}}</option>
+          {{/each}}</select></label></div>
+  </div>
+</div>

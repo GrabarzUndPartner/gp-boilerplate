@@ -1,0 +1,23 @@
+---
+docs:
+  extend: 'organisms/section'
+  refs:
+    imageRight:
+      type: 'boolean'
+      required: false
+    picture: 'ref:atoms/picture'
+    article: 'ref:molecules/article'
+data:
+  imageRight: true
+  picture: 'ref:atoms/picture'
+  article: 'ref:molecules/article'
+---
+{{#mixin "organisms/section" this partial-name="organisms/section/text-image" class=(class-mapping class text-image--right=imageRight)}}
+  {{#content "content"}}
+    <div class="row">
+      <div class="col-12 col-md-6 text-image__image">{{{mixin "atoms/picture" picture lazy=false}}}</div>
+      <div class="col-12 col-md-6 text-image__text">{{{mixin "molecules/article" article }}}</div>
+    </div>
+  {{/content}}
+{{/mixin}}
+

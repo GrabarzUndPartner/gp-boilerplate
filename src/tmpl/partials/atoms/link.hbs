@@ -1,18 +1,19 @@
 ---
-touch-indicator: false # types: pressure-waves
-id: #string
-class: #string
-url: "http://www."
-title: "Link"
-target: "_self"
-rel: "next"
+docs:
+  refs:
+    url:
+      url: 'string'
+      required: true
+    title:
+      type: 'string'
+      required: false
+    target:
+      type: 'string'
+      required: false
+      values: ['_self', '_blank']
+data:
+  url: '#url'
+  title: 'Default Link Title'
+  target: null
 ---
-{{#mixin "gp-module-ui-link" this partial-name="atoms/link" }}
-  {{#content "link-content"}}
-    {{#if touch-indicator}}
-      <span class="touch-indicator touch-indicator--{{{touch-indicator}}}"></span>
-    {{/if}}
-    {{#block "status"}}{{{status}}}{{/block}}
-    {{#block "title"}}{{{title}}}{{/block}}
-  {{/content}}
-{{/mixin}}
+<a class="partial {{{class}}}" data-partial="{{{fallback partial-name "atoms/link"}}}" href="{{{url}}}" title="{{{title}}}" target="{{fallback target "_self"}}">{{#block "title"}}{{{title}}}{{/block}}</a>

@@ -83,7 +83,7 @@ npm test
 
 It should build all sources into the 'build'-directory of your project root folder. No error message should be shown in your console.
 
-## Run development-environment
+### Run development-environment
 
 ```
 npm run dev
@@ -91,7 +91,7 @@ npm run dev
 
 Url: http://127.0.0.1:8050/dev/
 
-## Run production-environment
+### Run production-environment
 
 ```
 npm run prod
@@ -99,7 +99,13 @@ npm run prod
 
 Url: http://127.0.0.1:8050/
 
-## Build production-environment
+### Run production / development with IP
+
+```bash
+npm run dev -- --ip=0.0.0.0
+```
+
+### Build production-environment
 
 ```
 npm run build
@@ -115,33 +121,5 @@ The documentation can be found in the subdirectory "docs".
 | production | http://127.0.0.1:8050/docs     |
 
 
-## Configuration
 
-### Modernizr
 
-modernizr-build can be customized by `.modernizrrc` inside the root directory of your project. [Here](https://github.com/Modernizr/Modernizr/blob/master/lib/config-all.json) you will find all available configuration options.
-
-### jshint
-
-ToDo:
-
-- [x] Check CSSNano - doesn't remove comments
-- [x] Doc Helper
-- [x] Related Links to included partials
-- [x] Sample Controller/Model/Target, Handlebars, CSS
-- [ ] Share atom.io configuration
-- [ ] implement working Weinre
-
-install node and npm on osx by homebrew
-https://gist.github.com/DanHerbert/9520689
-
-fixing network problem
-short version (cmd): npm config set registry http://registry.npmjs.org/
-long version: https://github.com/npm/npm/issues/7945
-
-## heroku
-
----
-
-to install dev dependencies
-heroku config:set NPM_CONFIG_PRODUCTION=false

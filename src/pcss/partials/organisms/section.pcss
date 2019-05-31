@@ -1,13 +1,19 @@
-.partial[data-partial*="organisms/section"] {
-  margin-top: calc(40 / 375 * 100vw);
-  margin-bottom: @margin-top;
+.partial[data-partial="organisms/section"],
+.partial[data-partial^="organisms/section/"] {
+  padding-top: 20px;
+  padding-bottom: 20px;
 
-  @media (--screen-xs) {
-    margin-top: calc(60 / 16em);
-    margin-bottom: @margin-top;
+  & > div {
+    padding: 20px;
+    background: var(--color-2);
+    border: solid var(--color-primary) 1px;
   }
 
   &:first-child {
-    margin-top: 0;
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
   }
 }

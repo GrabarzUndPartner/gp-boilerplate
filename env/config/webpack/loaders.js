@@ -9,7 +9,7 @@ module.exports = [
             test: /\.js$/,
             enforce: 'pre',
             exclude: /node_modules/,
-            loader: 'jshint-loader'
+            loader: 'eslint-loader'
         }
     },
     {
@@ -19,14 +19,12 @@ module.exports = [
         config: {
             test: /\.(js|jsx)$/,
             exclude: /node_modules/,
-            use: [
-                {
-                    loader: 'babel-loader',
-                    options: {
-                        cacheDirectory: true
-                    }
+            use: [{
+                loader: 'babel-loader',
+                options: {
+                    cacheDirectory: true
                 }
-            ]
+            }]
         }
     },
     {
@@ -35,17 +33,14 @@ module.exports = [
         build: true,
         config: {
             test: /\.hbs$/,
-            use: [
-                {
-                    loader: 'handlebars-loader',
-                    options: {
-                        helperDirs: [],
-                        runtime: 'handlebars/runtime',
-                        partialDirs: [process.cwd() + '/src/tmpl/partials'],
-                        debug: false
-                    }
+            use: [{
+                loader: 'handlebars-loader',
+                options: {
+                    runtime: 'handlebars.runtime',
+                    partialDirs: [process.cwd() + '/src/tmpl/partials'],
+                    debug: true
                 }
-            ]
+            }]
         }
     },
     {
@@ -62,8 +57,7 @@ module.exports = [
                     loader: 'css-loader'
                 },
                 {
-                    loader: 'postcss-loader',
-                    options: require('../postcss/config.js')
+                    loader: 'postcss-loader'
                 }
             ]
         }
@@ -74,33 +68,12 @@ module.exports = [
         build: true,
         config: {
             test: /\.(png|jpg|gif|svg|ttf|woff|eot)$/,
-            use: [
-                {
-                    loader: 'url-loader',
-                    options: {
-                        limit: 100000
-                    }
+            use: [{
+                loader: 'url-loader',
+                options: {
+                    limit: 100000
                 }
-            ]
-        }
-    },
-    {
-        development: true,
-        production: true,
-        build: true,
-        config: {
-            test: /\.modernizr.js$/,
-            use: [
-                {
-                    loader: 'imports-loader',
-                    options: {
-                        window: 'global'
-                    }
-                },
-                {
-                    loader: 'modernizr-loader'
-                }
-            ]
+            }]
         }
     }
 ];

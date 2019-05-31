@@ -1,6 +1,10 @@
 ---
-
+docs:
+  refs:
+    navigation: 'ref:molecules/navigation'
+data:
+  navigation: 'ref:molecules/navigation'
 ---
 <footer class="partial" data-partial="organisms/footer">
-    {{{mixin "commons/adblocker"}}} {{{mixin "commons/noscript"}}} {{{mixin "commons/outdatedbrowser"}}}
+  {{{mixin "molecules/navigation" navigation}}}
 </footer>

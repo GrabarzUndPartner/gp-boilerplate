@@ -1,16 +1,19 @@
-'use strict';
+const webpack = require('webpack');
+const OptimizeJsPlugin = require('optimize-js-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const WorkboxPlugin = require('workbox-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
+// const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
-var webpack = require('webpack');
-var OptimizeJsPlugin = require('optimize-js-plugin');
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const pkg = require(process.cwd() + '/package.json');
 
-module.exports = function(name) {
+module.exports = function (name) {
     return [
         {
             development: true,
             production: true,
             build: true,
-            config: new webpack.BannerPlugin('Agency Boilerplate')
+            config: new webpack.BannerPlugin(pkg.name)
         },
         {
             development: true,
@@ -42,41 +45,7 @@ module.exports = function(name) {
                 debug: false
             })
         },
-        {
-            development: false,
-            production: true,
-            build: true,
-            config: new webpack.optimize.UglifyJsPlugin({
-                sourceMap: true,
-                screwIE8: true,
-                mangle: {
-                    except: []
-                },
-                extractComments: true,
-                acorn: true,
-                compress: {
-                    sequences: true,
-                    properties: true,
-                    dead_code: true,
-                    drop_debugger: true,
-                    conditionals: true,
-                    comparisons: true,
-                    evaluate: true,
-                    booleans: true,
-                    loops: true,
-                    unused: true,
-                    hoist_funs: true,
-                    hoist_vars: false,
-                    if_return: true,
-                    join_vars: true,
-                    cascade: true,
-                    negate_iife: true,
-                    pure_getters: false,
-                    drop_console: true,
-                    warnings: true
-                }
-            })
-        },
+
         {
             development: false,
             production: true,
@@ -109,6 +78,41 @@ module.exports = function(name) {
             production: false,
             build: false,
             config: new webpack.NoEmitOnErrorsPlugin()
+        },
+        // PWA
+        {
+            development: false,
+            production: true,
+            build: true,
+            config: new WorkboxPlugin.GenerateSW({
+                swDest: '../service-worker.js',
+                // these options encourage the ServiceWorkers to get in there fast
+                // and not allow any straggling "old" SWs to hang around
+                clientsClaim: true,
+                skipWaiting: true
+            })
+        },
+        {
+            development: false,
+            production: true,
+            build: true,
+            config: new WebpackPwaManifest(require('./pwa/manifest'))
         }
+        // {
+        //     development: false,
+        //     production: true,
+        //     build: true,
+        //     config: new SWPrecacheWebpackPlugin({
+        //         cacheId: 'my-domain-cache-id',
+        //         dontCacheBustUrlsMatching: /\.\w{8}\./,
+        //         filename: '../service-worker.js',
+        //         // filepath: '',
+        //         minify: true,
+        //         // navigateFallback: PUBLIC_PATH + 'index.html',
+        //         staticFileGlobsIgnorePatterns: [
+        //             /\.map$/, /manifest\.json$/
+        //         ]
+        //     })
+        // }
     ];
 };

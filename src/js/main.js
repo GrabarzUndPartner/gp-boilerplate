@@ -1,18 +1,29 @@
-'use strict';
-
-import 'babel-core/register';
-import 'babel-polyfill';
-
-import './webpackPublicPath';
+import parser from './services/parser';
 
 import 'jquery/../event';
 import 'jquery/../event/trigger';
 import 'jquery/../data';
 
-import 'modernizr-loader!modernizr';
+import 'lazysizes';
 
-import js from 'gp-module-parser';
-import './services/touchIndicator';
-import packages from './packages';
+parser.parse();
 
-js.parse(null, packages);
+/**
+ * PWA
+ */
+if ((process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'build') && document.querySelector('link[rel="manifest"]')) {
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker
+                .register('service-worker.js', {
+                    scope: 'js/'
+                })
+                .then(registration => {
+                    console.log('SW registered: ', registration);
+                })
+                .catch(registrationError => {
+                    console.log('SW registration failed: ', registrationError);
+                });
+        });
+    }
+}

@@ -1,12 +1,12 @@
 {
   "name": "clean",
-  "task": "gp-boilerplate-environment/lib/tasks/clean",
+  "task": "./lib/tasks/clean",
   "config": {
     "subtasks": [
       {
         "name": "default",
         "files": {
-          "dest": "<%= destination %>"
+          "dest": "<%= destination %>/**/*"
         }
       },
       {

@@ -1,31 +1,31 @@
 .partial[data-partial="organisms/section/stage"] {
-  position: relative;
-
-  .stage {
-    &__headline {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-
-      @media (--screen-xs) {
-        right: -100%;
-        left: -100%;
-      }
-    }
+  & > div {
+    position: relative;
+    padding: 0;
   }
 
-  [data-partial="atoms/picture"] {
+  & .stage__image {
+    position: relative;
+    display: block;
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
     &::before {
-      position: relative;
       display: block;
       padding-top: calc(9 / 16 * 100%);
       content: "";
     }
+  }
 
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+  & .stage__headline {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    font-size: 3vw;
   }
 }

@@ -1,35 +1,28 @@
 {
   "name": "svgo",
-  "task": "gp-boilerplate-environment/lib/tasks/svgo",
+  "task": "./lib/tasks/svgo",
   "config": {
     "subtasks": [
       {
         "name": "default",
-        "config": "<%= root %>/env/config/svgo/config.default.js",
+        "config": "<%= root %>/env/config/svgo/default.json",
         "files": {
           "src": [
-            "<%= root %>/src/assets/svg/**/*.svg",
-            "!<%= root %>/src/assets/svg/symbols/**/*.svg"
+            "<%= root %>/src/assets/svg/**/*.svg"
           ],
+          "ignore": [],
           "dest": "<%= destination %>/assets/svg"
-        }
-      },
-      {
-        "name": "svg-symbols",
-        "config": "<%= root %>/env/config/svgo/config.svg-symbols.js",
-        "files": {
-          "src": ["<%= root %>/generated/svg-symbols/**/*.svg"],
-          "dest": "<%= destination_root %>/generated/svg-symbols"
         }
       }
     ],
     "watch": [
       {
         "src": [
-          "<%= root %>/src/assets/svg/**/*.svg",
-          "!<%= root %>/src/assets/svg-symbols/**/*.svg"
+          "<%= root %>/src/assets/svg/**/*.svg"
         ],
-        "tasks": ["default"]
+        "tasks": [
+          "default"
+        ]
       }
     ]
   }

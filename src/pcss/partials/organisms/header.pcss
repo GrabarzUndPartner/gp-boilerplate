@@ -1,35 +1,25 @@
 .partial[data-partial="organisms/header"] {
   position: fixed;
   top: 0;
-  z-index: 5;
-  width: 100%;
-  min-width: $screen-default;
-  background-color: #fff;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
-  transition-timing-function: easeInOut;
-  transition-duration: 0.35s;
-  transition-property: transform;
-  transform: translateY(0%);
+  right: 0;
+  left: 0;
+  z-index: 10;
+  overflow: hidden;
 
-  &.js--is-hide {
-    transform: translateY(-100%);
+  & > div {
+    padding: 20px;
   }
 
-  nav {
-    @media (--screen-md) {
-      padding: 0;
-    }
+  & nav {
+    padding: 20px;
+    background: var(--color-header-background);
+    border: solid var(--color-primary) 1px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  }
+}
 
-    ul {
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-
-      li {
-        display: inline-block;
-        margin: calc(15 / 16em) 0;
-        margin-right: calc(15 / 16em);
-      }
-    }
+[data-partial="layouts/docs"] {
+  & .partial[data-partial="organisms/header"] {
+    position: relative;
   }
 }

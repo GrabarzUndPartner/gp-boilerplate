@@ -1,14 +1,16 @@
 {
   "name": "copy",
-  "task": "gp-boilerplate-environment/lib/tasks/copy",
+  "task": "./lib/tasks/copy",
   "config": {
     "subtasks": [
       {
         "name": "default",
         "files": {
           "src": [
-            "src/assets/**/*.{ttf,woff,eot,svg,ico,png,jpg,gif}",
-            "!src/assets/svg-symbols/**/*.svg"
+            "src/assets/**/*.{ttf,woff,eot,svg,ico,png,jpg,gif}"
+          ],
+          "ignore": [
+            "src/assets/svg-symbols/**/*.svg"
           ],
           "dest": "<%= destination %>/assets"
         }
@@ -16,14 +18,18 @@
       {
         "name": "external",
         "files": {
-          "src": ["src/external/**/*"],
+          "src": [
+            "src/external/**/*"
+          ],
           "dest": "<%= destination %>/external"
         }
       },
       {
         "name": "svg-symbols",
         "files": {
-          "src": ["generated/svg-symbols/**/*.svg"],
+          "src": [
+            "generated/svg-symbols/**/*.svg"
+          ],
           "dest": "<%= destination %>/assets/svg-symbols"
         }
       }
@@ -32,14 +38,30 @@
       {
         "src": [
           "src/assets/**/*.{ttf,woff,eot,svg,ico,png,jpg,gif}",
-          "src/assets/svg/**/*.svg",
-          "!src/assets/svg-symbols/**/*.svg"
+          "src/assets/svg/**/*.svg"
         ],
-        "tasks": ["default"]
+        "ignore": [
+          "src/assets/svg-symbols/**/*.svg"
+        ],
+        "tasks": [
+          "default"
+        ]
       },
       {
-        "src": ["src/external/**/*"],
-        "tasks": ["external"]
+        "src": [
+          "generated/svg-symbols/**/*.svg"
+        ],
+        "tasks": [
+          "svg-symbols"
+        ]
+      },
+      {
+        "src": [
+          "src/external/**/*"
+        ],
+        "tasks": [
+          "external"
+        ]
       }
     ]
   }

@@ -1,22 +1,27 @@
 ---
 docs:
-  overline: 'ref:atoms/headline/h4'
-  headline: 'ref:atoms/headline/h2'
-  subline: 'ref:atoms/headline/h3'
-  contnet: 'ref:atoms/text'
+  refs:
+    class:
+      type: 'string'
+      required: false
+    headline:
+      type: 'string'
+      required: false
+    text:
+      type: 'string'
+      required: true
 data:
-  overline:
-    text: "Overline"
-  headline:
-    text: "Headline"
-  subline:
-    text: "Subline"
-  content:
-    text: "Semper. Fringilla donec inventore sollicitudin cras, molestias nemo. Placerat laboriosam cupiditate, morbi urna ipsum, lorem molestie, integer habitasse? Similique quia metus quasi ipsa dolorem? Doloribus voluptatem. Vehicula accumsan, et dictum, iure pellentesque eget! Malesuada officiis, minus! Magni repellat phasellus quisquam."
+  class: null
+  headline: 'Article Headline'
+  text: '<p>Laboriosam ratione nostra nascetur dignissim hymenaeos sodales odio. Sit, venenatis fames vestibulum hac temporibus deleniti sapiente duis at corporis praesent velit, delectus, sapiente ratione! Laboriosam justo aliquid autem mollis bibendum proin voluptatem repellendus. Potenti augue aptent? Ac orci sit porta.</p>'
 ---
-<article class="partial" data-partial="molecules/article">
-  {{{mixin "atoms/headline/h4" overline}}} {{{mixin "atoms/headline/h2" headline}}} {{{mixin "atoms/headline/h3" subline}}}
-  {{#block "placeholder"}}
-    {{{mixin "atoms/text" content}}}
-  {{/block}}
+<article class="partial {{{class}}}" data-partial="molecules/article">
+  {{#if headline}}
+  <header>
+    <h2 class="article__headline">{{{headline}}}</h2>
+  </header>
+  {{/if}}
+  <section class="article__text">
+    {{{text}}}
+  </section>
 </article>

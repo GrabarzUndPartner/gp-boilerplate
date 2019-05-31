@@ -1,0 +1,15 @@
+---
+
+---
+<div class="partial {{{class-mapping accordeon--has-childs=list.length}}}" data-partial="docs/accordeon">
+  <div>
+    <label for="collapse_{{{key}}}"><a href="{{{url}}}" target="content" class="title">{{{name}}}</a><a href="{{{url}}}"
+        target="_blank" class="external">ext.</a></label>
+    {{#if list}}<input id="collapse_{{{key}}}" type="checkbox" /><span class="toggle"></span>
+      <div class="list">
+        {{#each list}}
+          {{{mixin "docs/accordeon" this}}}
+        {{/each}}</div>
+    {{/if}}
+  </div>
+</div>
