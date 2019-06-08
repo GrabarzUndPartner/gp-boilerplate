@@ -10,7 +10,7 @@ This boilerplate structure including tasks and servers should help you to develo
 
 ## Boilerplate specs
 
-The boilerplate based on [gulp](https://github.com/gulpjs/gulp) and [assemble (beta-5)](https://github.com/assemble/assemble).
+The boilerplate based on [gulp](https://github.com/gulpjs/gulp) and [assemble](https://github.com/assemble/assemble).
 
 ### Implemented tasks
 
