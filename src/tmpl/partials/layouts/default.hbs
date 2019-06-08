@@ -29,16 +29,13 @@
     <link rel="manifest" href="{{{options.resources.json.manifest}}}">
     {{/if}}
     {{/if}}
-    
+
     <link rel="preload" href="{{relativeToRoot}}{{options.resources.css.main}}" as="style" onload="this.rel='stylesheet';" media="screen">
     <noscript><link rel="stylesheet" href="{{relativeToRoot}}{{options.resources.css.main}}"></noscript>
 
     <script type="text/javascript">
       {{raw options.resources.js.embed}}
     </script>
-
-    {{!-- polyfills --}}
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=HTMLPictureElement" type="text/javascript" defer></script>
 
     {{!-- @TODO JAVASCRIPT CHUNKS - Sets webpackPublicPath variable for override root javascript path. Example: "/js/app.js" -> "/docroot/js/app.js" --}}
     <script type="text/javascript">
@@ -49,7 +46,7 @@
   <body>
 
     {% body %}
-    
+
     {{!-- rendering used svg symbols if not embed or extern --}}
     {{{svg-symbols}}}
 

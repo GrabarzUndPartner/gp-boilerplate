@@ -10,26 +10,26 @@ const fs = require('fs-extra');
  */
 
 module.exports = function generateImports (config) {
-    const render = function () {
-        updateImports(config.files);
-    };
-    if (process.env.NODE_ENV === 'development' && config.development && config.development.watch && config.development.watch.src) {
-        gulp.watch(config.development.watch.src)
-            .on('add', render)
-            .on('unlink', render);
-    }
-    render();
+  const render = function () {
+    updateImports(config.files);
+  };
+  if (process.env.NODE_ENV === 'development' && config.development && config.development.watch && config.development.watch.src) {
+    gulp.watch(config.development.watch.src)
+      .on('add', render)
+      .on('unlink', render);
+  }
+  render();
 };
 
 function updateImports (files) {
-    return files.map(function (data) {
-        const css = glob
-            .sync(data.src, { ignore: data.ignore })
-            .map(function (file) {
-                return `@import "${path.resolve(file)}";`;
-            })
-            .join('\n');
-        fs.mkdirsSync(path.dirname(data.dest));
-        fs.writeFileSync(data.dest, css);
-    });
+  return files.map(function (data) {
+    const css = glob
+      .sync(data.src, { ignore: data.ignore })
+      .map(function (file) {
+        return `@import "${path.resolve(file)}";`;
+      })
+      .join('\n');
+    fs.mkdirsSync(path.dirname(data.dest));
+    fs.writeFileSync(data.dest, css);
+  });
 }

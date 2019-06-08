@@ -21,6 +21,7 @@
       "yaml",
       "vue",
       "javascript",
+      "js",
       "json"
     ],
     "prettier.printWidth": 0,
