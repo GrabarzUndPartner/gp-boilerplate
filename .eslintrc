@@ -14,46 +14,13 @@
     "json"
   ],
   "extends": [
-    "eslint:recommended"
+    "eslint:recommended",
+    "standard"
   ],
   "rules": {
-    "no-lonely-if": [
-      "error"
-    ],
-    "padded-blocks": [
-      "error",
-      "never",
-      {
-        "allowSingleLineBlocks": false
-      }
-    ],
-    "curly": [
-      "error"
-    ],
-    "newline-per-chained-call": [
-      "error",
-      {
-        "ignoreChainWithDepth": 2
-      }
-    ],
-    "space-before-function-paren": [
-      "error"
-    ],
-    "array-bracket-newline": [
-      "error",
-      {
-        "multiline": true,
-        "minItems": 1
-      }
-    ],
-    "no-multiple-empty-lines": [
-      "error",
-      {
-        "max": 1,
-        "maxEOF": 1
-      }
-    ],
-    "block-spacing": "error",
+    "standard/no-callback-literal": "off",
+    "import/no-webpack-loader-syntax": "off",
+    "no-new": "off",
     "no-debugger": "off",
     "no-console": "off",
     "semi": [
@@ -65,13 +32,10 @@
       {
         "max": 7
       }
-    ],
-    "quotes": [
-      "error",
-      "single"
     ]
   },
   "globals": {
-    "$": "readonly"
+    "$": "readonly",
+    "console": "readonly"
   }
 }

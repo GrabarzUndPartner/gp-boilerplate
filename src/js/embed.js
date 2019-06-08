@@ -1,11 +1,6 @@
-
-document.documentElement.classList.remove('no-js');
-
 import 'script-loader!fg-loadcss';
 import 'script-loader!fg-loadcss/src/cssrelpreload';
 import './embed/fontfaceObserver';
+import './embed/polyfills';
 
-import objectFitImages from 'object-fit-images';
-Array.from(document.querySelectorAll('picture')).forEach(function (el) {
-    objectFitImages(el);
-});
+document.documentElement.classList.remove('no-js');

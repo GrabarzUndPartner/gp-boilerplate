@@ -1,0 +1,19 @@
+---
+docs:
+  extend: 'organisms/section'
+  refs:
+    name:
+      type: 'string'
+      required: false
+data:
+  name: 'Dummy'
+---
+{{#mixin "organisms/section" this partial-name="organisms/section/dummy" controller-name=(fallback controller-name "./partials/organisms/Dummy") fluid=true controller-async=(fallback controller-async "visible")}}
+  {{#content "content"}}
+  {{#if name}}
+    <div class="stage__headline">
+      <h1 data-hook="name">{{{name}}}</h1>
+    </div>
+  {{/if}}
+  {{/content}}
+{{/mixin}}

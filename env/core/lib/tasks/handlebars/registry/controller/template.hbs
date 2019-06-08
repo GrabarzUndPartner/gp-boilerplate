@@ -1,14 +1,25 @@
+{{#each controllers}}
+{{#unless async}}
+import controller{{{@index}}} from '{{{controller}}}';
+{{/unless}}
+{{/each}}
+
 const controllers = [];
-{{#each sources}}
-{{#if chunk}}
-controllers.push({name: '{{{name}}}', chunk: true, controller: function (cb) {
-    require.ensure([], function(require) {
-        cb(require('{{{controller}}}').default);
-    }, '{{{chunk}}}');
-}});
+
+{{#each controllers}}
+{{#if async}}
+controllers.push({
+  async: {{{async}}},
+  name: '{{{name}}}',
+  controller: () => import('{{{controller}}}')
+});
 {{else}}
-import component{{{@index}}} from '{{{controller}}}';
-controllers.push({name: '{{{name}}}', controller: (component{{{@index}}})});
+controllers.push({
+  async: false,
+  name: '{{{name}}}',
+  controller: controller{{{@index}}}
+});
 {{/if}}
 {{/each}}
+
 export default controllers;
