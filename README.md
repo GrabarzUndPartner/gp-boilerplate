@@ -12,41 +12,9 @@ This boilerplate structure including tasks and servers should help you to develo
 
 The boilerplate based on [gulp](https://github.com/gulpjs/gulp) and [assemble](https://github.com/assemble/assemble).
 
-### Implemented tasks
-
-Those tasks are configured by default:
-
-- clean
-- copy
-- handlebars-compiler
-- postcss-compiler
-- purecss-generator
-- sitemap-generator
-- watch-handler
-- webpack-bundler
-
-They could be modified by [env/tasks.json](./env/tasks.json).
-
-### Implemented servers
-
-Those servers are configured by default:
-
-- hapijs
-- hapijs-webpack-dev-server
-- livereload
-- weinre
-
-They could be modified by [env/local.json](./env/local.json).
-
 ## Setup your environment
 
-At first install the latest stable [node.js](https://nodejs.org/en/) version (>=5.1.0) by homebrew.
-
-```
-brew install node
-```
-
-When nodejs is installed you can run
+At first install.
 
 ```
 npm install
@@ -100,7 +68,3 @@ The documentation can be found in the subdirectory "docs".
 | ---------- | ------------------------------ |
 | dev        | http://127.0.0.1:8050/dev/docs |
 | production | http://127.0.0.1:8050/docs     |
-
-
-
-
