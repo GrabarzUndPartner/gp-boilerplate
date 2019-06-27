@@ -16,7 +16,7 @@
     "watch": [
       {
         "src": [
-          "<%= root %>/src/assets/svg-symbols/*.svg"
+          "<%= root %>/src/assets/svg/**/*.svg"
         ],
         "tasks": [
           "default"
