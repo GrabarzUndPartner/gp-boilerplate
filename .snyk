@@ -106,3 +106,21 @@ patch:
         patched: '2019-07-04T00:50:17.362Z'
     - ampersand-view > ampersand-state > ampersand-events > lodash:
         patched: '2019-07-04T00:50:17.362Z'
+    - snyk > lodash:
+        patched: '2019-07-15T12:00:40.632Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2019-07-15T12:00:40.632Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-07-15T12:00:40.632Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2019-07-15T12:00:40.632Z'
+    - snyk > inquirer > lodash:
+        patched: '2019-07-15T12:00:40.632Z'
+    - snyk > snyk-config > lodash:
+        patched: '2019-07-15T12:00:40.632Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-07-15T12:00:40.632Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-07-15T12:00:40.632Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-07-15T12:00:40.632Z'
