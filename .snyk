@@ -1,6 +1,190 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
 version: v1.13.5
-ignore: {}
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-DEFAULTSDEEP-173661:
+    - assemble > base-cli-process > base-pkg > expand-pkg > defaults-deep:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > base-cli-process > base-config-process > base-config-schema > base-pkg > expand-pkg > defaults-deep:
+        reason: assemble…
+        expires: '2019-08-14T14:13:19.680Z'
+  SNYK-JS-SETVALUE-450213:
+    - assemble > base-questions > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > assemble-core > templates > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > base-cli-process > base-cli-schema > map-schema > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > base-cli-process > base-option > option-cache > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > base-cli-process > base-config-process > base-config-schema > map-schema > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > base-questions > question-store > question-cache > option-cache > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > base-cli-process > base-cli-schema > map-schema > union-value > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > base-questions > question-store > data-store > cache-base > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > assemble-core > templates > base-option > option-cache > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > base-cli-process > base-pkg > pkg-store > cache-base > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > assemble-core > templates > group-array > union-value > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > base-cli-process > base-pkg > pkg-store > union-value > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > base-questions > base-store > data-store > union-value > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > base-questions > question-store > data-store > union-value > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > base-cli-process > base-config-process > base-option > option-cache > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > base-questions > base-store > data-store > cache-base > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > assemble-core > templates > vinyl-item > base-option > option-cache > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > base-questions > question-store > common-config > data-store > cache-base > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > base-cli-process > base-config-process > base-config-schema > map-schema > union-value > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > base-questions > question-store > data-store > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > base-questions > question-store > common-config > data-store > union-value > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.680Z'
+    - assemble > base-cli-process > base-pkg > pkg-store > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > base-questions > base-store > data-store > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > base-questions > question-store > common-config > question-cache > option-cache > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > base-cli-process > base-pkg > expand-pkg > normalize-pkg > map-schema > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > base-cli-process > base-config-process > base-config-schema > base-pkg > pkg-store > union-value > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > base-cli-process > base-config-process > base-config-schema > base-pkg > pkg-store > cache-base > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > base-questions > question-store > common-config > data-store > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > base-cli-process > base-pkg > expand-pkg > normalize-pkg > map-schema > union-value > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > assemble-core > templates > vinyl-view > vinyl-item > base-option > option-cache > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > base-cli-process > base-config-process > base-config-schema > base-pkg > expand-pkg > normalize-pkg > map-schema > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > base-cli-process > base-config-process > base-config-schema > base-pkg > pkg-store > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > base-cli-process > base-config-process > base-config-schema > base-pkg > expand-pkg > normalize-pkg > map-schema > union-value > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > base-cli-process > base-option > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > base-argv > expand-args > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > assemble-core > templates > base-option > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > base-cli-process > base-config-process > base-option > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > base-argv > expand-args > expand-object > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > base-questions > question-store > common-config > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > assemble-core > templates > vinyl-item > base-option > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > base-cli-process > base-cli > base-argv > expand-args > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > base-questions > question-store > common-config > question-cache > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > assemble-core > templates > vinyl-view > vinyl-item > base-option > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > base-cli-process > base-cli > base-argv > expand-args > expand-object > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > expand-front-matter > expand > engine > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > assemble-core > templates > template-error > engine > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.681Z'
+    - assemble > assemble-core > templates > engine-base > engine > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.682Z'
+    - assemble > assemble-core > templates > base-routes > template-error > engine > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.682Z'
+    - assemble > assemble-core > templates > vinyl-view > engine-base > engine > set-value:
+        reason: None given
+        expires: '2019-08-14T14:13:19.682Z'
+  'npm:braces:20180219':
+    - assemble > base-runtimes > micromatch > braces:
+        reason: None given
+        expires: '2019-08-14T14:13:19.682Z'
+    - assemble > base-cli-process > base-config-process > micromatch > braces:
+        reason: None given
+        expires: '2019-08-14T14:13:19.682Z'
+    - assemble > assemble-core > assemble-streams > match-file > micromatch > braces:
+        reason: None given
+        expires: '2019-08-14T14:13:19.682Z'
+    - assemble > assemble-core > templates > match-file > micromatch > braces:
+        reason: None given
+        expires: '2019-08-14T14:13:19.682Z'
+    - assemble > assemble-core > base-task > composer > micromatch > braces:
+        reason: None given
+        expires: '2019-08-14T14:13:19.682Z'
+    - assemble > assemble-core > assemble-fs > vinyl-fs > glob-stream > micromatch > braces:
+        reason: None given
+        expires: '2019-08-14T14:13:19.682Z'
+    - assemble > assemble-core > templates > get-view > match-file > micromatch > braces:
+        reason: None given
+        expires: '2019-08-14T14:13:19.682Z'
+    - assemble > base-questions > question-store > common-config > composer > micromatch > braces:
+        reason: None given
+        expires: '2019-08-14T14:13:19.682Z'
+    - assemble > assemble-core > templates > layouts > get-view > match-file > micromatch > braces:
+        reason: None given
+        expires: '2019-08-14T14:13:19.682Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   SNYK-JS-LODASH-450202:
