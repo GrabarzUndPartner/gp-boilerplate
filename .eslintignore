@@ -1,1 +1,8 @@
-node_modules
+
+# Folders
+/node_modules/
+/production/
+/build/
+/dev/
+/generated/
+/env/
