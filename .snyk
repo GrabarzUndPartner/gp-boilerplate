@@ -64,3 +64,45 @@ patch:
         patched: '2019-07-08T00:50:18.047Z'
     - '@babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
         patched: '2019-07-08T00:50:18.047Z'
+    - ampersand-collection > ampersand-events > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - ampersand-model > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - postcss-reporter > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - gulp-svg-symbols > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - cheerio > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - ampersand-view > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - ampersand-collection > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - ampersand-model > ampersand-state > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - ampersand-collection > ampersand-class-extend > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - ampersand-model > ampersand-sync > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - webpack-bundle-analyzer > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - ampersand-view > ampersand-collection-view > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - ampersand-view > ampersand-dom-bindings > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - postcss-assets > assets > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - ampersand-view > ampersand-state > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - gulp-svg-symbols > cheerio > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - ampersand-model > ampersand-state > ampersand-events > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - postcss-assets > assets > async > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - ampersand-view > ampersand-collection-view > ampersand-events > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - ampersand-view > ampersand-collection-view > ampersand-class-extend > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
+    - ampersand-view > ampersand-state > ampersand-events > lodash:
+        patched: '2019-07-04T00:50:17.362Z'
