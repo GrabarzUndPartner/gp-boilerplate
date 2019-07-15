@@ -4,6 +4,66 @@ ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   SNYK-JS-LODASH-450202:
+    - babel-eslint > @babel/traverse > @babel/generator > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - eslint > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - '@babel/core > lodash':
+        patched: '2019-07-08T00:50:18.047Z'
+    - eslint > table > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - eslint > inquirer > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - stylelint > postcss-reporter > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - '@babel/core > @babel/generator > lodash':
+        patched: '2019-07-08T00:50:18.047Z'
+    - stylelint-config-recess-order > stylelint-order > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - standard > eslint-plugin-import > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - standard > eslint > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - stylelint > table > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - babel-eslint > @babel/types > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - stylelint > postcss-jsx > @babel/core > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2019-07-08T00:50:18.047Z'
+    - standard > eslint > table > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - stylelint > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - standard > eslint > inquirer > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - stylelint-config-recess-order > stylelint-order > postcss-sorting > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - '@babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-call-delegate > @babel/types > lodash':
+        patched: '2019-07-08T00:50:18.047Z'
+    - stylelint > postcss-jsx > @babel/core > @babel/types > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - babel-eslint > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - '@babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-call-delegate > @babel/traverse > @babel/types > lodash':
+        patched: '2019-07-08T00:50:18.047Z'
+    - stylelint > postcss-jsx > @babel/core > @babel/template > @babel/types > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - babel-eslint > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - '@babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/traverse > @babel/helper-function-name > @babel/types > lodash':
+        patched: '2019-07-08T00:50:18.047Z'
+    - stylelint > postcss-jsx > @babel/core > @babel/helpers > @babel/template > @babel/types > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - '@babel/preset-env > @babel/plugin-transform-classes > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2019-07-08T00:50:18.047Z'
+    - stylelint > postcss-jsx > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - stylelint > postcss-jsx > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-08T00:50:18.047Z'
+    - '@babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2019-07-08T00:50:18.047Z'
     - ampersand-collection > ampersand-events > lodash:
         patched: '2019-07-04T00:50:17.362Z'
     - ampersand-model > lodash:
