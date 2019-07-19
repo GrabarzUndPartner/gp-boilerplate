@@ -1,6 +1,6 @@
 # Boilerplate - Grabarz & Partner
 
-[![NPM version](https://badge.fury.io/gh/GrabarzUndPartner%2gp-boilerplate.svg)](https://badge.fury.io/gh/GrabarzUndPartner%2gp-boilerplate) [![Build Status](https://travis-ci.org/GrabarzUndPartner/gp-boilerplate.svg?branch=master)](https://travis-ci.org/GrabarzUndPartner/gp-boilerplate) [![Greenkeeper badge](https://badges.greenkeeper.io/GrabarzUndPartner/gp-boilerplate.svg)](https://greenkeeper.io/)
+[![GitHub version](https://badge.fury.io/gh/GrabarzUndPartner%2Fgp-boilerplate.svg)](https://badge.fury.io/gh/GrabarzUndPartner%2Fgp-boilerplate) [![Build Status](https://travis-ci.org/GrabarzUndPartner/gp-boilerplate.svg?branch=master)](https://travis-ci.org/GrabarzUndPartner/gp-boilerplate) [![Greenkeeper badge](https://badges.greenkeeper.io/GrabarzUndPartner/gp-boilerplate.svg)](https://greenkeeper.io/)
 [![Dependency Status](https://img.shields.io/david/GrabarzUndPartner/gp-boilerplate.svg?style=flat)](https://david-dm.org/GrabarzUndPartner/gp-boilerplate)
 [![devDependency Status](https://img.shields.io/david/dev/GrabarzUndPartner/gp-boilerplate.svg?style=flat)](https://david-dm.org/GrabarzUndPartner/gp-boilerplate#info=devDependencies) 
 
