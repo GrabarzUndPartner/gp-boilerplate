@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
-    "acorn": "^6.1.1",
+    "acorn": "^7.0.0",
     "ampersand-collection": "^2.0.2",
     "ampersand-model": "^8.0.1",
     "ampersand-view": "^10.0.3",
