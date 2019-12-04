@@ -73,7 +73,7 @@
     "gulp-nodemon": "^2.4.2",
     "gulp-notify": "^3.2.0",
     "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^1.4.0",
+    "gulp-rename": "^2.0.0",
     "gulp-svg-symbols": "^3.2.3",
     "gulp-svgo": "^2.1.1",
     "h2o2": "^8.2.0",
