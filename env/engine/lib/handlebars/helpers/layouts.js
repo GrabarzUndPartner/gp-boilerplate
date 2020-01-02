@@ -67,7 +67,7 @@ function applyAction (val, action) {
 function mixin (target) {
   let arg;
   let key;
-  let len = arguments.length;
+  const len = arguments.length;
   let i = 1;
 
   for (; i < len; i++) {
@@ -118,12 +118,12 @@ function layouts (engine) {
 
       options = options || {};
 
-      let fn = options.fn || noop;
-      let context = mixin({}, customContext, options.hash, {
+      const fn = options.fn || noop;
+      const context = mixin({}, customContext, options.hash, {
         $$layoutActions: [],
         $$layoutStack: []
       });
-      let data = handlebars.createFrame(options.data);
+      const data = handlebars.createFrame(options.data);
       let template = handlebars.partials[name];
 
       // Partial template required
@@ -178,9 +178,9 @@ function layouts (engine) {
     block: function (name, options, cb) {
       options = options || {};
 
-      let fn = options.fn || noop;
-      let data = handlebars.createFrame(options.data);
-      let context = this || {};
+      const fn = options.fn || noop;
+      const data = handlebars.createFrame(options.data);
+      const context = this || {};
 
       return applyStack(context, engine).then(
         function (stack) {
@@ -216,11 +216,11 @@ function layouts (engine) {
     content: function (name, options, cb) {
       options = options || {};
 
-      let fn = options.fn;
-      let data = handlebars.createFrame(options.data);
-      let hash = options.hash || {};
-      let mode = hash.mode || 'replace';
-      let context = this || {};
+      const fn = options.fn;
+      const data = handlebars.createFrame(options.data);
+      const hash = options.hash || {};
+      const mode = hash.mode || 'replace';
+      const context = this || {};
 
       return applyStack(context, engine).then(
         function () {

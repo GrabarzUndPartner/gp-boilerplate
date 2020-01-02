@@ -24,12 +24,12 @@ module.exports = {
 
     server.ext({
       type: 'onRequest',
-      method: async function (request, h) {
-        return new Promise(async function (resolve) {
-          function reply () {
+      method: function (request, h) {
+        return new Promise(function (resolve) {
+          const reply = () => {
             h.request._isReplied = request.raw.res.finished;
             resolve(request.raw.res.finished ? h.abandon : h.continue);
-          }
+          };
 
           // eslint-disable-next-line new-cap
           registerMiddleware(webpackDevMiddleware, request, reply);
@@ -39,12 +39,12 @@ module.exports = {
 
     server.ext({
       type: 'onRequest',
-      method: async function (request, h) {
-        return new Promise(async function (resolve) {
-          function reply () {
+      method: function (request, h) {
+        return new Promise(function (resolve) {
+          const reply = () => {
             h.request._isReplied = request.raw.res.finished;
             resolve(request.raw.res.finished ? h.abandon : h.continue);
-          }
+          };
           // eslint-disable-next-line new-cap
           registerMiddleware(webpackHotMiddleware, request, reply);
         });

@@ -10,15 +10,19 @@ if (navigator.userAgent.indexOf('MSIE') !== -1 ||
   script.setAttribute('defer', true);
   document.head.appendChild(script);
 
-  import('object-fit-images').then(function (module) {
-    const objectFitImages = module.default || module;
-    Array.from(document.querySelectorAll('picture')).forEach(function (el) {
-      objectFitImages(el);
-    });
-  });
+  loadObjectFitImages();
 }
 
 // requestIdleCallback
 global.requestIdleCallback = global.requestIdleCallback || function (callback) {
   setTimeout(callback, 350);
 };
+
+function loadObjectFitImages () {
+  return import('object-fit-images').then(function (module) {
+    const objectFitImages = module.default || module;
+    Array.from(document.querySelectorAll('picture')).forEach(function (el) {
+      objectFitImages(el);
+    });
+  });
+}
