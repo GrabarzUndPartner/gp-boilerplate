@@ -9,7 +9,7 @@ function getIP (details) {
 
 module.exports = function () {
   for (var dev in ifaces) {
-    if (ifaces.hasOwnProperty(dev)) {
+    if (Object.prototype.hasOwnProperty.call(ifaces, dev)) {
       if (dev !== 'en1' && dev !== 'en0') {
         continue;
       }

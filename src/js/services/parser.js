@@ -113,9 +113,10 @@ export class ControllerParser {
   }
 }
 
+// eslint-disable-next-line complexity
 function parseFilter (node) {
-  let asyncType = node.dataset.controllerAsync.toLowerCase();
-  if (!node.controllerAsyncInit) {
+  if ('controllerAsync' in node.dataset && !node.controllerAsyncInit) {
+    let asyncType = node.dataset.controllerAsync.toLowerCase();
     node.controllerAsyncInit = true;
     const matches = asyncType.match(/^interaction:(.*)$/);
     let interaction;

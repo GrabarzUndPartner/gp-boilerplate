@@ -46,4 +46,3 @@ node_modules/*
 /generated
 /production
 /src/js/packages.js
-/package-lock.json
