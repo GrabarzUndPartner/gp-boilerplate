@@ -3,7 +3,7 @@
 const gulp = require('gulp');
 
 module.exports = function (name, config, watch, taskPattern, mainTask) {
-  let options = {
+  const options = {
     watchers: []
   };
 

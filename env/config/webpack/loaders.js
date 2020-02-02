@@ -36,9 +36,17 @@ module.exports = [
       use: [{
         loader: 'handlebars-loader',
         options: {
-          runtime: 'handlebars.runtime',
+          helperDirs: [process.cwd() + '/env/engine/lib/handlebars/helpers'],
           partialDirs: [process.cwd() + '/src/tmpl/partials'],
           debug: true
+        }
+      },
+      {
+        loader: 'string-replace-loader',
+        options: {
+          search: '^(---)[.\\s\\S]*(---)',
+          replace: '',
+          flags: 'g'
         }
       }]
     }

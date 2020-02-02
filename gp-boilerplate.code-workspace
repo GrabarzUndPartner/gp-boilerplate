@@ -5,31 +5,19 @@
     }
   ],
   "settings": {
-    "editor.formatOnSave": true,
-    "[handlebars]": {
-      "editor.formatOnSave": false
-    },
+    "editor.formatOnSave": false,
     "emmet.includeLanguages": {
       "postcss": "css"
     },
     "emmet.syntaxProfiles": {
       "postcss": "css"
     },
-    "prettier.eslintIntegration": false,
-    "prettier.stylelintIntegration": true,
-    "prettier.disableLanguages": [
-      "yaml",
-      "vue",
-      "javascript",
-      "js",
-      "json"
-    ],
-    "prettier.printWidth": 0,
-
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
     "html.format.enable": true,
     "html.format.indentHandlebars": true,
     "html.format.maxPreserveNewLines": 0,
-
     "files.exclude": {
       "build/": false,
       "production/": false,
@@ -56,13 +44,11 @@
     "recommendations": [
       "codezombiech.gitignore",
       "davidanson.vscode-markdownlint",
-      "dbaeumer.jshint",
+      "dbaeumer.vscode-eslint",
       "editorconfig.editorconfig",
-      "esbenp.prettier-vscode",
-      "ms-ceintl.vscode-language-pack-de",
       "naumovs.color-highlight",
       "ricard.postcss",
-      "shinnn.stylelint",
+      "stylelint.vscode-stylelint",
       "tomesterez.style-vars-panel",
       "wayou.vscode-todo-highlight",
       "yzhang.markdown-all-in-one",
