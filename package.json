@@ -68,7 +68,7 @@
     "eslint-config-stylelint": "^11.1.0",
     "fg-loadcss": "^2.1.0",
     "fontfaceobserver": "^2.1.0",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.0.0",
     "gulp-changed": "^4.0.2",
     "gulp-extname": "^0.2.2",
     "gulp-nodemon": "^2.4.2",
