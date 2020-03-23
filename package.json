@@ -103,7 +103,7 @@
     "postcss-preset-env": "^6.7.0",
     "postcss-reporter": "^6.0.1",
     "precss": "^4.0.0",
-    "regenerator-runtime": "^0.13.3",
+    "regenerator-runtime": "^0.13.4",
     "script-loader": "^0.7.2",
     "snyk": "^1.290.1",
     "string-replace-loader": "^2.2.0",
