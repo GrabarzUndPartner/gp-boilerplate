@@ -83,7 +83,7 @@
     "handlebars-loader": "^1.7.1",
     "handlebars-utils": "^1.0.6",
     "hapi": "^18.1.0",
-    "hapi-auth-jwt2": "^9.0.0",
+    "hapi-auth-jwt2": "^10.1.0",
     "highlight.js": "^9.18.0",
     "inert": "^5.1.3",
     "jquery": "^3.4.1",
