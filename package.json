@@ -1,11 +1,8 @@
 {
   "name": "gp-boilerplate",
-  "version": "5.0.0",
+  "version": "4.1.0",
   "description": "Grabarz & Partner - Frontend Boilerplate",
   "main": "none",
-  "engines": {
-    "node": ">=10"
-  },
   "bugs": {
     "url": "https://github.com/GrabarzUndPartner/gp-boilerplate/issues"
   },
@@ -27,8 +24,8 @@
       "email": "thorn.walli@grabarzundpartner.de"
     }
   ],
+  "license": "MIT",
   "private": true,
-  "license": "GNU GPLv3",
   "author": "Grabarz & Partner Werbeagentur GmbH",
   "scripts": {
     "test": "npm run lint && npm run build",
@@ -143,6 +140,5 @@
     "webpack-dev-middleware": "^3.7.2",
     "webpack-hot-middleware": "^2.25.0",
     "webpack-pwa-manifest": "^4.1.1"
-  },
-  "snyk": true
+  }
 }
