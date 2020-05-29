@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const path = require('upath');
 const OptimizeJsPlugin = require('optimize-js-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const pkg = require(process.cwd() + '/package.json');
@@ -55,12 +56,14 @@ module.exports = function (name) {
       production: true,
       build: true,
       config: new BundleAnalyzerPlugin({
+        reportFilename: path.resolve(`reports/webpack/${name}.html`),
+        statsFilename: path.resolve(`reports/webpack/stats/${name}.json`),
         analyzerMode: 'static',
-        openAnalyzer: false,
-        reportFilename: name + '.report.html',
         generateStatsFile: true,
-        statsFilename: name + '.stats.json',
-        logLevel: 'info'
+        openAnalyzer: false,
+        logLevel: 'info',
+        defaultSizes: 'gzip',
+        statsOptions: 'normal'
       })
     },
     {

@@ -26,7 +26,7 @@ module.exports = {
           controllers
         }),
         function () {
-          console.log(ansiColors.bold.green('saved file:'), ansiColors.bold.black('packages.js'));
+          console.log(ansiColors.bold.green('saved file:'), ansiColors.bold('packages.js'));
           resolve();
         }
       );
