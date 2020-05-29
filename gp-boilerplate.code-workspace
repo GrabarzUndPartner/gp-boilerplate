@@ -32,12 +32,18 @@
       "**/.DS_Store": true
     },
     "files.associations": {
-      ".eslintrc": "json",
+      ".branchlintrc": "json",
+      ".huskyrc": "json",
+      ".lintstagedrc": "json",
       ".postcssrc": "json",
+      ".releaserc": "json",
       ".stylelintrc": "json",
       ".vcmrc": "json",
       "*.css": "postcss",
-      "*.pcss": "postcss"
+      "*.pcss": "postcss",
+      ".*ignore": "ignore",
+      "*.js.tmpl": "javascript",
+      "*.html.tmpl": "html"
     }
   },
   "extensions": {

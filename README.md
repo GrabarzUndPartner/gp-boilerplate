@@ -1,6 +1,9 @@
 # Boilerplate - Grabarz & Partner
 
-[![GitHub version](https://badge.fury.io/gh/GrabarzUndPartner%2Fgp-boilerplate.svg)](https://badge.fury.io/gh/GrabarzUndPartner%2Fgp-boilerplate) [![Build Status](https://travis-ci.org/GrabarzUndPartner/gp-boilerplate.svg?branch=master)](https://travis-ci.org/GrabarzUndPartner/gp-boilerplate) [![Greenkeeper badge](https://badges.greenkeeper.io/GrabarzUndPartner/gp-boilerplate.svg)](https://greenkeeper.io/)
+[![GitHub version](https://badge.fury.io/gh/GrabarzUndPartner%2Fgp-boilerplate.svg)](https://badge.fury.io/gh/GrabarzUndPartner%2Fgp-boilerplate) 
+
+[![Master][github-workflow-master-src]][github-workflow-master-href]
+
 [![Dependency Status](https://img.shields.io/david/GrabarzUndPartner/gp-boilerplate.svg?style=flat)](https://david-dm.org/GrabarzUndPartner/gp-boilerplate)
 [![devDependency Status](https://img.shields.io/david/dev/GrabarzUndPartner/gp-boilerplate.svg?style=flat)](https://david-dm.org/GrabarzUndPartner/gp-boilerplate#info=devDependencies) 
 
@@ -70,3 +73,7 @@ The documentation can be found in the subdirectory "docs".
 | ---------- | ------------------------------ |
 | dev        | http://127.0.0.1:8050/dev/docs |
 | production | http://127.0.0.1:8050/docs     |
+
+
+[github-workflow-master-src]: <https://github.com/GrabarzUndPartner/gp-boilerplate/workflows/Master/badge.svg?branch=master>
+[github-workflow-master-href]: <https://github.com/GrabarzUndPartner/gp-boilerplate/actions?query=workflow%3AMaster>
