@@ -80,7 +80,8 @@ jobs:
       - name: Build
         run: |
           npm run build
-          touch build/.nojekyll
+          cp -R reports/* dist/reports/
+          touch dist/.nojekyll
         env:
           WEBSITE_HOST: 'https://grabarzundpartner.github.io/gp-boilerplate'
           BASE_PATH: /gp-boilerplate/
