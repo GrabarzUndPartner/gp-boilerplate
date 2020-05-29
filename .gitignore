@@ -9,8 +9,7 @@ out
 gen
 
 # VSCode
-.vscode/*
-!/.vscode/launch.json
+.history
 
 ### Node template
 # Logs
