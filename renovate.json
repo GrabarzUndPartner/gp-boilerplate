@@ -1,7 +1,10 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    "group:allNonMajor",
+    ":semanticCommitTypeAll(chore)"
   ],
+  "rangeStrategy": "pin",
   "baseBranches": [
     "release"
   ],
