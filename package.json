@@ -45,7 +45,9 @@
     "task-webpack-app": "cross-env NODE_ENV=production node node_modules/gulp/bin/gulp webpack:app --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/",
     "task-svgo": "cross-env NODE_ENV=build node node_modules/gulp/bin/gulp svgo --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/",
     "task-svg-symbols": "cross-env NODE_ENV=build node node_modules/gulp/bin/gulp svg-symbols --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/",
-    "deploy-now": "npm run build && now ./build -A ../now.json"
+    "deploy-now": "npm run build && now ./build -A ../now.json",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "acorn": "^7.1.1",
@@ -102,7 +104,7 @@
     "precss": "^4.0.0",
     "regenerator-runtime": "^0.13.3",
     "script-loader": "^0.7.2",
-    "snyk": "^1.290.1",
+    "snyk": "^1.332.1",
     "string-replace-loader": "^2.2.0",
     "template-helpers": "^1.0.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
