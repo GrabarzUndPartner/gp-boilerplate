@@ -27,6 +27,7 @@
       "email": "thorn.walli@grabarzundpartner.de"
     }
   ],
+  "private": true,
   "license": "GNU GPLv3",
   "author": "Grabarz & Partner Werbeagentur GmbH",
   "scripts": {
