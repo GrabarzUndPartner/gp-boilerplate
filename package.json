@@ -45,9 +45,7 @@
     "task-webpack-app": "cross-env NODE_ENV=production node node_modules/gulp/bin/gulp webpack:app --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/",
     "task-svgo": "cross-env NODE_ENV=build node node_modules/gulp/bin/gulp svgo --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/",
     "task-svg-symbols": "cross-env NODE_ENV=build node node_modules/gulp/bin/gulp svg-symbols --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/",
-    "deploy-now": "npm run build && now ./build -A ../now.json",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "deploy-now": "npm run build && now ./build -A ../now.json"
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.3",
