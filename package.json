@@ -55,7 +55,7 @@
     "assemble-handlebars-helpers": "0.1.3",
     "cheerio": "0.22.0",
     "core-js": "3.6.5",
-    "cross-env": "6.0.3",
+    "cross-env": "7.0.2",
     "cssmin": "0.4.3",
     "cssnano": "4.1.10",
     "del": "5.1.0",
