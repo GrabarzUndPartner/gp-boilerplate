@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [4.1.1](https://github.com/GrabarzUndPartner/gp-boilerplate/compare/v4.1.0...v4.1.1) (2020-05-30)
+
+
+### Bug Fixes
+
+* **polyfills:** update polyfills ([596de18](https://github.com/GrabarzUndPartner/gp-boilerplate/commit/596de186b7f083936a13060eac3f0afdf27e4678))
+
 # [4.1.0](https://github.com/GrabarzUndPartner/gp-boilerplate/compare/v4.0.0...v4.1.0) (2020-05-29)
 
 
