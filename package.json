@@ -43,7 +43,9 @@
     "task-webpack-app": "cross-env NODE_ENV=production node node_modules/gulp/bin/gulp webpack:app --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/",
     "task-svgo": "cross-env NODE_ENV=build node node_modules/gulp/bin/gulp svgo --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/",
     "task-svg-symbols": "cross-env NODE_ENV=build node node_modules/gulp/bin/gulp svg-symbols --serverConfig=/env/config/hapi/config --gulpTaskConfig=/env/config/",
-    "deploy-now": "npm run build && now ./build -A ../now.json"
+    "deploy-now": "npm run build && now ./build -A ../now.json",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "acorn": "7.2.0",
@@ -58,9 +60,9 @@
     "cross-env": "7.0.2",
     "cssmin": "0.4.3",
     "cssnano": "4.1.10",
-    "custom-event-polyfill": "^1.0.7",
+    "custom-event-polyfill": "1.0.7",
     "del": "5.1.0",
-    "domtokenlist-shim": "^1.2.0",
+    "domtokenlist-shim": "1.2.0",
     "eslint-config-stylelint": "12.0.0",
     "fontfaceobserver": "2.1.0",
     "fs-extra": "9.0.0",
@@ -99,7 +101,7 @@
     "postcss-reporter": "6.0.1",
     "precss": "4.0.0",
     "regenerator-runtime": "0.13.5",
-    "requestidlecallback": "^0.3.0",
+    "requestidlecallback": "0.3.0",
     "script-loader": "0.7.2",
     "snyk": "1.332.1",
     "string-replace-loader": "2.3.0",
@@ -124,7 +126,7 @@
     "@commitlint/cli": "8.3.5",
     "@commitlint/config-conventional": "8.3.4",
     "eslint": "7.1.0",
-    "eslint-loader": "3.0.3",
+    "eslint-loader": "4.0.2",
     "eslint-plugin-chai-friendly": "0.6.0",
     "eslint-plugin-json": "2.1.1",
     "eslint-plugin-mocha": "7.0.0",
@@ -142,5 +144,6 @@
     "webpack-dev-middleware": "3.7.2",
     "webpack-hot-middleware": "2.25.0",
     "webpack-pwa-manifest": "4.2.0"
-  }
+  },
+  "snyk": true
 }
