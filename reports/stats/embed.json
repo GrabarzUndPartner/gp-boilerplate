@@ -6,8 +6,8 @@
   ],
   "version": "4.43.0",
   "hash": "59ec43dce940b894fa8e",
-  "time": 2843,
-  "builtAt": 1590834808727,
+  "time": 1885,
+  "builtAt": 1590844118615,
   "publicPath": "/",
   "outputPath": "/home/runner/work/gp-boilerplate/gp-boilerplate/build/js",
   "assetsByChunkName": {
@@ -107,9 +107,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.promise.js",
-          "issuerId": 98,
-          "issuerName": "./node_modules/core-js/modules/es.promise.js",
+          "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/web.dom-collections.for-each.js",
+          "issuerId": 52,
+          "issuerName": "./node_modules/core-js/modules/web.dom-collections.for-each.js",
           "issuerPath": [
             {
               "id": null,
@@ -117,14 +117,14 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
-              "id": 98,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.promise.js",
-              "name": "./node_modules/core-js/modules/es.promise.js"
+              "id": 52,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/web.dom-collections.for-each.js",
+              "name": "./node_modules/core-js/modules/web.dom-collections.for-each.js"
             }
           ],
           "failed": false,
@@ -659,9 +659,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.regexp.to-string.js",
-          "issuerId": 110,
-          "issuerName": "./node_modules/core-js/modules/es.regexp.to-string.js",
+          "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.string.replace.js",
+          "issuerId": 82,
+          "issuerName": "./node_modules/core-js/modules/es.string.replace.js",
           "issuerPath": [
             {
               "id": null,
@@ -669,14 +669,14 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
-              "id": 110,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.regexp.to-string.js",
-              "name": "./node_modules/core-js/modules/es.regexp.to-string.js"
+              "id": 82,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.string.replace.js",
+              "name": "./node_modules/core-js/modules/es.string.replace.js"
             }
           ],
           "failed": false,
@@ -970,9 +970,9 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
               "id": 40,
@@ -1472,9 +1472,9 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
               "id": 52,
@@ -1816,9 +1816,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.string.includes.js",
-          "issuerId": 111,
-          "issuerName": "./node_modules/core-js/modules/es.string.includes.js",
+          "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.string.replace.js",
+          "issuerId": 82,
+          "issuerName": "./node_modules/core-js/modules/es.string.replace.js",
           "issuerPath": [
             {
               "id": null,
@@ -1826,14 +1826,14 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
-              "id": 111,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.string.includes.js",
-              "name": "./node_modules/core-js/modules/es.string.includes.js"
+              "id": 82,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.string.replace.js",
+              "name": "./node_modules/core-js/modules/es.string.replace.js"
             }
           ],
           "failed": false,
@@ -2108,9 +2108,9 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
               "id": 52,
@@ -2874,9 +2874,9 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
               "id": 40,
@@ -3193,9 +3193,9 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
               "id": 40,
@@ -4120,9 +4120,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "issuerId": null,
-          "issuerName": "./src/js/embed/polyfills.js",
+          "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "issuerId": 67,
+          "issuerName": "./src/js/embed/fontfaceObserver.js",
           "issuerPath": [
             {
               "id": null,
@@ -4130,9 +4130,9 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             }
           ],
           "failed": false,
@@ -4480,9 +4480,9 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
               "id": 40,
@@ -4634,9 +4634,9 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
               "id": 40,
@@ -4959,9 +4959,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "issuerId": null,
-          "issuerName": "./src/js/embed/polyfills.js",
+          "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "issuerId": 67,
+          "issuerName": "./src/js/embed/fontfaceObserver.js",
           "issuerPath": [
             {
               "id": null,
@@ -4969,9 +4969,9 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             }
           ],
           "failed": false,
@@ -6065,9 +6065,9 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
               "id": 40,
@@ -6196,9 +6196,9 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
               "id": 40,
@@ -6259,9 +6259,9 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
               "id": 40,
@@ -6390,9 +6390,9 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
               "id": 40,
@@ -6526,9 +6526,9 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
               "id": 40,
@@ -6599,9 +6599,9 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
               "id": 40,
@@ -6662,9 +6662,9 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
               "id": 40,
@@ -6730,9 +6730,9 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
               "id": 40,
@@ -7209,9 +7209,9 @@
               "name": "./src/js/embed.js"
             },
             {
-              "id": null,
-              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-              "name": "./src/js/embed/polyfills.js"
+              "id": 67,
+              "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+              "name": "./src/js/embed/fontfaceObserver.js"
             },
             {
               "id": 52,
@@ -9648,9 +9648,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.promise.js",
-      "issuerId": 98,
-      "issuerName": "./node_modules/core-js/modules/es.promise.js",
+      "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/web.dom-collections.for-each.js",
+      "issuerId": 52,
+      "issuerName": "./node_modules/core-js/modules/web.dom-collections.for-each.js",
       "issuerPath": [
         {
           "id": null,
@@ -9658,14 +9658,14 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
-          "id": 98,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.promise.js",
-          "name": "./node_modules/core-js/modules/es.promise.js"
+          "id": 52,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/web.dom-collections.for-each.js",
+          "name": "./node_modules/core-js/modules/web.dom-collections.for-each.js"
         }
       ],
       "failed": false,
@@ -10200,9 +10200,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.regexp.to-string.js",
-      "issuerId": 110,
-      "issuerName": "./node_modules/core-js/modules/es.regexp.to-string.js",
+      "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.string.replace.js",
+      "issuerId": 82,
+      "issuerName": "./node_modules/core-js/modules/es.string.replace.js",
       "issuerPath": [
         {
           "id": null,
@@ -10210,14 +10210,14 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
-          "id": 110,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.regexp.to-string.js",
-          "name": "./node_modules/core-js/modules/es.regexp.to-string.js"
+          "id": 82,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.string.replace.js",
+          "name": "./node_modules/core-js/modules/es.string.replace.js"
         }
       ],
       "failed": false,
@@ -10511,9 +10511,9 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
           "id": 40,
@@ -11013,9 +11013,9 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
           "id": 52,
@@ -11357,9 +11357,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.string.includes.js",
-      "issuerId": 111,
-      "issuerName": "./node_modules/core-js/modules/es.string.includes.js",
+      "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.string.replace.js",
+      "issuerId": 82,
+      "issuerName": "./node_modules/core-js/modules/es.string.replace.js",
       "issuerPath": [
         {
           "id": null,
@@ -11367,14 +11367,14 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
-          "id": 111,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.string.includes.js",
-          "name": "./node_modules/core-js/modules/es.string.includes.js"
+          "id": 82,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/core-js/modules/es.string.replace.js",
+          "name": "./node_modules/core-js/modules/es.string.replace.js"
         }
       ],
       "failed": false,
@@ -11649,9 +11649,9 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
           "id": 52,
@@ -12415,9 +12415,9 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
           "id": 40,
@@ -12734,9 +12734,9 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
           "id": 40,
@@ -13661,9 +13661,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-      "issuerId": null,
-      "issuerName": "./src/js/embed/polyfills.js",
+      "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+      "issuerId": 67,
+      "issuerName": "./src/js/embed/fontfaceObserver.js",
       "issuerPath": [
         {
           "id": null,
@@ -13671,9 +13671,9 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         }
       ],
       "failed": false,
@@ -14021,9 +14021,9 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
           "id": 40,
@@ -14175,9 +14175,9 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
           "id": 40,
@@ -14500,9 +14500,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-      "issuerId": null,
-      "issuerName": "./src/js/embed/polyfills.js",
+      "issuer": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+      "issuerId": 67,
+      "issuerName": "./src/js/embed/fontfaceObserver.js",
       "issuerPath": [
         {
           "id": null,
@@ -14510,9 +14510,9 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         }
       ],
       "failed": false,
@@ -15606,9 +15606,9 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
           "id": 40,
@@ -15737,9 +15737,9 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
           "id": 40,
@@ -15800,9 +15800,9 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
           "id": 40,
@@ -15931,9 +15931,9 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
           "id": 40,
@@ -16067,9 +16067,9 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
           "id": 40,
@@ -16140,9 +16140,9 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
           "id": 40,
@@ -16203,9 +16203,9 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
           "id": 40,
@@ -16271,9 +16271,9 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
           "id": 40,
@@ -16750,9 +16750,9 @@
           "name": "./src/js/embed.js"
         },
         {
-          "id": null,
-          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/polyfills.js",
-          "name": "./src/js/embed/polyfills.js"
+          "id": 67,
+          "identifier": "/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/babel-loader/lib/index.js??ref--5-0!/home/runner/work/gp-boilerplate/gp-boilerplate/node_modules/eslint-loader/dist/cjs.js!/home/runner/work/gp-boilerplate/gp-boilerplate/src/js/embed/fontfaceObserver.js",
+          "name": "./src/js/embed/fontfaceObserver.js"
         },
         {
           "id": 52,
