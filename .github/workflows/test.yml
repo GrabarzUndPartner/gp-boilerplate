@@ -5,6 +5,7 @@ on:
       - 'feature/**'
       - 'hotfix/**'
       - 'renovate/**'
+      - 'snyk-*'
 jobs:
   build:
     name: Test & Build
