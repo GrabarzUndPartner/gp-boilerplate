@@ -1,5 +1,17 @@
 # Project Changelog
 
+# [4.2.0](https://github.com/GrabarzUndPartner/gp-boilerplate/compare/v4.1.1...v4.2.0) (2020-05-30)
+
+
+### Bug Fixes
+
+* package.json, package-lock.json & .snyk to reduce vulnerabilities ([1a672f4](https://github.com/GrabarzUndPartner/gp-boilerplate/commit/1a672f48d50d41965fffdb148ed9c9067942dddd))
+
+
+### Features
+
+* upgrade eslint-loader from 3.0.3 to 4.0.2 ([d53e4b8](https://github.com/GrabarzUndPartner/gp-boilerplate/commit/d53e4b899564294fa6fb46eb4f7c6ce6479b7f16))
+
 ## [4.1.1](https://github.com/GrabarzUndPartner/gp-boilerplate/compare/v4.1.0...v4.1.1) (2020-05-30)
 
 
