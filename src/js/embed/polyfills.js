@@ -13,11 +13,6 @@ if (navigator.userAgent.indexOf('MSIE') !== -1 ||
   loadObjectFitImages();
 }
 
-// requestIdleCallback
-global.requestIdleCallback = global.requestIdleCallback || function (callback) {
-  setTimeout(callback, 350);
-};
-
 function loadObjectFitImages () {
   return import('object-fit-images').then(function (module) {
     const objectFitImages = module.default || module;
@@ -25,4 +20,21 @@ function loadObjectFitImages () {
       objectFitImages(el);
     });
   });
+}
+
+if (!('CustomEvent' in window &&
+// In Safari, typeof CustomEvent == 'object' but it otherwise works fine
+(typeof window.CustomEvent === 'function' ||
+  (window.CustomEvent.toString().includes('CustomEventConstructor'))))) {
+  require('custom-event-polyfill');
+}
+
+if (!('DOMTokenList' in window && (function (x) {
+  return 'classList' in x ? !x.classList.toggle('x', false) && !x.className : true;
+})(document.createElement('x')))) {
+  require('domtokenlist-shim');
+}
+
+if (!('requestIdleCallback' in window)) {
+  require('requestidlecallback');
 }
