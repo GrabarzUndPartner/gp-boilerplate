@@ -8,17 +8,12 @@ const mode = {
   production: 'production'
 };
 
-const basePath = process.env.BASE_PATH || './';
-
 module.exports = function (dest) {
   const config = {
     mode: mode[process.env.NODE_ENV],
     devtool: devtool[process.env.NODE_ENV],
     optimization: {
       minimize: true
-    },
-    output: {
-      publicPath: basePath
     },
     plugins: require('./plugins')(dest).reduce(reduceList, []),
     module: {
