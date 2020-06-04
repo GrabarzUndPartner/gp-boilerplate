@@ -135,7 +135,7 @@
     "husky": "4.2.5",
     "run-sequence": "2.2.1",
     "standard": "14.3.4",
-    "stylelint": "13.5.0",
+    "stylelint": "13.6.0",
     "stylelint-config-css-modules": "2.2.0",
     "stylelint-config-recess-order": "2.0.4",
     "stylelint-config-recommended": "3.0.0",
