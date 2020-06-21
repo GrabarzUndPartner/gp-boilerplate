@@ -8,6 +8,5 @@
   "baseBranches": [
     "release"
   ],
-  "automerge": true,
-  "ignorePresets": [":prHourlyLimit2"]
+  "automerge": true
 }
