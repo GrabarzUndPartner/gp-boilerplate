@@ -401,29 +401,29 @@ var embed=(function(t){function n(n){for(var e,o,i=n[0],c=n[1],u=0,s=[];u<i.leng
   </section>
   <section class="code">
       <h3>HTML</h3>
-      <pre role="code-html"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"partial "</span> <span class="hljs-attr">data-partial</span>=<span class="hljs-string">"atoms/link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#url"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Default Link Title"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_self"</span>&gt;</span>Default Link Title<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre>
+      <pre role="code-html"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;partial &quot;</span> <span class="hljs-attr">data-partial</span>=<span class="hljs-string">&quot;atoms/link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#url&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;Default Link Title&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_self&quot;</span>&gt;</span>Default Link Title<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre>
       <h3>Handlebars/Mustache</h3>
-      <pre role="code-hbs"><code class="hljs"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"partial </span></span></span><span class="hljs-template-variable">{{{class}}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">data-partial</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{{fallback partial-name "atoms/link"}}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{{url}}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{{title}}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{fallback target "_self"}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-tag">{{#<span class="hljs-name">block</span> "title"}}</span><span class="hljs-template-variable">{{{title}}}</span><span class="hljs-template-tag">{{/<span class="hljs-name">block</span>}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span></code></pre>
+      <pre role="code-hbs"><code class="hljs"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;partial </span></span></span><span class="hljs-template-variable">{{{<span class="hljs-name">class</span>}}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span> <span class="hljs-attr">data-partial</span>=<span class="hljs-string">&quot;</span></span></span><span class="hljs-template-variable">{{{<span class="hljs-name">fallback</span> partial-name <span class="hljs-string">&quot;atoms/link&quot;</span>}}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;</span></span></span><span class="hljs-template-variable">{{{<span class="hljs-name">url</span>}}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;</span></span></span><span class="hljs-template-variable">{{{<span class="hljs-name">title</span>}}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;</span></span></span><span class="hljs-template-variable">{{<span class="hljs-name">fallback</span> target <span class="hljs-string">&quot;_self&quot;</span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span>&gt;</span></span><span class="hljs-template-tag">{{#<span class="hljs-name">block</span> <span class="hljs-string">&quot;title&quot;</span>}}</span><span class="hljs-template-variable">{{{<span class="hljs-name">title</span>}}}</span><span class="hljs-template-tag">{{/<span class="hljs-name">block</span>}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span></code></pre>
       <h3>JSON</h3>
       <pre role="code-json"><code class="hljs">{
-    <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#url"</span>,
-    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Default Link Title"</span>,
-    <span class="hljs-attr">"target"</span>: <span class="hljs-literal">null</span>
+    <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;#url&quot;</span>,
+    <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Default Link Title&quot;</span>,
+    <span class="hljs-attr">&quot;target&quot;</span>: <span class="hljs-literal">null</span>
 }</code></pre>
       <h3>References</h3>
       <pre role="code-refs"><code class="hljs">{
-    <span class="hljs-attr">"url"</span>: {
-        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"string"</span>,
-        <span class="hljs-attr">"required"</span>: <span class="hljs-literal">true</span>
+    <span class="hljs-attr">&quot;url&quot;</span>: {
+        <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;required&quot;</span>: <span class="hljs-literal">true</span>
     },
-    <span class="hljs-attr">"title"</span>: {
-        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
-        <span class="hljs-attr">"required"</span>: <span class="hljs-literal">false</span>
+    <span class="hljs-attr">&quot;title&quot;</span>: {
+        <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;required&quot;</span>: <span class="hljs-literal">false</span>
     },
-    <span class="hljs-attr">"target"</span>: {
-        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
-        <span class="hljs-attr">"required"</span>: <span class="hljs-literal">false</span>,
-        <span class="hljs-attr">"values"</span>: [<span class="hljs-string">"_self"</span>, <span class="hljs-string">"_blank"</span>]
+    <span class="hljs-attr">&quot;target&quot;</span>: {
+        <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;required&quot;</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">&quot;values&quot;</span>: [<span class="hljs-string">&quot;_self&quot;</span>, <span class="hljs-string">&quot;_blank&quot;</span>]
     }
 }</code></pre>
   </section>

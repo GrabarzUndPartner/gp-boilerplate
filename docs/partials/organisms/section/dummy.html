@@ -409,38 +409,38 @@ var embed=(function(t){function n(n){for(var e,o,i=n[0],c=n[1],u=0,s=[];u<i.leng
   </section>
   <section class="code">
       <h3>HTML</h3>
-      <pre role="code-html"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"partial controller "</span> <span class="hljs-attr">data-partial</span>=<span class="hljs-string">"organisms/section/dummy"</span> <span class="hljs-attr">data-controller</span>=<span class="hljs-string">"./partials/organisms/Dummy"</span> <span class="hljs-attr">data-controller-async</span>=<span class="hljs-string">"visible"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container-fluid"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"stage__headline"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">data-hook</span>=<span class="hljs-string">"name"</span>&gt;</span>Dummy<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <pre role="code-html"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;partial controller &quot;</span> <span class="hljs-attr">data-partial</span>=<span class="hljs-string">&quot;organisms/section/dummy&quot;</span> <span class="hljs-attr">data-controller</span>=<span class="hljs-string">&quot;./partials/organisms/Dummy&quot;</span> <span class="hljs-attr">data-controller-async</span>=<span class="hljs-string">&quot;visible&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container-fluid&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;stage__headline&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">data-hook</span>=<span class="hljs-string">&quot;name&quot;</span>&gt;</span>Dummy<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       <h3>Handlebars/Mustache</h3>
-      <pre role="code-hbs"><code class="hljs"><span class="hljs-template-tag">{{#<span class="hljs-name">mixin</span> "organisms/section" this partial-name="organisms/section/dummy" controller-name=(fallback controller-name "./partials/organisms/Dummy") fluid=true controller-async=(fallback controller-async "visible")}}</span><span class="xml">
-  </span><span class="hljs-template-tag">{{#<span class="hljs-name">content</span> "content"}}</span><span class="xml">
+      <pre role="code-hbs"><code class="hljs"><span class="hljs-template-tag">{{#<span class="hljs-name">mixin</span> <span class="hljs-string">&quot;organisms/section&quot;</span> this <span class="hljs-attr">partial-name</span>=<span class="hljs-string">&quot;organisms/section/dummy&quot;</span> <span class="hljs-attr">controller-name</span>=(<span class="hljs-name">fallback</span> controller-name <span class="hljs-string">&quot;./partials/organisms/Dummy&quot;</span>) <span class="hljs-attr">fluid</span>=<span class="hljs-literal">true</span> <span class="hljs-attr">controller-async</span>=(<span class="hljs-name">fallback</span> controller-async <span class="hljs-string">&quot;visible&quot;</span>)}}</span><span class="xml">
+  </span><span class="hljs-template-tag">{{#<span class="hljs-name">content</span> <span class="hljs-string">&quot;content&quot;</span>}}</span><span class="xml">
   </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> name}}</span><span class="xml">
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"stage__headline"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">data-hook</span>=<span class="hljs-string">"name"</span>&gt;</span></span><span class="hljs-template-variable">{{{name}}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;stage__headline&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">data-hook</span>=<span class="hljs-string">&quot;name&quot;</span>&gt;</span></span><span class="hljs-template-variable">{{{<span class="hljs-name">name</span>}}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
   </span><span class="hljs-template-tag">{{/<span class="hljs-name">content</span>}}</span><span class="xml">
 </span><span class="hljs-template-tag">{{/<span class="hljs-name">mixin</span>}}</span></code></pre>
       <h3>JSON</h3>
       <pre role="code-json"><code class="hljs">{
-    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Dummy"</span>,
-    <span class="hljs-attr">"fluid"</span>: <span class="hljs-literal">false</span>
+    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Dummy&quot;</span>,
+    <span class="hljs-attr">&quot;fluid&quot;</span>: <span class="hljs-literal">false</span>
 }</code></pre>
       <h3>References</h3>
       <pre role="code-refs"><code class="hljs">{
-    <span class="hljs-attr">"name"</span>: {
-        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
-        <span class="hljs-attr">"required"</span>: <span class="hljs-literal">false</span>
+    <span class="hljs-attr">&quot;name&quot;</span>: {
+        <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;required&quot;</span>: <span class="hljs-literal">false</span>
     },
-    <span class="hljs-attr">"fluid"</span>: {
-        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"boolean"</span>,
-        <span class="hljs-attr">"required"</span>: <span class="hljs-literal">false</span>
+    <span class="hljs-attr">&quot;fluid&quot;</span>: {
+        <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+        <span class="hljs-attr">&quot;required&quot;</span>: <span class="hljs-literal">false</span>
     }
 }</code></pre>
   </section>
