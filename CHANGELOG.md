@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [4.2.1](https://github.com/GrabarzUndPartner/gp-boilerplate/compare/v4.2.0...v4.2.1) (2020-06-21)
+
+
+### Bug Fixes
+
+* package.json & package-lock.json to reduce vulnerabilities ([bc8f9b0](https://github.com/GrabarzUndPartner/gp-boilerplate/commit/bc8f9b00194b954f281ae24fd9b36ef1cb1d8f91))
+
 # [4.2.0](https://github.com/GrabarzUndPartner/gp-boilerplate/compare/v4.1.1...v4.2.0) (2020-05-30)
 
 
