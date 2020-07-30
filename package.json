@@ -109,7 +109,7 @@
     "uglifyjs-webpack-plugin": "2.2.0",
     "uniq": "1.0.1",
     "upath": "1.2.0",
-    "webpack": "4.44.0",
+    "webpack": "4.44.1",
     "webpack-bundle-analyzer": "3.8.0",
     "webpack-stream": "5.2.1"
   },
