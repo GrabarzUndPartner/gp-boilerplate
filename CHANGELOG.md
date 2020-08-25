@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [4.2.3](https://github.com/GrabarzUndPartner/gp-boilerplate/compare/v4.2.2...v4.2.3) (2020-08-25)
+
+
+### Bug Fixes
+
+* **wepback:** fix public path in docs; fix svg svgSymbol Helper (viewbox) ([c9af486](https://github.com/GrabarzUndPartner/gp-boilerplate/commit/c9af486b8f4e6b7bf64d0899b735ae5416c57e07))
+
 ## [4.2.2](https://github.com/GrabarzUndPartner/gp-boilerplate/compare/v4.2.1...v4.2.2) (2020-08-25)
 
 
