@@ -38,7 +38,7 @@
           "library": [
             "[name]"
           ],
-          "chunkFilename": "app.[chunkhash].js"
+          "chunkFilename": "docs.[chunkhash].js"
         }
       },
       {
