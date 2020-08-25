@@ -51,7 +51,7 @@ if (tasksDir) {
   }
 
   if (!gulp.task('build')) {
-    gulp.task('build', gulp.series('prebuild', 'webpack:app'));
+    gulp.task('build', gulp.series('prebuild', 'webpack:app', 'webpack:docs'));
   }
 }
 

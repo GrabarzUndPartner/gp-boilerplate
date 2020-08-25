@@ -2,7 +2,8 @@ const fs = require('fs');
 const upath = require('upath');
 const cheerio = require('cheerio');
 
-const ASSETS_PATH = 'assets/svg-symbols'; const IGNORED_ATTRS = [
+const ASSETS_PATH = 'assets/svg-symbols';
+const IGNORED_ATTRS = [
   'embed', 'extern', 'xmlns', 'viewBox'
 ];
 
@@ -23,8 +24,14 @@ module.exports.svgSymbol = function (name, id, options, cb) {
     const isEmbed = options.hash.embed; const isExtern = options.hash.extern;
 
     const attrs = [
-      'xmlns="http://www.w3.org/2000/svg"', `viewBox="${symbol.attr('viewBox')}"`
+      'xmlns="http://www.w3.org/2000/svg"'
     ];
+
+    const viewBox = symbol.attr('viewbox') || symbol.attr('viewBox');
+    if (viewBox) {
+      attrs.push(`viewBox="${viewBox}"`);
+    }
+
     Object.keys(options.hash).forEach(function (name) {
       if (IGNORED_ATTRS.indexOf(name) < 0) {
         attrs.push(`${name}="${options.hash[name].toString()}"`);
