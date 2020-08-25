@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [4.2.2](https://github.com/GrabarzUndPartner/gp-boilerplate/compare/v4.2.1...v4.2.2) (2020-08-25)
+
+
+### Bug Fixes
+
+* upgrade multiple dependencies with Snyk ([f33e9cc](https://github.com/GrabarzUndPartner/gp-boilerplate/commit/f33e9cc936035ccfde67a3c5a3970d3b0abb7fb6))
+
 ## [4.2.1](https://github.com/GrabarzUndPartner/gp-boilerplate/compare/v4.2.0...v4.2.1) (2020-06-21)
 
 
