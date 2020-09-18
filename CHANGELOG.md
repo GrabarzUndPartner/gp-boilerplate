@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [4.2.4](https://github.com/GrabarzUndPartner/gp-boilerplate/compare/v4.2.3...v4.2.4) (2020-09-18)
+
+
+### Bug Fixes
+
+* upgrade snyk from 1.383.0 to 1.384.0 ([e13e179](https://github.com/GrabarzUndPartner/gp-boilerplate/commit/e13e179bdc20b44011c1fb31994a981994934ab7))
+
 ## [4.2.3](https://github.com/GrabarzUndPartner/gp-boilerplate/compare/v4.2.2...v4.2.3) (2020-08-25)
 
 
