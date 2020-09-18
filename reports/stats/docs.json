@@ -4,10 +4,10 @@
   "warnings": [
     "configuration\nThe 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment.\nYou can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/"
   ],
-  "version": "4.44.1",
+  "version": "4.44.2",
   "hash": "7554207f5b1f6ec4403e",
-  "time": 252,
-  "builtAt": 1598366907750,
+  "time": 276,
+  "builtAt": 1600442421489,
   "publicPath": "js/",
   "outputPath": "/home/runner/work/gp-boilerplate/gp-boilerplate/build/js",
   "assetsByChunkName": {
