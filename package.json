@@ -61,7 +61,7 @@
     "cssmin": "0.4.3",
     "cssnano": "4.1.10",
     "custom-event-polyfill": "1.0.7",
-    "del": "5.1.0",
+    "del": "6.0.0",
     "domtokenlist-shim": "1.2.0",
     "eslint-config-stylelint": "12.0.0",
     "fontfaceobserver": "2.1.0",
