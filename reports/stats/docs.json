@@ -6,8 +6,8 @@
   ],
   "version": "4.44.2",
   "hash": "7554207f5b1f6ec4403e",
-  "time": 291,
-  "builtAt": 1601999821396,
+  "time": 224,
+  "builtAt": 1602231865666,
   "publicPath": "js/",
   "outputPath": "/home/runner/work/gp-boilerplate/gp-boilerplate/build/js",
   "assetsByChunkName": {
