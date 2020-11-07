@@ -108,7 +108,7 @@
     "template-helpers": "1.0.1",
     "uglifyjs-webpack-plugin": "2.2.0",
     "uniq": "1.0.1",
-    "upath": "2.0.0",
+    "upath": "2.0.1",
     "webpack": "4.44.2",
     "webpack-bundle-analyzer": "4.1.0",
     "webpack-stream": "6.1.0"
