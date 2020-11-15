@@ -33,7 +33,7 @@ function getActions (context) {
 }
 
 function getActionsByName (context, name) {
-  var actions = getActions(context);
+  const actions = getActions(context);
 
   return actions[name] || (actions[name] = []);
 }

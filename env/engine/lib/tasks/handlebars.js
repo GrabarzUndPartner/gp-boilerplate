@@ -107,7 +107,7 @@ module.exports = function (name, config, watch) {
           });
         }
 
-        var stream = app
+        const stream = app
           .toStream(task.name)
           .pipe(app.renderFile(getData(watch, config.resources, config.fonts)))
           .on('error', errorHandler)

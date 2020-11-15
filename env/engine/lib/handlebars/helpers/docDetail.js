@@ -22,11 +22,11 @@ module.exports = function (assemble) {
         return cb(err);
       }
 
-      var jsonContent = getJSONContent(assemble, options.data.root.partial);
+      let jsonContent = getJSONContent(assemble, options.data.root.partial);
       jsonContent = replaceExtends(assemble, jsonContent);
 
-      var docsRefsContent = iterateJSONContentByRef(assemble, jsonContent, 'docs', 'refs');
-      var dataContent = iterateJSONContentByRef(assemble, jsonContent, 'data');
+      const docsRefsContent = iterateJSONContentByRef(assemble, jsonContent, 'docs', 'refs');
+      const dataContent = iterateJSONContentByRef(assemble, jsonContent, 'data');
 
       view.render({
         docs: Object.assign({}, jsonContent.docs || {}),
@@ -82,8 +82,8 @@ function beautifyJS (data) {
 }
 
 function getJSONContent (assemble, path) {
-  var partialName = upath.join(path).replace('partials/', '');
-  var partial = assemble.views.partials[partialName];
+  const partialName = upath.join(path).replace('partials/', '');
+  const partial = assemble.views.partials[partialName];
 
   if (partial) {
     const context = assemble.views.partials[partialName].context();
@@ -100,9 +100,10 @@ function iterateJSONContentByRef (assemble, content, key, subKey) {
     if (subKey) {
       content = content[subKey] || content;
     }
-    var string = JSON.stringify(content);
+    const string = JSON.stringify(content);
+    // eslint-disable-next-line no-useless-backreference
     return string.replace(/\1([\\'\\"]+ref:)+\2([a-zA-Z0-9\\/-_]+)\\"/gm, function (source, prefix, value) {
-      var content = getJSONContent(assemble, value);
+      const content = getJSONContent(assemble, value);
       return iterateJSONContentByRef(assemble, content || {}, key, subKey);
     });
   } else {
@@ -111,17 +112,17 @@ function iterateJSONContentByRef (assemble, content, key, subKey) {
 }
 
 function getRelatedPartials (assemble, options) {
-  var list = [];
-  var m;
-  var re = /\{\{?[\\{#](mixin|extend|\\>)[\s\\"]+([\\-\w\\/]+)/g;
+  const list = [];
+  let m;
+  const re = /\{\{?[\\{#](mixin|extend|\\>)[\s\\"]+([\\-\w\\/]+)/g;
   while ((m = re.exec(options.fn())) !== null) {
     if (m.index === re.lastIndex) {
       re.lastIndex++;
     }
-    var partial = assemble.views.partials[m[2]];
+    const partial = assemble.views.partials[m[2]];
 
-    var relatedPartialURI = upath.join(partial.base, partial.relative);
-    var relativePath = upath.join(options.data.root.relativeToRoot, 'docs', relatedPartialURI.replace(upath.extname(relatedPartialURI), '.html').replace(/src\/tmpl\/partials\//, 'partials/'));
+    const relatedPartialURI = upath.join(partial.base, partial.relative);
+    const relativePath = upath.join(options.data.root.relativeToRoot, 'docs', relatedPartialURI.replace(upath.extname(relatedPartialURI), '.html').replace(/src\/tmpl\/partials\//, 'partials/'));
 
     list.push({
       title: partial.key,

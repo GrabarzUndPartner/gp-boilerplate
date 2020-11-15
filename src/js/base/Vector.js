@@ -173,7 +173,7 @@ Vector.prototype.normalizeLocal = function () {
 };
 
 function normalize (scope, result) {
-  var l = scope.length();
+  const l = scope.length();
   if (l > 1) {
     result
       .setX(scope.x / l)

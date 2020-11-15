@@ -8,7 +8,7 @@ function getIP (details) {
 }
 
 module.exports = function () {
-  for (var dev in ifaces) {
+  for (const dev in ifaces) {
     if (Object.prototype.hasOwnProperty.call(ifaces, dev)) {
       if (dev !== 'en1' && dev !== 'en0') {
         continue;

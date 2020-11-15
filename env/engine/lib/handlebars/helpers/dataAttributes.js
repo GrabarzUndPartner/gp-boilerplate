@@ -49,6 +49,6 @@ module.exports = engine =>
   };
 
 function toSnakeCase (text, sep = '_') {
-  var result = text.replace(/([A-Z])/g, `${sep}$1`);
+  const result = text.replace(/([A-Z])/g, `${sep}$1`);
   return result.toLowerCase();
 }

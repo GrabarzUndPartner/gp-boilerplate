@@ -23,9 +23,9 @@ if (tasksDir) {
    * Create Tasks
    */
 
-  var glob = require('glob');
+  const glob = require('glob');
 
-  var files = glob.sync('**/map.json', {
+  const files = glob.sync('**/map.json', {
     cwd: process.cwd() + tasksDir,
     root: '/',
     absolute: false
