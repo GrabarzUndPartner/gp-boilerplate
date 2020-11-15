@@ -1,0 +1,3 @@
+/*! gp-boilerplate */
+
+/*! npm.im/object-fit-images 3.2.4 */
