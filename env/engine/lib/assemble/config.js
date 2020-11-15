@@ -69,7 +69,7 @@ assemble.preRender(/\.hbs$/, mergeContext(assemble));
 
 function mergeContext (app, locals) {
   return function (view, next) {
-    var key = view.relative.replace(path.extname(view.relative), '');
+    const key = view.relative.replace(path.extname(view.relative), '');
     view.layout = view.data.layout || view.layout;
     view.data = merge(
       {
@@ -86,7 +86,7 @@ function mergeContext (app, locals) {
 }
 
 function getRelativeToRoot (view) {
-  var relativeToRoot = path.relative(path.dirname(view.key), view.base).replace(path.extname(view.key), '') || '.';
+  let relativeToRoot = path.relative(path.dirname(view.key), view.base).replace(path.extname(view.key), '') || '.';
   if (view.options.collection === 'docs') {
     relativeToRoot = '../' + relativeToRoot;
   }

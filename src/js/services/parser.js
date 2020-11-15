@@ -20,9 +20,9 @@ export class ControllerParser {
   }
 
   registerIntersect (node) {
-    var selector = '.controller[data-controller]';
+    const selector = '.controller[data-controller]';
     node = node || document.documentElement;
-    var nodes = Array.prototype.slice.call(node.querySelectorAll(selector));
+    const nodes = Array.prototype.slice.call(node.querySelectorAll(selector));
     if (this.matches(node, selector)) {
       nodes.push(node);
     }
@@ -94,13 +94,13 @@ export class ControllerParser {
   }
 
   createIntersectionObserver () {
-    var options = {
+    const options = {
       // root: document.body,
       rootMargin: '0px',
       threshold: 1.0
     };
 
-    var callback = (entries, observer) => {
+    const callback = (entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           this.observer.unobserve(entry.target);

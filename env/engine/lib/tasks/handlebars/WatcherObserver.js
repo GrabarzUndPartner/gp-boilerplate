@@ -5,8 +5,8 @@ const ansiColors = require('ansi-colors');
 
 const DEBUG = false;
 
-const regexIsHBS = new RegExp(/\.hbs$/);
-const regexPartial = new RegExp(/\{\{?[#]?(mixin|extend|>) ["']([\\-\w\\/]+)["']/g);
+const regexIsHBS = /\.hbs$/;
+const regexPartial = /\{\{?[#]?(mixin|extend|>) ["']([\\-\w\\/]+)["']/g;
 
 class WatcherWrapper {
   constructor (watcher) {
@@ -39,15 +39,15 @@ class WatcherWrapper {
   }
 
   addedParentsFromFile (path) {
-    var content = fs.readFileSync(path).toString();
-    var result;
-    var childs = [];
+    const content = fs.readFileSync(path).toString();
+    let result;
+    let childs = [];
     while ((result = regexPartial.exec(content)) !== null) {
       childs.push(result[2]);
     }
     uniq(childs);
     childs = childs.map(value => {
-      var partial = 'partials/' + value + '.hbs';
+      const partial = 'partials/' + value + '.hbs';
       return upath.join(this.cwd(), this.watcher.options.base, partial);
     });
 
@@ -57,7 +57,7 @@ class WatcherWrapper {
       uniq(this.fileParentMap[child]);
     });
     // Alte referenzierungen entfernen
-    for (var key in this.fileParentMap) {
+    for (const key in this.fileParentMap) {
       if (this.fileParentMap[key] && this.fileParentMap[key].indexOf(path) > -1 && childs.indexOf(key) === -1) {
         // Eintrag existiert noch, wird aber nicht mehr benoetigt.
         this.fileParentMap[key].splice(this.fileParentMap[key].indexOf(path), 1);
@@ -96,8 +96,8 @@ class WatcherWrapper {
     const files = [];
     const filesMap = this.watcher.getWatched();
     getFilesFromMap(filesMap).map(path => {
-      var childs = this.addedParentsFromFile(path);
-      var name = upath.relative(upath.join(this.cwd(), this.watcher.options.base), path);
+      const childs = this.addedParentsFromFile(path);
+      const name = upath.relative(upath.join(this.cwd(), this.watcher.options.base), path);
       return {
         path: path,
         name: name,
@@ -122,7 +122,7 @@ class WatcherWrapper {
 
   onChange (path) {
     this.addedParentsFromFile(path);
-    var files = this.getRenderFiles(path);
+    let files = this.getRenderFiles(path);
     uniq(files);
     files = files.map(function (file) {
       return file;
@@ -142,7 +142,7 @@ class WatcherWrapper {
 
   onUnlink (path) {
     debugFileMap(this.fileParentMap, 'From');
-    for (var key in this.fileParentMap) {
+    for (const key in this.fileParentMap) {
       if (this.fileParentMap[key]) {
         if (this.fileParentMap[key].indexOf(path) > -1) {
           this.fileParentMap[key].splice(this.fileParentMap[key].indexOf(path), 1);
@@ -210,7 +210,7 @@ function debugFileMap (fileMap, title) {
       console.log(ansiColors.bold(title));
     }
 
-    for (var key in fileMap) {
+    for (const key in fileMap) {
       if (fileMap[key]) {
         console.log(ansiColors.bold.green(key));
         debugFileMapLogFiles(fileMap[key]);

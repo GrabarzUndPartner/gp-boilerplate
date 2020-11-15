@@ -8,7 +8,7 @@ module.exports = function (name, config, watch, taskPattern, mainTask) {
   };
 
   const tasks = (config.subtasks || []).map(function (task) {
-    var taskName = name + ':' + task.name;
+    const taskName = name + ':' + task.name;
     taskPattern(taskName, task, options);
     return taskName;
   });

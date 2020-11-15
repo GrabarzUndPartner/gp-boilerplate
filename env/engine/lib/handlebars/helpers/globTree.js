@@ -99,6 +99,7 @@ function getMappedPartials (files) {
       if (partial.base === '.') {
         return partial;
       }
+      return false;
     }) || {
       list: []
     }

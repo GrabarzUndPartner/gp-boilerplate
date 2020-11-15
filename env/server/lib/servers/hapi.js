@@ -1,5 +1,5 @@
-var hapi = require('hapi');
-var router = require('../hapi/router');
+const hapi = require('hapi');
+const router = require('../hapi/router');
 
 module.exports = async function (root, config) {
   const server = new hapi.Server({ port: process.env.PORT || config.port });

@@ -1,4 +1,4 @@
-var gulp = require('gulp');
+const gulp = require('gulp');
 // Environments
 require('./env/engine');
 require('./env/server');

@@ -10,7 +10,7 @@ const taskGenerator = require('../taskGenerator');
 module.exports = function (name, config, watch) {
   return taskGenerator(name, config, watch, function (taskName, task) {
     gulp.task(taskName, function () {
-      var src = gulp.src(task.files.src).on('error', errorHandler);
+      let src = gulp.src(task.files.src).on('error', errorHandler);
       if (task.sourcemap) {
         src = src.pipe(sourcemaps.init()).on('error', errorHandler);
       }

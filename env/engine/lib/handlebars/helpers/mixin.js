@@ -1,4 +1,4 @@
-var merge = require('extend-shallow');
+const merge = require('extend-shallow');
 
 module.exports = function (engine, assemble) {
   if (require('handlebars-layouts')(engine) !== engine.helpers.extend) {
@@ -6,8 +6,8 @@ module.exports = function (engine, assemble) {
   }
 
   return function (name) {
-    var options = arguments[2] || arguments[1];
-    var context = {};
+    const options = arguments[2] || arguments[1];
+    let context = {};
     if (arguments[2]) {
       context = arguments[1];
     }
@@ -15,8 +15,8 @@ module.exports = function (engine, assemble) {
     if (typeof name !== 'string') {
       return '';
     }
-    var ctx = {};
-    var localContext = assemble.views.partials[name].context();
+    let ctx = {};
+    const localContext = assemble.views.partials[name].context();
 
     if (localContext) {
       ctx = merge(ctx, localContext.data || localContext, getContextData(context));
