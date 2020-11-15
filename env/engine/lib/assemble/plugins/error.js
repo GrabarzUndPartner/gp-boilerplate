@@ -34,8 +34,8 @@ function notifyOS (plugin, file, error) {
 }
 
 function report (file, reason, stack) {
-  var log = '';
-  var chalk = colors.white.bgRed;
+  let log = '';
+  const chalk = colors.white.bgRed;
   log += chalk('FILE:') + ' ' + file + '\n';
   log += chalk('PROB:') + ' ' + reason + '\n';
   if (stack) {

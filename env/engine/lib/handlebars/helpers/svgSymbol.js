@@ -78,7 +78,7 @@ module.exports.svgSymbols = function (options, cb) {
     usedSymbols = options.data.root.usedSymbols || [];
   }
 
-  usedSymbols.map(function (name) {
+  usedSymbols.forEach(function (name) {
     if (fileCache[name]) {
       html += fileCache[name].content;
     }

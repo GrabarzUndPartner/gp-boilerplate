@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const path = require('upath');
-const OptimizeJsPlugin = require('optimize-js-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const pkg = require(process.cwd() + '/package.json');
 
@@ -40,15 +39,6 @@ module.exports = function (name) {
       config: new webpack.LoaderOptionsPlugin({
         minimize: true,
         debug: false
-      })
-    },
-
-    {
-      development: false,
-      production: false,
-      build: true,
-      config: new OptimizeJsPlugin({
-        sourceMap: false
       })
     },
     {

@@ -1,5 +1,5 @@
-var Inert = require('inert');
-var extend = require('lodash/extend');
+const Inert = require('inert');
+const extend = require('lodash/extend');
 
 module.exports = {
   name: 'static',

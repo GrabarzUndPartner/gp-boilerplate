@@ -15,7 +15,7 @@ export default AmpersandView.extend(dataTypeDefinition, {
     }
 
     if (options.target && $(options.target).length) {
-      var targetModel = $(options.target).data('controller').model;
+      const targetModel = $(options.target).data('controller').model;
       if (targetModel) {
         this.targetModel = targetModel;
       }

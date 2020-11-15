@@ -9,17 +9,17 @@ module.exports = {
   collect: function () {
     return through.obj(function (file, enc, cb) {
       if (file.contents) {
-        var $ = cheerio.load(file.contents.toString(enc));
+        const $ = cheerio.load(file.contents.toString(enc));
         controller.collect($);
       }
       cb();
     });
   },
   collectFromFile: function () {
-    var enc = 'utf-8';
+    const enc = 'utf-8';
     return function (file) {
       if (file.contents) {
-        var $ = cheerio.load(file.contents.toString(enc));
+        const $ = cheerio.load(file.contents.toString(enc));
         controller.collect($);
       }
     };

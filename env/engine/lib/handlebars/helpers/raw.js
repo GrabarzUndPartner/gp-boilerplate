@@ -33,6 +33,7 @@ function readFiles (files, cb, fileContent, filepath) {
       }
     });
   } else {
+    // eslint-disable-next-line node/no-callback-literal
     cb(`/* [Handlebars][RAW] Can't file ${filepath} */`);
   }
 }
