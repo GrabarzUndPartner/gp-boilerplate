@@ -22,7 +22,7 @@ module.exports = function generateImports (config) {
 };
 
 function updateImports (files) {
-  return files.forEach.forEach((data) => {
+  return files.forEach((data) => {
     const css = glob
       .sync(data.src, { ignore: data.ignore })
       .map(function (file) {
