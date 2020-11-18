@@ -133,7 +133,7 @@
     "gulp-livereload": "4.0.2",
     "husky": "4.3.0",
     "run-sequence": "2.2.1",
-    "standard": "16.0.2",
+    "standard": "16.0.3",
     "stylelint": "13.8.0",
     "stylelint-config-css-modules": "2.2.0",
     "stylelint-config-recess-order": "2.3.0",
