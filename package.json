@@ -97,7 +97,7 @@
     "postcss-momentum-scrolling": "3.1.5",
     "postcss-object-fit-images": "1.1.2",
     "postcss-preset-env": "6.7.0",
-    "postcss-reporter": "7.0.1",
+    "postcss-reporter": "7.0.2",
     "precss": "4.0.0",
     "regenerator-runtime": "0.13.7",
     "requestidlecallback": "0.3.0",
