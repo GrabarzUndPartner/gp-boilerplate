@@ -90,7 +90,7 @@
     "postcss-assets": "5.0.0",
     "postcss-bootstrap-4-grid": "1.0.3",
     "postcss-browser-reporter": "0.6.0",
-    "postcss-calc": "7.0.5",
+    "postcss-calc": "8.0.0",
     "postcss-clearfix": "2.0.1",
     "postcss-discard-comments": "4.0.2",
     "postcss-import": "14.0.0",
