@@ -10,9 +10,7 @@ const beautify = require('js-prettify');
 const cssmin = require('cssmin');
 const hljs = require('highlight.js');
 
-hljs.configure({
-  useBR: true
-});
+hljs.configure({});
 
 module.exports = function (assemble) {
   return function (options, cb) {
