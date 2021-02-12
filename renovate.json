@@ -6,7 +6,7 @@
   ],
   "rangeStrategy": "pin",
   "baseBranches": [
-    "release"
+    "develop"
   ],
   "automerge": true
 }

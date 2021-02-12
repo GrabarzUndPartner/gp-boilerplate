@@ -1,11 +1,8 @@
 name: Test
 on:
-  push:
-    branches:
-      - 'feature/**'
-      - 'hotfix/**'
-      - 'renovate/**'
-      - 'snyk-*'
+  pull_request:
+    types: [opened, synchronize, reopened]
+
 jobs:
   build:
     name: Test & Build
@@ -17,7 +14,7 @@ jobs:
         node: [12]
 
     steps:
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
 

@@ -4,6 +4,9 @@ const webpack = require('webpack');
 const upath = require('upath');
 const taskGenerator = require('../taskGenerator');
 
+const isDev = process.env.NODE_ENV === 'development';
+const mode = isDev ? 'development' : 'production';
+
 module.exports = function (name, config, serverConfig) {
   return taskGenerator(name, config, serverConfig, function (taskName, task) {
     gulp.task(taskName, function () {
@@ -22,7 +25,8 @@ module.exports = function (name, config, serverConfig) {
                   chunkFilename: task.files.chunkFilename || '[id].js'
                 }
               },
-              require(task.config)(task.name)
+              require(task.config)(task.name),
+              { mode }
             ),
             webpack
           )

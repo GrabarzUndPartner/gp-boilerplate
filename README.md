@@ -2,7 +2,7 @@
 
 [![GitHub version](https://badge.fury.io/gh/GrabarzUndPartner%2Fgp-boilerplate.svg)](https://badge.fury.io/gh/GrabarzUndPartner%2Fgp-boilerplate) 
 
-[![Master][github-workflow-master-src]][github-workflow-master-href]
+[![Main][github-workflow-main-src]][github-workflow-main-href]
 
 [![Dependency Status](https://img.shields.io/david/GrabarzUndPartner/gp-boilerplate.svg?style=flat)](https://david-dm.org/GrabarzUndPartner/gp-boilerplate)
 [![devDependency Status](https://img.shields.io/david/dev/GrabarzUndPartner/gp-boilerplate.svg?style=flat)](https://david-dm.org/GrabarzUndPartner/gp-boilerplate#info=devDependencies) 
@@ -75,5 +75,5 @@ The documentation can be found in the subdirectory "docs".
 | production | http://127.0.0.1:8050/docs     |
 
 
-[github-workflow-master-src]: <https://github.com/GrabarzUndPartner/gp-boilerplate/workflows/Master/badge.svg?branch=master>
-[github-workflow-master-href]: <https://github.com/GrabarzUndPartner/gp-boilerplate/actions?query=workflow%3AMaster>
+[github-workflow-main-src]: <https://github.com/GrabarzUndPartner/gp-boilerplate/workflows/Main/badge.svg?branch=main>
+[github-workflow-main-href]: <https://github.com/GrabarzUndPartner/gp-boilerplate/actions?query=workflow%3AMain>

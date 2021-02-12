@@ -10,6 +10,7 @@ module.exports = {
     const compiler = Webpack(options.webpack);
     const webpackDevConfig = options.webpackDev || {};
     const webpackHotConfig = options.webpackHot || {};
+
     const webpackDevMiddleware = WebpackDevMiddleware(compiler, webpackDevConfig);
     const webpackHotMiddleware = WebpackHotMiddleware(compiler, webpackHotConfig);
 
