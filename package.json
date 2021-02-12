@@ -48,6 +48,7 @@
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
+    "@hapi/hapi": "^20.1.0",
     "acorn": "8.0.5",
     "ampersand-collection": "2.0.2",
     "ampersand-model": "8.0.1",
@@ -79,7 +80,6 @@
     "handlebars-layouts": "3.1.4",
     "handlebars-loader": "1.7.1",
     "handlebars-utils": "1.0.6",
-    "hapi": "18.1.0",
     "hapi-auth-jwt2": "10.2.0",
     "highlight.js": "10.6.0",
     "inert": "5.1.3",
