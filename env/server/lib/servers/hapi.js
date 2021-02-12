@@ -1,4 +1,4 @@
-const hapi = require('hapi');
+const hapi = require('@hapi/hapi');
 const router = require('../hapi/router');
 
 module.exports = async function (root, config) {
