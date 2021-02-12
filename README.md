@@ -2,7 +2,10 @@
 
 [![GitHub version](https://badge.fury.io/gh/GrabarzUndPartner%2Fgp-boilerplate.svg)](https://badge.fury.io/gh/GrabarzUndPartner%2Fgp-boilerplate) 
 
-[![Main][github-workflow-main-src]][github-workflow-main-href]
+[![main][github-workflow-main-src]][github-workflow-main-href]
+[![develop][github-workflow-develop-src]][github-workflow-develop-href]
+
+[![Renovate - Status][renovate-status-src]][renovate-status-href]
 
 [![Dependency Status](https://img.shields.io/david/GrabarzUndPartner/gp-boilerplate.svg?style=flat)](https://david-dm.org/GrabarzUndPartner/gp-boilerplate)
 [![devDependency Status](https://img.shields.io/david/dev/GrabarzUndPartner/gp-boilerplate.svg?style=flat)](https://david-dm.org/GrabarzUndPartner/gp-boilerplate#info=devDependencies) 
@@ -75,5 +78,18 @@ The documentation can be found in the subdirectory "docs".
 | production | http://127.0.0.1:8050/docs     |
 
 
+
+
+<!-- Badges -->
+
+[renovate-status-src]: <https://img.shields.io/badge/renovate-enabled-brightgreen>
+[renovate-status-href]: <https://renovate.whitesourcesoftware.com/>
+
 [github-workflow-main-src]: <https://github.com/GrabarzUndPartner/gp-boilerplate/workflows/Main/badge.svg?branch=main>
 [github-workflow-main-href]: <https://github.com/GrabarzUndPartner/gp-boilerplate/actions?query=workflow%3AMain>
+[github-workflow-develop-src]: <https://github.com/GrabarzUndPartner/gp-boilerplate/workflows/Test/badge.svg?branch=develop>
+[github-workflow-develop-href]: <https://github.com/GrabarzUndPartner/gp-boilerplate/actions?query=workflow%3ATest>
+[dependencies-status-src]: <https://david-dm.org/GrabarzUndPartner/gp-boilerplate/status.svg>
+[dependencies-status-href]: <https://david-dm.org/GrabarzUndPartner/gp-boilerplate>
+[dependencies-dev-status-src]: <https://david-dm.org/GrabarzUndPartner/gp-boilerplate/dev-status.svg>
+[dependencies-dev-status-href]: <https://david-dm.org/GrabarzUndPartner/gp-boilerplate?type=dev>
