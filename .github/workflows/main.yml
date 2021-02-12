@@ -57,7 +57,7 @@ jobs:
 
   build-gh-pages:
     name: Build (GH-Pages)
-    needs: install
+    needs: semantic-version
     runs-on: ${{ matrix.os }}
 
     strategy:
