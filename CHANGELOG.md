@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [4.2.6](https://github.com/GrabarzUndPartner/gp-boilerplate/compare/v4.2.5...v4.2.6) (2021-02-12)
+
+
+### Bug Fixes
+
+* **webpack:** fix webpack config ([2dae9aa](https://github.com/GrabarzUndPartner/gp-boilerplate/commit/2dae9aa969f62ca1d1c3a42ebe24b26715143b39))
+
 ## [4.2.5](https://github.com/GrabarzUndPartner/gp-boilerplate/compare/v4.2.4...v4.2.5) (2021-01-11)
 
 
