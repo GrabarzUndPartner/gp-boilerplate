@@ -76,7 +76,7 @@
     "gulp-svg-symbols": "3.2.3",
     "gulp-svgo": "2.2.1",
     "h2o2": "8.2.0",
-    "handlebars": "4.7.6",
+    "handlebars": "4.7.7",
     "handlebars-layouts": "3.1.4",
     "handlebars-loader": "1.7.1",
     "handlebars-utils": "1.0.6",
