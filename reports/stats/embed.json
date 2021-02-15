@@ -1,8 +1,8 @@
 {
-  "hash": "ac566637a9e2ca1eabae",
-  "version": "5.21.2",
-  "time": 3351,
-  "builtAt": 1613378404583,
+  "hash": "b9524a7ed2ed5a288f9d",
+  "version": "5.22.0",
+  "time": 2939,
+  "builtAt": 1613384044964,
   "publicPath": "/",
   "outputPath": "/home/runner/work/gp-boilerplate/gp-boilerplate/build/js",
   "assetsByChunkName": {
@@ -14,7 +14,7 @@
     {
       "type": "asset",
       "name": "embed.js",
-      "size": 47539,
+      "size": 47529,
       "emitted": true,
       "comparedForEmit": false,
       "cached": false,
@@ -24,7 +24,7 @@
         "related": {
           "license": "embed.js.LICENSE.txt"
         },
-        "size": 47539
+        "size": 47529
       },
       "chunkNames": [
         "embed"
@@ -129,7 +129,7 @@
         "797.js"
       ],
       "auxiliaryFiles": [],
-      "hash": "06ceeec5fbfe137a985f",
+      "hash": "10e3825e4b87a7ff789d",
       "childrenByOrder": {},
       "id": 797,
       "siblings": [],
@@ -269,7 +269,7 @@
         "embed.js"
       ],
       "auxiliaryFiles": [],
-      "hash": "707a610a8a1ce91d2b73",
+      "hash": "46e6a167a855ba69fe33",
       "childrenByOrder": {},
       "id": 991,
       "siblings": [],
@@ -30417,11 +30417,11 @@
       "assets": [
         {
           "name": "embed.js",
-          "size": 47539
+          "size": 47529
         }
       ],
       "filteredAssets": 0,
-      "assetsSize": 47539,
+      "assetsSize": 47529,
       "auxiliaryAssets": [],
       "filteredAuxiliaryAssets": 0,
       "auxiliaryAssetsSize": 0,
@@ -30439,11 +30439,11 @@
       "assets": [
         {
           "name": "embed.js",
-          "size": 47539
+          "size": 47529
         }
       ],
       "filteredAssets": 0,
-      "assetsSize": 47539,
+      "assetsSize": 47529,
       "auxiliaryAssets": [],
       "filteredAuxiliaryAssets": 0,
       "auxiliaryAssetsSize": 0,

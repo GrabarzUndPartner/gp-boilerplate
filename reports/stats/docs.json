@@ -1,8 +1,8 @@
 {
-  "hash": "b8798944e4561b997731",
-  "version": "5.21.2",
-  "time": 995,
-  "builtAt": 1613378418134,
+  "hash": "d1274e31fa9ff8206b0d",
+  "version": "5.22.0",
+  "time": 894,
+  "builtAt": 1613384056803,
   "publicPath": "js/",
   "outputPath": "/home/runner/work/gp-boilerplate/gp-boilerplate/build/js",
   "assetsByChunkName": {
@@ -14,7 +14,7 @@
     {
       "type": "asset",
       "name": "docs.js",
-      "size": 19279,
+      "size": 19269,
       "emitted": true,
       "comparedForEmit": false,
       "cached": false,
@@ -24,7 +24,7 @@
         "related": {
           "license": "docs.js.LICENSE.txt"
         },
-        "size": 19279
+        "size": 19269
       },
       "chunkNames": [
         "docs"
@@ -84,7 +84,7 @@
         "docs.js"
       ],
       "auxiliaryFiles": [],
-      "hash": "cac2826f083b17b5a531",
+      "hash": "b93f04f9728cb590932c",
       "childrenByOrder": {},
       "id": 163,
       "siblings": [],
@@ -18583,11 +18583,11 @@
       "assets": [
         {
           "name": "docs.js",
-          "size": 19279
+          "size": 19269
         }
       ],
       "filteredAssets": 0,
-      "assetsSize": 19279,
+      "assetsSize": 19269,
       "auxiliaryAssets": [],
       "filteredAuxiliaryAssets": 0,
       "auxiliaryAssetsSize": 0,
@@ -18605,11 +18605,11 @@
       "assets": [
         {
           "name": "docs.js",
-          "size": 19279
+          "size": 19269
         }
       ],
       "filteredAssets": 0,
-      "assetsSize": 19279,
+      "assetsSize": 19269,
       "auxiliaryAssets": [],
       "filteredAuxiliaryAssets": 0,
       "auxiliaryAssetsSize": 0,
