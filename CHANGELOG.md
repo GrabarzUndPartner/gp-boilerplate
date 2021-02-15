@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [4.2.7](https://github.com/GrabarzUndPartner/gp-boilerplate/compare/v4.2.6...v4.2.7) (2021-02-15)
+
+
+### Bug Fixes
+
+* **handelbars:** fix watch-observer in hb task for empty changes (docs) ([943d08f](https://github.com/GrabarzUndPartner/gp-boilerplate/commit/943d08fec49ee37866b3595ce334aabd716b09c2))
+
 ## [4.2.6](https://github.com/GrabarzUndPartner/gp-boilerplate/compare/v4.2.5...v4.2.6) (2021-02-12)
 
 
