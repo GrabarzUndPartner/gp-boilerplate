@@ -30,6 +30,7 @@ module.exports = function (name, config, watch) {
   });
 
   let watcherInitialized = false;
+  let watcherObserver;
 
   return taskGenerator(
     name,
@@ -40,7 +41,7 @@ module.exports = function (name, config, watch) {
         if (!watcherInitialized) {
           if (task.partialRendering && options.watchers) {
             // Register WatcherHelper for partial file rendering
-            var watcherObserver = new WatcherObserver();
+            watcherObserver = new WatcherObserver();
             options.watchers.forEach(function (watcher) {
               if (watcher.options.partialRendering) {
                 watcherObserver.register(watcher);
@@ -71,7 +72,7 @@ module.exports = function (name, config, watch) {
         /**
          * PartialRendering
          */
-
+        let hasChanges = true;
         if (task.partialRendering && watcherObserver && watcherObserver.hasChanges()) {
           const src = watcherObserver.watchers.reduce(function (result, watcher) {
             const src = micromatch(
@@ -82,24 +83,17 @@ module.exports = function (name, config, watch) {
             ).map(function (file) {
               return upath.relative(upath.join(task.partialRendering.options.cwd), file);
             });
-            watcher.resetChangedFiles();
             return result.concat(src);
           }, []);
-
-          // var src = micromatch(
-          //     watcherHelper.changedFiles.map(function(file) {
-          //         return './' + upath.relative(process.cwd(), file);
-          //     }),
-          //     task.files.src
-          // ).map(function(file) {
-          //     return upath.relative(upath.join(task.partialRendering.options.cwd), file);
-          // });
-          // watcherHelper.resetChangedFiles();
-          app[task.name](src, {
-            base: task.partialRendering.options.base || task.partialRendering.options.cwd || '',
-            cwd: task.partialRendering.options.cwd,
-            ignore: task.files.ignore
-          });
+          if (src.length > 0) {
+            app[task.name](src, {
+              base: task.partialRendering.options.base || task.partialRendering.options.cwd || '',
+              cwd: task.partialRendering.options.cwd,
+              ignore: task.files.ignore
+            });
+          } else {
+            hasChanges = false;
+          }
         } else {
           app[task.name](task.files.src, {
             base: task.files.base,
@@ -107,12 +101,15 @@ module.exports = function (name, config, watch) {
           });
         }
 
-        const stream = app
-          .toStream(task.name)
-          .pipe(app.renderFile(getData(watch, config.resources, config.fonts)))
-          .on('error', errorHandler)
-          .pipe(extname())
-          .on('error', errorHandler);
+        let stream = app
+          .toStream(task.name);
+        if (hasChanges) {
+          stream = stream
+            .pipe(app.renderFile(getData(watch, config.resources, config.fonts)))
+            .on('error', errorHandler)
+            .pipe(extname())
+            .on('error', errorHandler);
+        }
 
         return stream.pipe(app.dest(task.files.dest)).on('error', errorHandler);
       });
