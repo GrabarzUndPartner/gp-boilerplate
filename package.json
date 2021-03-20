@@ -48,7 +48,7 @@
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
-    "@hapi/hapi": "20.1.1",
+    "@hapi/hapi": "20.1.2",
     "acorn": "8.1.0",
     "ampersand-collection": "2.0.2",
     "ampersand-model": "8.0.1",
@@ -109,7 +109,7 @@
     "uglifyjs-webpack-plugin": "2.2.0",
     "uniq": "1.0.1",
     "upath": "2.0.1",
-    "webpack": "5.27.0",
+    "webpack": "5.27.1",
     "webpack-bundle-analyzer": "4.4.0",
     "webpack-stream": "6.1.2"
   },
