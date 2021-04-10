@@ -93,7 +93,7 @@
     "postcss-browser-reporter": "0.6.0",
     "postcss-calc": "8.0.0",
     "postcss-clearfix": "2.0.1",
-    "postcss-discard-comments": "4.0.2",
+    "postcss-discard-comments": "5.0.0",
     "postcss-import": "14.0.1",
     "postcss-momentum-scrolling": "3.9.17",
     "postcss-object-fit-images": "1.1.2",
