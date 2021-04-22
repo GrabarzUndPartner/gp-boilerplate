@@ -70,7 +70,7 @@
     "gulp-changed": "4.0.2",
     "gulp-extname": "0.2.2",
     "gulp-nodemon": "2.5.0",
-    "gulp-notify": "3.2.0",
+    "gulp-notify": "4.0.0",
     "gulp-postcss": "9.0.0",
     "gulp-rename": "2.0.0",
     "gulp-svg-symbols": "3.2.3",
