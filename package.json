@@ -138,7 +138,7 @@
     "stylelint": "13.13.0",
     "stylelint-config-css-modules": "2.2.0",
     "stylelint-config-recess-order": "2.4.0",
-    "stylelint-config-recommended": "4.0.0",
+    "stylelint-config-recommended": "5.0.0",
     "stylelint-config-standard": "21.0.0",
     "sw-precache-webpack-plugin": "1.0.0",
     "webpack-dev-middleware": "4.1.0",
