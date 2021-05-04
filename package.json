@@ -128,7 +128,7 @@
     "eslint": "7.25.0",
     "eslint-loader": "4.0.2",
     "eslint-plugin-chai-friendly": "0.6.0",
-    "eslint-plugin-json": "2.1.2",
+    "eslint-plugin-json": "3.0.0",
     "eslint-plugin-mocha": "8.1.0",
     "gulp": "4.0.2",
     "gulp-livereload": "4.0.2",
