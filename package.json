@@ -127,7 +127,7 @@
     "@commitlint/config-conventional": "12.1.1",
     "eslint": "7.26.0",
     "eslint-loader": "4.0.2",
-    "eslint-plugin-chai-friendly": "0.6.0",
+    "eslint-plugin-chai-friendly": "0.7.1",
     "eslint-plugin-json": "3.0.0",
     "eslint-plugin-mocha": "8.1.0",
     "gulp": "4.0.2",
