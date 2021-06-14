@@ -87,7 +87,7 @@
     "js-prettify": "1.4.0",
     "lazysizes": "5.3.2",
     "object-fit-images": "3.2.4",
-    "postcss": "8.3.3",
+    "postcss": "8.3.4",
     "postcss-assets": "6.0.0",
     "postcss-bootstrap-4-grid": "1.0.3",
     "postcss-browser-reporter": "0.6.0",
