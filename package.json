@@ -67,7 +67,7 @@
     "eslint-config-stylelint": "13.1.1",
     "fontfaceobserver": "2.1.0",
     "fs-extra": "10.0.0",
-    "gulp-changed": "4.0.2",
+    "gulp-changed": "4.0.3",
     "gulp-extname": "0.2.2",
     "gulp-nodemon": "2.5.0",
     "gulp-notify": "4.0.0",
