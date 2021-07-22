@@ -100,7 +100,7 @@
     "postcss-preset-env": "6.7.0",
     "postcss-reporter": "7.0.2",
     "precss": "4.0.0",
-    "regenerator-runtime": "0.13.7",
+    "regenerator-runtime": "0.13.9",
     "requestidlecallback": "0.3.0",
     "script-loader": "0.7.2",
     "snyk": "1.666.0",
