@@ -95,7 +95,7 @@
     "postcss-clearfix": "2.0.1",
     "postcss-discard-comments": "5.0.1",
     "postcss-import": "14.0.2",
-    "postcss-momentum-scrolling": "3.13.22",
+    "postcss-momentum-scrolling": "3.14.22",
     "postcss-object-fit-images": "1.1.2",
     "postcss-preset-env": "6.7.0",
     "postcss-reporter": "7.0.2",
