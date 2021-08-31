@@ -111,7 +111,7 @@
     "upath": "2.0.1",
     "webpack": "5.51.1",
     "webpack-bundle-analyzer": "4.4.2",
-    "webpack-stream": "6.1.2"
+    "webpack-stream": "7.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.15.0",
