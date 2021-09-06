@@ -49,7 +49,7 @@
   },
   "dependencies": {
     "@hapi/hapi": "20.1.5",
-    "acorn": "8.4.1",
+    "acorn": "8.5.0",
     "ampersand-collection": "2.0.2",
     "ampersand-model": "8.0.1",
     "ampersand-view": "10.0.3",
