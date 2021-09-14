@@ -103,7 +103,7 @@
     "regenerator-runtime": "0.13.9",
     "requestidlecallback": "0.3.0",
     "script-loader": "0.7.2",
-    "snyk": "1.711.0",
+    "snyk": "1.712.0",
     "string-replace-loader": "3.0.3",
     "template-helpers": "1.0.1",
     "uglifyjs-webpack-plugin": "2.2.0",
@@ -142,7 +142,7 @@
     "stylelint-config-standard": "22.0.0",
     "sw-precache-webpack-plugin": "1.0.0",
     "webpack-dev-middleware": "5.1.0",
-    "webpack-hot-middleware": "2.25.0",
+    "webpack-hot-middleware": "2.25.1",
     "webpack-pwa-manifest": "4.3.0"
   },
   "snyk": true
