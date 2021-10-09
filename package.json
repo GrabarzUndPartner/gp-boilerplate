@@ -48,7 +48,7 @@
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
-    "@hapi/hapi": "20.2.0",
+    "@hapi/hapi": "20.2.1",
     "acorn": "8.5.0",
     "ampersand-collection": "2.0.2",
     "ampersand-model": "8.0.1",
