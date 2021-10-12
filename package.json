@@ -110,7 +110,7 @@
     "uniq": "1.0.1",
     "upath": "2.0.1",
     "webpack": "5.58.1",
-    "webpack-bundle-analyzer": "4.4.2",
+    "webpack-bundle-analyzer": "4.5.0",
     "webpack-stream": "7.0.0"
   },
   "devDependencies": {
