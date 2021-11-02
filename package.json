@@ -64,7 +64,7 @@
     "custom-event-polyfill": "1.0.7",
     "del": "6.0.0",
     "domtokenlist-shim": "1.2.0",
-    "eslint-config-stylelint": "14.0.0",
+    "eslint-config-stylelint": "15.0.0",
     "fontfaceobserver": "2.1.0",
     "fs-extra": "10.0.0",
     "gulp-changed": "4.0.3",
