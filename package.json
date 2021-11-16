@@ -60,7 +60,7 @@
     "core-js": "3.19.1",
     "cross-env": "7.0.3",
     "cssmin": "0.4.3",
-    "cssnano": "5.0.10",
+    "cssnano": "5.0.11",
     "custom-event-polyfill": "1.0.7",
     "del": "6.0.0",
     "domtokenlist-shim": "1.2.0",
