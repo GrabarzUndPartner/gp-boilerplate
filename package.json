@@ -49,7 +49,7 @@
   },
   "dependencies": {
     "@hapi/hapi": "20.2.1",
-    "acorn": "8.5.0",
+    "acorn": "8.6.0",
     "ampersand-collection": "2.0.2",
     "ampersand-model": "8.0.1",
     "ampersand-view": "10.0.3",
@@ -103,7 +103,7 @@
     "regenerator-runtime": "0.13.9",
     "requestidlecallback": "0.3.0",
     "script-loader": "0.7.2",
-    "snyk": "1.763.0",
+    "snyk": "1.764.0",
     "string-replace-loader": "3.0.3",
     "template-helpers": "1.0.1",
     "uglifyjs-webpack-plugin": "2.2.0",
