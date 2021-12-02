@@ -103,7 +103,7 @@
     "regenerator-runtime": "0.13.9",
     "requestidlecallback": "0.3.0",
     "script-loader": "0.7.2",
-    "snyk": "1.780.0",
+    "snyk": "1.782.0",
     "string-replace-loader": "3.1.0",
     "template-helpers": "1.0.1",
     "uglifyjs-webpack-plugin": "2.2.0",
